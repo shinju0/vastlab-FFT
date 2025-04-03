@@ -1,0 +1,117 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 28,038       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  7,725       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  6,189       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  4,968       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  2,538       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  8,166       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  3,712       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  3,718       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  4,268       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  4,253       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  4,257       | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 12,510       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 13,628       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  9,492       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  9,050       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  9,908       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++----------------------------------------+--------------------------+-----------------+---------------+--------------+-------------+---------------+
+| Function                               | Location                 | Compile/Link    | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++----------------------------------------+--------------------------+-----------------+---------------+--------------+-------------+---------------+
+| + FFT_TOP                              | FFT.cpp:545              | 28,038          | 2,538         | 4,253        | 9,492       | 9,908         |
+|  + cos                                 | sincosdouble.cpp:12      | 10,999          |               |              |             |               |
+|   + cos                                | hls_hotbm_double.cpp:143 | 10,997          |               |              |             |               |
+|    + sin_or_cos<double>                | hls_hotbm.h:209          | 10,995          |               |              |             |               |
+|       fp_struct                        | x_hls_utils.h:456        |   638 (2 calls) |               |              |             |               |
+|     + range_redux_payne_hanek_hotb...  | hls_range_redux.h:543    | 2,553           |               |              |             |               |
+|        fp_struct                       | x_hls_utils.h:456        |   319           |               |              |             |               |
+|        expv                            | x_hls_utils.h:485        |   109           |               |              |             |               |
+|        clz<61, 124, 0>                 | hls_normalize.h:69       |   164           |               |              |             |               |
+|     + range_redux_payne_hanek_hotb...  | hls_range_redux.h:431    | 2,173           |               |              |             |               |
+|        fp_struct                       | x_hls_utils.h:456        |   319           |               |              |             |               |
+|        expv                            | x_hls_utils.h:485        |   109           |               |              |             |               |
+|        table_lookup_4oPi_hotbm<52, ... | hls_range_redux.h:393    |   283           |               |              |             |               |
+|        clz<61, 124, 0>                 | hls_normalize.h:69       |   164           |               |              |             |               |
+|       sin_or_cos_approximation<63,...  | hls_hotbm_double.cpp:8   | 2,775           |               |              |             |               |
+|     + scaled_fixed2ieee<63, 1>         | x_hls_float_utils.h:389  | 1,543           |               |              |             |               |
+|        fp_struct                       | x_hls_utils.h:454        |     4           |               |              |             |               |
+|        clz                             | hls_normalize.h:79       |    29           |               |              |             |               |
+|        set_mantissa                    | x_hls_utils.h:499        |   111           |               |              |             |               |
+|      + to_ieee                         | x_hls_utils.h:509        |   303           |               |              |             |               |
+|       + to_double                      | x_hls_utils.h:494        |   301           |               |              |             |               |
+|          data                          | x_hls_utils.h:475        |   279           |               |              |             |               |
+|     + to_ieee                          | x_hls_utils.h:509        |   303           |               |              |             |               |
+|      + to_double                       | x_hls_utils.h:494        |   301           |               |              |             |               |
+|         data                           | x_hls_utils.h:475        |   279           |               |              |             |               |
+|  + sin                                 | sincosdouble.cpp:7       | 10,999          |               |              |             |               |
+|   + sin                                | hls_hotbm_double.cpp:139 | 10,997          |               |              |             |               |
+|    + sin_or_cos<double>                | hls_hotbm.h:209          | 10,995          |               |              |             |               |
+|       fp_struct                        | x_hls_utils.h:456        |   638 (2 calls) |               |              |             |               |
+|     + range_redux_payne_hanek_hotb...  | hls_range_redux.h:543    | 2,553           |               |              |             |               |
+|        fp_struct                       | x_hls_utils.h:456        |   319           |               |              |             |               |
+|        expv                            | x_hls_utils.h:485        |   109           |               |              |             |               |
+|        clz<61, 124, 0>                 | hls_normalize.h:69       |   164           |               |              |             |               |
+|     + range_redux_payne_hanek_hotb...  | hls_range_redux.h:431    | 2,173           |               |              |             |               |
+|        fp_struct                       | x_hls_utils.h:456        |   319           |               |              |             |               |
+|        expv                            | x_hls_utils.h:485        |   109           |               |              |             |               |
+|        table_lookup_4oPi_hotbm<52, ... | hls_range_redux.h:393    |   283           |               |              |             |               |
+|        clz<61, 124, 0>                 | hls_normalize.h:69       |   164           |               |              |             |               |
+|       sin_or_cos_approximation<63,...  | hls_hotbm_double.cpp:8   | 2,775           |               |              |             |               |
+|     + scaled_fixed2ieee<63, 1>         | x_hls_float_utils.h:389  | 1,543           |               |              |             |               |
+|        fp_struct                       | x_hls_utils.h:454        |     4           |               |              |             |               |
+|        clz                             | hls_normalize.h:79       |    29           |               |              |             |               |
+|        set_mantissa                    | x_hls_utils.h:499        |   111           |               |              |             |               |
+|      + to_ieee                         | x_hls_utils.h:509        |   303           |               |              |             |               |
+|       + to_double                      | x_hls_utils.h:494        |   301           |               |              |             |               |
+|          data                          | x_hls_utils.h:475        |   279           |               |              |             |               |
+|     + to_ieee                          | x_hls_utils.h:509        |   303           |               |              |             |               |
+|      + to_double                       | x_hls_utils.h:494        |   301           |               |              |             |               |
+|         data                           | x_hls_utils.h:475        |   279           |               |              |             |               |
+|  + FFT_DIT_spatial_unroll_CY_st...     | FFT.cpp:503              | 5,977           | 2,536         | 4,251        | 9,490       | 9,897         |
+|   + reverse_input_stream_UF4           | FFT.cpp:78               | 1,778           |  741          | 1,864        | 7,105       | 7,523         |
+|      bit_reverse<8>                    | FFT.cpp:67               |   103           |               |              |             |               |
+|   + FFT_Stage1_vectorstream_para...    | FFT.cpp:445              |   303           |  118          |  293         |  292        |  350          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:388              |   112           |               |              |             |               |
+|   + FFT_Stage2_vectorstreamIn_ar...    | FFT.cpp:472              |   426           |  137          |  221         |  220        |  247          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:388              |   224 (2 calls) |               |              |             |               |
+|   + FFT_stage_spatial_unroll<3>        | FFT.cpp:328              |   561           |  178          |  186         |  186        |  171          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:7                |   402 (3 calls) |               |              |             |               |
+|   + FFT_stage_spatial_unroll<4>        | FFT.cpp:328              |   561           |  255          |  325         |  325        |  302          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:7                |   402 (3 calls) |               |              |             |               |
+|   + FFT_stage_spatial_unroll<5>        | FFT.cpp:328              |   561           |  255          |  257         |  257        |  234          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:7                |   402 (3 calls) |               |              |             |               |
+|   + FFT_stage_spatial_unroll<6>        | FFT.cpp:328              |   561           |  255          |  257         |  257        |  234          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:7                |   402 (3 calls) |               |              |             |               |
+|   + FFT_stage_spatial_unroll<7>        | FFT.cpp:328              |   561           |  255          |  257         |  257        |  234          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:7                |   402 (3 calls) |               |              |             |               |
+|   + FFT_stage_spatial_unroll<8>        | FFT.cpp:328              |   561           |  239          |  237         |  237        |  212          |
+|      RADIX2_BFLY_double_buffer_qu...   | FFT.cpp:7                |   402 (3 calls) |               |              |             |               |
+|     output_result_array_to_strea...    | FFT.cpp:52               |    70           |   70          |  163         |  163        |  194          |
++----------------------------------------+--------------------------+-----------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

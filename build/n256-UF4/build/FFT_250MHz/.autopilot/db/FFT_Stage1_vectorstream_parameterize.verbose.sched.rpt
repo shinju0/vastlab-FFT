@@ -1,0 +1,118 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_Stage1_vectorstream_parameterize'
+================================================================
+* Date:           Wed Apr  2 21:41:26 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        build
+* Solution:       FFT_250MHz (Vivado IP Flow Target)
+* Product family: versalpremium
+* Target device:  xcvp1802-lsvc4072-3HP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.566 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       37|       37|  0.148 us|  0.148 us|   32|   32|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 2, States = { 1 2 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [2/2] (0.00ns)   --->   "%call_ln451 = call void @FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc, i512 %reverse_in_stream_vector, i512 %data_s1_stream_vector" [FFT.cpp:451]   --->   Operation 3 'call' 'call_ln451' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 4 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln449 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_73" [FFT.cpp:449]   --->   Operation 4 'specdataflowpipeline' 'specdataflowpipeline_ln449' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %data_s1_stream_vector, void @empty_74, i32 0, i32 0, void @empty_73, i32 0, i32 0, void @empty_73, void @empty_73, void @empty_73, i32 0, i32 0, i32 0, i32 0, void @empty_73, void @empty_73, i32 4294967295, i32 0, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %reverse_in_stream_vector, void @empty_74, i32 0, i32 0, void @empty_73, i32 0, i32 0, void @empty_73, void @empty_73, void @empty_73, i32 0, i32 0, i32 0, i32 0, void @empty_73, void @empty_73, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%specperformance_ln450 = specperformance void @_ssdm_op_SpecPerformance, i32 0, i64 32, i64 0, i64 0, i64 0, i64 0, i64 0, i32 0, void @empty_73" [FFT.cpp:450]   --->   Operation 7 'specperformance' 'specperformance_ln450' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/2] (0.00ns)   --->   "%call_ln451 = call void @FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc, i512 %reverse_in_stream_vector, i512 %data_s1_stream_vector" [FFT.cpp:451]   --->   Operation 8 'call' 'call_ln451' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%ret_ln469 = ret" [FFT.cpp:469]   --->   Operation 9 'ret' 'ret_ln469' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

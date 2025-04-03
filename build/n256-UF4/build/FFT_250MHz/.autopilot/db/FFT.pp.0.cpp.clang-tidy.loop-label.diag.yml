@@ -1,0 +1,610 @@
+---
+MainSourceFile:  /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          280546
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          281012
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          281479
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          564671
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_463_1:  '
+    FileOffset:      463
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1914205
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_463_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_465_2:  '
+    FileOffset:      465
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1914249
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_465_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_848_1:  '
+    FileOffset:      848
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1916244
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_848_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_927_1:  '
+    FileOffset:      927
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1918257
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_927_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_987_1:  '
+    FileOffset:      987
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1920279
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_987_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1046_1:  '
+    FileOffset:      1046
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1922390
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1046_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1048_2:  '
+    FileOffset:      1048
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1922434
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1048_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1091_1:  '
+    FileOffset:      1091
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1923544
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1091_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1106_1:  '
+    FileOffset:      1106
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1924261
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1106_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1576_1:  '
+    FileOffset:      1576
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1936203
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1576_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1591_1:  '
+    FileOffset:      1591
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1936607
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1591_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1648_1:  '
+    FileOffset:      1648
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1938567
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1648_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1699_1:  '
+    FileOffset:      1699
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1940420
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1699_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1967_1:  '
+    FileOffset:      1967
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1947097
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1967_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2018_1:  '
+    FileOffset:      2018
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          1949034
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2018_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_1:  '
+    FileOffset:      127
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2186015
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2186462
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_1:  '
+    FileOffset:      169
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2186983
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_1:  '
+    FileOffset:      170
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2187300
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_198_1:  '
+    FileOffset:      198
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2188102
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_198_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_199_1:  '
+    FileOffset:      199
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2188457
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_200_1:  '
+    FileOffset:      200
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2188812
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_200_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_1:  '
+    FileOffset:      201
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2189167
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_202_1:  '
+    FileOffset:      202
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2189522
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_202_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_1:  '
+    FileOffset:      203
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2189877
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_1:  '
+    FileOffset:      204
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2190232
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2190587
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_1:  '
+    FileOffset:      206
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2190943
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_1:  '
+    FileOffset:      207
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2191300
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_1:  '
+    FileOffset:      222
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2191721
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_1:  '
+    FileOffset:      223
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2192057
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_224_1:  '
+    FileOffset:      224
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2192392
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_224_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_225_1:  '
+    FileOffset:      225
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2192726
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_225_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_226_1:  '
+    FileOffset:      226
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2193061
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_226_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_256_1:  '
+    FileOffset:      256
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2193517
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_256_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_257_1:  '
+    FileOffset:      257
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2193940
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_257_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_258_1:  '
+    FileOffset:      258
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2194365
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_258_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_259_1:  '
+    FileOffset:      259
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2194790
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_259_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_260_1:  '
+    FileOffset:      260
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2195215
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_260_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_261_1:  '
+    FileOffset:      261
+    FilePath:        /opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2195639
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_261_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op'
+    FileOffset:      19
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op'
+    FileOffset:      20
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op'
+    FileOffset:      35
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op'
+    FileOffset:      36
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op'
+    FileOffset:      37
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op'
+    FileOffset:      38
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_1:  '
+    FileOffset:      59
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2203881
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_1:  '
+    FileOffset:      100
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2205203
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_105_2:  '
+    FileOffset:      105
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2205381
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_105_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_123_3:  '
+    FileOffset:      123
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2206200
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_123_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_130_4:  '
+    FileOffset:      130
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2206488
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_130_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_285_5:  '
+    FileOffset:      285
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2213752
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_285_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_320_6:  '
+    FileOffset:      320
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2214088
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_320_6: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, mul + fabric is invalid combination for bind_op'
+    FileOffset:      343
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, mul + fabric is invalid combination for bind_op'
+    FileOffset:      359
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, mul + fabric is invalid combination for bind_op'
+    FileOffset:      376
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op'
+    FileOffset:      400
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op'
+    FileOffset:      401
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op'
+    FileOffset:      425
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op'
+    FileOffset:      426
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op'
+    FileOffset:      427
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op'
+    FileOffset:      428
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_458_1:  '
+    FileOffset:      458
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2218208
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_458_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_482_1:  '
+    FileOffset:      482
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2219042
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_482_1: '
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_0'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      511
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_1'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      512
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_2'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      513
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_3'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      514
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_4'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      515
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_5'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      516
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-warn-mayneed-no-ctor-attribute
+    Message:         'Implicit constructor of ''data_6'' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor))'
+    FileOffset:      517
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      519
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      521
+    FilePath:        FFT.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_558_1:  '
+    FileOffset:      558
+    FilePath:        FFT.cpp
+    Replacements:    
+      - FilePath:        /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp
+        Offset:          2222389
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_558_1: '
+...

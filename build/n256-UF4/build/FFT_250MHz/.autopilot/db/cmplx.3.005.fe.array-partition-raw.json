@@ -1,0 +1,158 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "FFT.cpp",
+    "fileloc": 545,
+    "instructions": 2,
+    "name": "FFT_TOP",
+    "total_instructions": 8166
+  },
+  "1": {
+    "basicblocks": 38,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 328,
+    "instructions": 827,
+    "loads": {
+      "G": 272
+    },
+    "name": "FFT_stage_spatial_unroll<8>",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 827
+  },
+  "10": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 328,
+    "instructions": 681,
+    "loads": {
+      "G": 48
+    },
+    "name": "FFT_stage_spatial_unroll<4>",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 681
+  },
+  "11": {
+    "basicblocks": 220,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 78,
+    "instructions": 3086,
+    "loads": {
+      "L": 88
+    },
+    "name": "reverse_input_stream_UF4",
+    "stores": {
+      "L": 224
+    },
+    "total_instructions": 3086
+  },
+  "2": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 328,
+    "instructions": 713,
+    "loads": {
+      "G": 144
+    },
+    "name": "FFT_stage_spatial_unroll<7>",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 713
+  },
+  "3": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 328,
+    "instructions": 617,
+    "loads": {
+      "G": 48
+    },
+    "name": "FFT_stage_spatial_unroll<5>",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 617
+  },
+  "4": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 472,
+    "instructions": 397,
+    "name": "FFT_Stage2_vectorstreamIn_arrayOut_parametize",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 397
+  },
+  "5": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 328,
+    "instructions": 649,
+    "loads": {
+      "G": 80
+    },
+    "name": "FFT_stage_spatial_unroll<6>",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 649
+  },
+  "6": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 328,
+    "instructions": 648,
+    "loads": {
+      "G": 16
+    },
+    "name": "FFT_stage_spatial_unroll<3>",
+    "stores": {
+      "G": 16
+    },
+    "total_instructions": 648
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "11 9 4 6 10 3 5 2 1 8",
+    "file": "FFT.cpp",
+    "fileloc": 503,
+    "instructions": 191,
+    "name": "FFT_DIT_spatial_unroll_CY_stream_vector",
+    "total_instructions": 8164
+  },
+  "8": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 52,
+    "instructions": 249,
+    "loads": {
+      "G": 16
+    },
+    "name": "output_result_array_to_stream",
+    "total_instructions": 249
+  },
+  "9": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 445,
+    "instructions": 106,
+    "name": "FFT_Stage1_vectorstream_parameterize",
+    "total_instructions": 106
+  }
+}

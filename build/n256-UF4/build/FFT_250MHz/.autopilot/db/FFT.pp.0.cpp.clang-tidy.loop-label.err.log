@@ -1,0 +1,5 @@
+12 warnings and 17 errors generated.
+Error while processing /scratch/cy/HP-FFT-HLS/n256/UF4/build/FFT_250MHz/.autopilot/db/FFT.pp.0.cpp.
+clang-tidy applied 54 of 54 suggested fixes.
+Suppressed 121 warnings (116 in non-user code, 5 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

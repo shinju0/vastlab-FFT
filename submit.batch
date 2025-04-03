@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=FFT
+#SBATCH -o %x.%J.out
+#SBATCH --cpus-per-task=32
+#SBATCH --mem 180G
+#SBATCH -p batch
+#### SBATCH -w c04
+bash run.sh
+
+
+
+

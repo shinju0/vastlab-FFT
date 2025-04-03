@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vitis HLS Report for 'output_result_array_to_stream'
+================================================================
+* Date:           Wed Apr  2 21:41:38 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        build
+* Solution:       FFT_250MHz (Vivado IP Flow Target)
+* Product family: versalpremium
+* Target device:  xcvp1802-lsvc4072-3HP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  1.357 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       34|       34|  0.136 us|  0.136 us|   32|   32|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PostP_Fwd_loop  |       32|       32|         2|          1|          1|    32|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       14|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       40|     -|
+|Register             |        -|      -|        9|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        9|       54|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2470|   3588|  1680448|   840224|   637|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     9882|  14352|  6721792|  3360896|  2549|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |i_fu_279_p2                |         +|   0|  0|   6|           5|           1|
+    |ap_condition_186           |       and|   0|  0|   2|           1|           1|
+    |icmp_ln55_fu_389_p2        |      icmp|   0|  0|   2|           5|           2|
+    |ap_block_pp0_stage0_01001  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  14|          13|           7|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   8|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   8|          2|    1|          2|
+    |ap_sig_allocacmp_i93_load         |   8|          2|    5|         10|
+    |i93_fu_60                         |   8|          2|    5|         10|
+    |out_r_blk_n                       |   8|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  40|         10|   13|         26|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                         |  1|   0|    1|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
+    |i93_fu_60                         |  5|   0|    5|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             |  9|   0|    9|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+|                                      RTL Ports                                     | Dir | Bits|  Protocol  |                               Source Object                               |    C Type    |
++------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+|ap_clk                                                                              |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_rst                                                                              |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_start                                                                            |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_done                                                                             |  out|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_continue                                                                         |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_idle                                                                             |  out|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_ready                                                                            |  out|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|out_r_din                                                                           |  out|  512|     ap_fifo|                                                                      out_r|       pointer|
+|out_r_full_n                                                                        |   in|    1|     ap_fifo|                                                                      out_r|       pointer|
+|out_r_write                                                                         |  out|    1|     ap_fifo|                                                                      out_r|       pointer|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3|         array|
++------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+

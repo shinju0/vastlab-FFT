@@ -1,0 +1,31 @@
+FFT.cpp:337:27: warning: Unroll pragma is ignored, because 'factor' is not positive integer  [-Winvalid-hls-pragmas]
+#pragma HLS unroll factor=4>>(stage-1)
+                          ^~~~~~~~~~~~
+FFT.cpp:535:5: note: in instantiation of function template specialization 'FFT_stage_spatial_unroll<4>' requested here
+    FFT_stage_spatial_unroll<4>(data_1, data_2);
+    ^
+FFT.cpp:337:27: warning: Unroll pragma is ignored, because 'factor' is not positive integer  [-Winvalid-hls-pragmas]
+#pragma HLS unroll factor=4>>(stage-1)
+                          ^~~~~~~~~~~~
+FFT.cpp:536:5: note: in instantiation of function template specialization 'FFT_stage_spatial_unroll<5>' requested here
+    FFT_stage_spatial_unroll<5>(data_2, data_3);
+    ^
+FFT.cpp:337:27: warning: Unroll pragma is ignored, because 'factor' is not positive integer  [-Winvalid-hls-pragmas]
+#pragma HLS unroll factor=4>>(stage-1)
+                          ^~~~~~~~~~~~
+FFT.cpp:537:5: note: in instantiation of function template specialization 'FFT_stage_spatial_unroll<6>' requested here
+    FFT_stage_spatial_unroll<6>(data_3, data_4);
+    ^
+FFT.cpp:337:27: warning: Unroll pragma is ignored, because 'factor' is not positive integer  [-Winvalid-hls-pragmas]
+#pragma HLS unroll factor=4>>(stage-1)
+                          ^~~~~~~~~~~~
+FFT.cpp:538:5: note: in instantiation of function template specialization 'FFT_stage_spatial_unroll<7>' requested here
+    FFT_stage_spatial_unroll<7>(data_4, data_5);
+    ^
+FFT.cpp:337:27: warning: Unroll pragma is ignored, because 'factor' is not positive integer  [-Winvalid-hls-pragmas]
+#pragma HLS unroll factor=4>>(stage-1)
+                          ^~~~~~~~~~~~
+FFT.cpp:539:5: note: in instantiation of function template specialization 'FFT_stage_spatial_unroll<8>' requested here
+    FFT_stage_spatial_unroll<8>(data_5, data_6);
+    ^
+5 warnings generated.

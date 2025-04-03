@@ -1,0 +1,46 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'FFT_TOP'" level="0">
+<item name = "Date">Wed Apr  2 21:41:32 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">build</item>
+<item name = "Solution">FFT_250MHz (Vivado IP Flow Target)</item>
+<item name = "Product family">versalpremium</item>
+<item name = "Target device">xcvp1802-lsvc4072-3HP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 2.908 ns, 1.08 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">397, 397, 1.588 us, 1.588 us, 32, 32, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_FFT_DIT_spatial_unroll_CY_stream_vector_fu_170">FFT_DIT_spatial_unroll_CY_stream_vector, 397, 397, 1.588 us, 1.588 us, 32, 32, dataflow</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
