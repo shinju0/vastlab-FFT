@@ -1,5 +1,4 @@
-build/
-build/n256-UF4/
+build
 *_v*/
 *.out
 log.txt
