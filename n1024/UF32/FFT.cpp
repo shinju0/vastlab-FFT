@@ -75,7 +75,9 @@ template<int N>  ap_uint<N> bit_reverse ( ap_uint<N> input ){
 }
 
 
-void reverse_input_stream_UF1 (
+
+
+void reverse_input_stream_UF32 (
     hls::stream<hls::vector<complex<float>, UF*2>> & dataIn,
     hls::stream<hls::vector<complex<float>, UF*2>> & reverse_in_stream_vector
 ){
@@ -83,29 +85,29 @@ void reverse_input_stream_UF1 (
     static complex<float> data_in_cyclic[UF*2][FFT_NUM/(UF*2)];
 
     static complex<float> data_rev_stream[UF*2][FFT_NUM/(UF*2)];
-    
+
+    #pragma HLS array_partition variable=data_rev_stream type=complete dim=1 
     #pragma HLS array_partition variable=data_in_cyclic type=complete dim=1 
-    #pragma HLS array_partition variable=data_in_cyclic type=cyclic factor=UF dim=2
 
-    #pragma HLS stream type=pipo variable=data_in_cyclic 
-    #pragma HLS stream type=pipo variable=data_rev_stream
+    #pragma HLS array_partition variable=data_rev_stream type=complete dim=2
+    #pragma HLS array_partition variable=data_in_cyclic type=complete dim=2
 
-    #pragma HLS dataflow disable_start_propagation
-    #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
+    // #pragma HLS array_partition variable=data_in_cyclic type=cyclic factor=UF dim=2
 
-    
-    // reverse_read_stream_input(dataIn, data_rev_stream_0, data_rev_stream_1, data_rev_stream_2, data_rev_stream_3);
-    // reverse_from_block_to_cyclic(data_rev_stream_0,data_rev_stream_1,data_rev_stream_2,data_rev_stream_3,data_in_cyclic);
-    // reverse_write_stream_output (data_in_cyclic, reverse_in_stream_vector);
+    #pragma HLS stream type=pipo variable=data_in_cyclic depth=3
+    #pragma HLS stream type=pipo variable=data_rev_stream  depth=3
+
+    // #pragma HLS dataflow disable_start_propagation
+    // #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
+    #pragma HLS pipeline II=FFT_NUM/(2*UF)
+
+    const int TIME_STEP = FFT_NUM/(UF*2);
+    const int PAR = UF*2;
 
 
-    const int TIME_STEP =  FFT_NUM/(UF*2);
-    const int PAR =  UF*2;
-
-
-    READ_STREAM_INPUT: for (int i = 0; i < TIME_STEP; i++){ 
+    READ_STREAM_INPUT: for (int i = 0; i < TIME_STEP; i++){
         #pragma HLS pipeline II=1
-        // #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
+        #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
         hls::vector<complex<float>, UF*2> temp;
         temp = dataIn.read();
         ap_uint<EXP2_FFT> original[UF*2];
@@ -118,77 +120,86 @@ void reverse_input_stream_UF1 (
         for (int u = 0; u < UF*2; u++) {
             reversed[u] = bit_reverse<EXP2_FFT>(original[u]);
         }
+
         data_rev_stream[0][reversed[0]%TIME_STEP] = temp[0];
-        data_rev_stream[1][reversed[1]%TIME_STEP] = temp[1];
+        data_rev_stream[32][reversed[1]%TIME_STEP] = temp[1];
+        data_rev_stream[16][reversed[2]%TIME_STEP] = temp[2];
+        data_rev_stream[48][reversed[3]%TIME_STEP] = temp[3];
+        data_rev_stream[8][reversed[4]%TIME_STEP] = temp[4];
+        data_rev_stream[40][reversed[5]%TIME_STEP] = temp[5];
+        data_rev_stream[24][reversed[6]%TIME_STEP] = temp[6];
+        data_rev_stream[56][reversed[7]%TIME_STEP] = temp[7];
+        data_rev_stream[4][reversed[8]%TIME_STEP] = temp[8];
+        data_rev_stream[36][reversed[9]%TIME_STEP] = temp[9];
+        data_rev_stream[20][reversed[10]%TIME_STEP] = temp[10];
+        data_rev_stream[52][reversed[11]%TIME_STEP] = temp[11];
+        data_rev_stream[12][reversed[12]%TIME_STEP] = temp[12];
+        data_rev_stream[44][reversed[13]%TIME_STEP] = temp[13];
+        data_rev_stream[28][reversed[14]%TIME_STEP] = temp[14];
+        data_rev_stream[60][reversed[15]%TIME_STEP] = temp[15];
+        data_rev_stream[2][reversed[16]%TIME_STEP] = temp[16];
+        data_rev_stream[34][reversed[17]%TIME_STEP] = temp[17];
+        data_rev_stream[18][reversed[18]%TIME_STEP] = temp[18];
+        data_rev_stream[50][reversed[19]%TIME_STEP] = temp[19];
+        data_rev_stream[10][reversed[20]%TIME_STEP] = temp[20];
+        data_rev_stream[42][reversed[21]%TIME_STEP] = temp[21];
+        data_rev_stream[26][reversed[22]%TIME_STEP] = temp[22];
+        data_rev_stream[58][reversed[23]%TIME_STEP] = temp[23];
+        data_rev_stream[6][reversed[24]%TIME_STEP] = temp[24];
+        data_rev_stream[38][reversed[25]%TIME_STEP] = temp[25];
+        data_rev_stream[22][reversed[26]%TIME_STEP] = temp[26];
+        data_rev_stream[54][reversed[27]%TIME_STEP] = temp[27];
+        data_rev_stream[14][reversed[28]%TIME_STEP] = temp[28];
+        data_rev_stream[46][reversed[29]%TIME_STEP] = temp[29];
+        data_rev_stream[30][reversed[30]%TIME_STEP] = temp[30];
+        data_rev_stream[62][reversed[31]%TIME_STEP] = temp[31];
+        data_rev_stream[1][reversed[32]%TIME_STEP] = temp[32];
+        data_rev_stream[33][reversed[33]%TIME_STEP] = temp[33];
+        data_rev_stream[17][reversed[34]%TIME_STEP] = temp[34];
+        data_rev_stream[49][reversed[35]%TIME_STEP] = temp[35];
+        data_rev_stream[9][reversed[36]%TIME_STEP] = temp[36];
+        data_rev_stream[41][reversed[37]%TIME_STEP] = temp[37];
+        data_rev_stream[25][reversed[38]%TIME_STEP] = temp[38];
+        data_rev_stream[57][reversed[39]%TIME_STEP] = temp[39];
+        data_rev_stream[5][reversed[40]%TIME_STEP] = temp[40];
+        data_rev_stream[37][reversed[41]%TIME_STEP] = temp[41];
+        data_rev_stream[21][reversed[42]%TIME_STEP] = temp[42];
+        data_rev_stream[53][reversed[43]%TIME_STEP] = temp[43];
+        data_rev_stream[13][reversed[44]%TIME_STEP] = temp[44];
+        data_rev_stream[45][reversed[45]%TIME_STEP] = temp[45];
+        data_rev_stream[29][reversed[46]%TIME_STEP] = temp[46];
+        data_rev_stream[61][reversed[47]%TIME_STEP] = temp[47];
+        data_rev_stream[3][reversed[48]%TIME_STEP] = temp[48];
+        data_rev_stream[35][reversed[49]%TIME_STEP] = temp[49];
+        data_rev_stream[19][reversed[50]%TIME_STEP] = temp[50];
+        data_rev_stream[51][reversed[51]%TIME_STEP] = temp[51];
+        data_rev_stream[11][reversed[52]%TIME_STEP] = temp[52];
+        data_rev_stream[43][reversed[53]%TIME_STEP] = temp[53];
+        data_rev_stream[27][reversed[54]%TIME_STEP] = temp[54];
+        data_rev_stream[59][reversed[55]%TIME_STEP] = temp[55];
+        data_rev_stream[7][reversed[56]%TIME_STEP] = temp[56];
+        data_rev_stream[39][reversed[57]%TIME_STEP] = temp[57];
+        data_rev_stream[23][reversed[58]%TIME_STEP] = temp[58];
+        data_rev_stream[55][reversed[59]%TIME_STEP] = temp[59];
+        data_rev_stream[15][reversed[60]%TIME_STEP] = temp[60];
+        data_rev_stream[47][reversed[61]%TIME_STEP] = temp[61];
+        data_rev_stream[31][reversed[62]%TIME_STEP] = temp[62];
+        data_rev_stream[63][reversed[63]%TIME_STEP] = temp[63];
     }
 
-    // // print data_rev_stream
-    // for (int i = 0; i < UF*2; i++){
-    //     for(int j = 0; j < TIME_STEP; j++){
-    //         data_rev_stream[i][j] = i * TIME_STEP + j;
-    //     }
-    // }
 
-
-    FROM_BLOCK_TO_CYCLIC: for (int i = 0; i < TIME_STEP; i= i + 1){ 
+    FROM_BLOCK_TO_CYCLIC_SIMPLE: for (int i = 0; i < TIME_STEP; i= i + 1){ 
         #pragma HLS pipeline II=1
-        // #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
-        int offset[UF*2];
-        #pragma HLS array_partition variable=offset type=complete dim=1
+        #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
         for (int u = 0; u < UF*2; u++) {
-            offset[u] = (i+u)%TIME_STEP;
-        }
-        int cyclic_offset[UF*2];
-        #pragma HLS array_partition variable=cyclic_offset type=complete dim=1
-        complex<float> block_data[UF*2];
-        #pragma HLS array_partition variable=block_data type=complete dim=1
-        for (int u = 0; u < UF*2; u++) {
-            block_data[u] = data_rev_stream[u][offset[u]];
-        }
-    
-        complex<float> cyclic_data[UF*2];
-        #pragma HLS array_partition variable=cyclic_data type=complete dim=1
-
-        if (i%PAR ==0 ){
-            cyclic_data[0] = block_data[0];
-            cyclic_data[1] = block_data[1];
-
-            cyclic_offset[0] = i/PAR ;
-            cyclic_offset[1] = ((i+1)%TIME_STEP+TIME_STEP)/PAR;
-
-        }else if (i%PAR ==1 ){
-            cyclic_data[0] = block_data[1];
-            cyclic_data[1] = block_data[0];
-
-            cyclic_offset[0] = ((i+1)%TIME_STEP+TIME_STEP)/PAR;
-            cyclic_offset[1] = i/PAR; 
-
-        }
-        for (int u = 0; u < UF*2; u++) {
-            data_in_cyclic[u][cyclic_offset[u]] = cyclic_data[u];
+            int index = i * UF*2 + u;
+            data_in_cyclic[u][i] = data_rev_stream[index/TIME_STEP][index%TIME_STEP];
         }
     }
-
-    // print data_in_cyclic
-    // for(int j = 0; j < TIME_STEP; j++){
-    //     for (int i = 0; i < UF*2; i++){
-    //         int index = j*UF*2+i;
-    //         if(data_in_cyclic[i][j] != data_rev_stream[index/TIME_STEP][index%TIME_STEP]) cout << "!!! " << i << " " << j << " " << endl;
-    //         // cout << "index " << index << ": rev "<< data_rev_stream[index/TIME_STEP][index%TIME_STEP] << " cyclic " << data_in_cyclic[i][j] << endl;
-    //     }
-    // }
-
-    // for (int i = 0; i < TIME_STEP; i= i + 1){ 
-    //     for (int u = 0; u < UF*2; u++) {
-    //         // data_rev_stream[u][i] = data_in_cyclic[u][i];
-    //         int index = i * UF*2 + u;
-    //         data_in_cyclic[u][i] = data_rev_stream[index/TIME_STEP][index%TIME_STEP];
-    //     }
-    // }
 
     STREAM_OUT_REVERSE: for (int i = 0; i < TIME_STEP; i= i + 1){ 
         #pragma HLS pipeline II=1
-        // #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle  
+        #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle  
         hls::vector<complex<float>, UF*2> temp;
         for (int u = 0; u < UF*2; u++) {
             temp[u] = data_in_cyclic[u][i];
@@ -321,58 +332,60 @@ data_out1 = complex<float>(d3_real, d3_imag);
 
 void FFT_Stage1_vectorstream_parameterize(
     hls::stream<hls::vector<complex<float>, UF*2>> & reverse_in_stream_vector,
-    complex<float> data_out[FFT_NUM]
+    hls::stream<hls::vector<complex<float>, UF*2>> & data_s1_stream_vector
 ){
     #pragma HLS dataflow disable_start_propagation
     // #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
-    FFT_Stage1: for (int m = 0; m < FFT_NUM; m += 2 * UF) {
+    FFT_Stage1: for (int m = 0; m < FFT_NUM/(2*UF); m += 1) {
         #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
         #pragma HLS pipeline 
         // Butterfly computations
         auto tw = complex<float>(0,0); 
         hls::vector<complex<float>, UF*2> data = reverse_in_stream_vector.read();
-        for (int i = 0; i < UF * 2; i += 2){
-            auto data0 = data[i];
-            auto data1 = data[i + 1];
+        hls::vector<complex<float>, UF*2> data_out;
+        for (int i = 0; i < UF; i++){
+            auto data0 = data[i*2];
+            auto data1 = data[i*2+1];
             complex<float> data_out0, data_out1;
             RADIX2_BFLY_double_buffer_quarter_onlycompute(data0, data1, data_out0, data_out1, false, false, tw); 
-            data_out[m + i] = data_out0;
-            data_out[m + i + 1] = data_out1;
+            data_out[i*2] = data_out0;
+            data_out[i*2+1] = data_out1;
         }
+        data_s1_stream_vector.write(data_out);
     }
 
 }
 
 
-// void FFT_Stage2_vectorstreamIn_arrayOut_parametize(
-//     hls::stream<hls::vector<complex<float>, UF*2>> & data_s1_stream_vector,
-//     complex<float> data_2[FFT_NUM]
-// ){
+void FFT_Stage2_vectorstreamIn_arrayOut_parametize(
+    hls::stream<hls::vector<complex<float>, UF*2>> & data_s1_stream_vector,
+    complex<float> data_2[FFT_NUM]
+){
 
-// #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
-// FFT_Stage2:  for (int m = 0; m < FFT_NUM; m += 2*UF) {
-//         #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
-//         #pragma HLS pipeline
-//         hls::vector<complex<float>, UF*2> data = data_s1_stream_vector.read();
-//         for (int i = 0; i < UF*2; i+= 4){
-//             auto index0 = 64*0;
-//             auto index1 = 64*1;
-//             auto tw0 = twiddles[index0];   
-//             auto tw1 = twiddles[index1];   
-//             auto data0 = data[i];
-//             auto data1 = data[i+2];
-//             auto data2 = data[i+1];
-//             auto data3 = data[i+3];
-//             complex<float> data_out0, data_out1, data_out2, data_out3;
-//             RADIX2_BFLY_double_buffer_quarter_onlycompute(data0, data1, data_out0, data_out1, false,  0 > 0, tw0); 
-//             RADIX2_BFLY_double_buffer_quarter_onlycompute(data2, data3, data_out2, data_out3, true,  1 > 0, tw1); 
-//             data_2[m+i] =  data_out0;
-//             data_2[m+i+2] =  data_out1;
-//             data_2[m+i+1] =  data_out2;
-//             data_2[m+i+3] =  data_out3;
-//         }
-//     }
-// }
+#pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
+FFT_Stage2:  for (int m = 0; m < FFT_NUM; m += 2*UF) {
+        #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
+        #pragma HLS pipeline
+        hls::vector<complex<float>, UF*2> data = data_s1_stream_vector.read();
+        for (int i = 0; i < UF*2; i+= 4){
+            auto index0 = 64*0;
+            auto index1 = 64*1;
+            auto tw0 = twiddles[index0];   
+            auto tw1 = twiddles[index1];   
+            auto data0 = data[i];
+            auto data1 = data[i+2];
+            auto data2 = data[i+1];
+            auto data3 = data[i+3];
+            complex<float> data_out0, data_out1, data_out2, data_out3;
+            RADIX2_BFLY_double_buffer_quarter_onlycompute(data0, data1, data_out0, data_out1, false,  0 > 0, tw0); 
+            RADIX2_BFLY_double_buffer_quarter_onlycompute(data2, data3, data_out2, data_out3, true,  1 > 0, tw1); 
+            data_2[m+i] =  data_out0;
+            data_2[m+i+2] =  data_out1;
+            data_2[m+i+1] =  data_out2;
+            data_2[m+i+3] =  data_out3;
+        }
+    }
+}
 
 
 void FFT_DIT_spatial_unroll_CY_stream_vector( 
@@ -383,6 +396,7 @@ void FFT_DIT_spatial_unroll_CY_stream_vector(
     #pragma HLS dataflow disable_start_propagation
     #pragma HLS performance target_ti=FFT_NUM/(2*UF) unit=cycle
 
+    static complex<float> data_0[FFT_NUM];
     static complex<float> data_1[FFT_NUM];
     static complex<float> data_2[FFT_NUM];
     static complex<float> data_3[FFT_NUM];
@@ -391,12 +405,22 @@ void FFT_DIT_spatial_unroll_CY_stream_vector(
     static complex<float> data_6[FFT_NUM];
     static complex<float> data_7[FFT_NUM];
     static complex<float> data_8[FFT_NUM];
-    
 
-    #pragma HLS array_partition variable=data_1 type=cyclic factor=UF dim=1
-    #pragma HLS array_partition variable=data_2 type=cyclic factor=UF dim=1
-    #pragma HLS array_partition variable=data_3 type=cyclic factor=UF dim=1
-    #pragma HLS array_partition variable=data_4 type=cyclic factor=UF dim=1
+
+    #pragma HLS array_partition variable=data_0 type=cyclic factor=UF*2 dim=1
+    #pragma HLS bind_storage variable=data_0 type=RAM_2P impl=LUTRAM
+    #pragma HLS array_partition variable=data_1 type=cyclic factor=UF*2 dim=1
+    #pragma HLS bind_storage variable=data_1 type=RAM_2P impl=LUTRAM
+    #pragma HLS array_partition variable=data_2 type=cyclic factor=UF*2 dim=1
+    #pragma HLS bind_storage variable=data_2 type=RAM_2P impl=LUTRAM
+    // #pragma HLS array_partition variable=data_1 type=cyclic factor=UF dim=1
+    // #pragma HLS array_partition variable=data_2 type=cyclic factor=UF dim=1
+    // #pragma HLS array_partition variable=data_3 type=cyclic factor=UF dim=1
+    // #pragma HLS array_partition variable=data_4 type=cyclic factor=UF dim=1
+    #pragma HLS array_partition variable=data_3 type=cyclic factor=UF*2 dim=1
+    #pragma HLS bind_storage variable=data_3 type=RAM_2P impl=LUTRAM
+    #pragma HLS array_partition variable=data_4 type=cyclic factor=UF*2 dim=1
+    #pragma HLS bind_storage variable=data_4 type=RAM_2P impl=LUTRAM
     #pragma HLS array_partition variable=data_5 type=cyclic factor=UF dim=1
     #pragma HLS array_partition variable=data_6 type=cyclic factor=UF dim=1
     #pragma HLS array_partition variable=data_7 type=cyclic factor=UF dim=1
@@ -405,16 +429,19 @@ void FFT_DIT_spatial_unroll_CY_stream_vector(
 
 
     hls::stream<hls::vector<complex<float>, UF*2>> reverse_in_stream_vector; 
+    hls::stream<hls::vector<complex<float>, UF*2>> data_s1_stream_vector; 
 
-    reverse_input_stream_UF1(dataIn, reverse_in_stream_vector);
-    FFT_Stage1_vectorstream_parameterize (reverse_in_stream_vector, data_1);
-    FFT_stage_spatial_unroll<2>(data_1, data_2);
-    FFT_stage_spatial_unroll<3>(data_2, data_3);
-    FFT_stage_spatial_unroll<4>(data_3, data_4);
-    FFT_stage_spatial_unroll<5>(data_4, data_5);
-    FFT_stage_spatial_unroll<6>(data_5, data_6);
-    FFT_stage_spatial_unroll<7>(data_6, data_7);
-    FFT_stage_spatial_unroll<8>(data_7, data_8);
+    reverse_input_stream_UF32(dataIn, reverse_in_stream_vector);
+    FFT_Stage1_vectorstream_parameterize (reverse_in_stream_vector, data_s1_stream_vector);
+    FFT_Stage2_vectorstreamIn_arrayOut_parametize (data_s1_stream_vector, data_0);
+    FFT_stage_spatial_unroll<3>(data_0, data_1);
+    FFT_stage_spatial_unroll<4>(data_1, data_2);
+    FFT_stage_spatial_unroll<5>(data_2, data_3);
+    FFT_stage_spatial_unroll<6>(data_3, data_4);
+    FFT_stage_spatial_unroll<7>(data_4, data_5);
+    FFT_stage_spatial_unroll<8>(data_5, data_6);
+    FFT_stage_spatial_unroll<9>(data_6, data_7);
+    FFT_stage_spatial_unroll<10>(data_7, data_8);
     output_result_array_to_stream (data_8, dataOut);
 
 }

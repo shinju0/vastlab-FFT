@@ -18,7 +18,7 @@ typedef double dtype_gold;
 #define FFT_NUM 256
 #define EXP2_FFT 8
 
-#define UF 1
+#define UF 32
 
 
 #ifndef PI

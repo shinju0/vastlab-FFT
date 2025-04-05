@@ -32,7 +32,9 @@ csim_design
 csynth_design
 # report_directives
 # cosim_design
-# export_design -flow syn -rtl verilog  
+export_design -flow syn -rtl verilog  
 close_project
 
 exit
+
+

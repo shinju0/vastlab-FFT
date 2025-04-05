@@ -15,8 +15,8 @@ using namespace std;
 typedef float dtype_test;
 typedef double dtype_gold;
 #define batch_size 1 
-#define FFT_NUM 256
-#define EXP2_FFT 8
+#define FFT_NUM 1024
+#define EXP2_FFT 10
 
 #define UF 1
 

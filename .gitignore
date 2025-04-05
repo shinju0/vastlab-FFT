@@ -1,0 +1,5 @@
+build/
+*_v*/
+*.out
+log.txt
+logs
