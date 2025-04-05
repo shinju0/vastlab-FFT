@@ -1,4 +1,5 @@
 build/
+build/n256-UF4/
 *_v*/
 *.out
 log.txt
