@@ -1,0 +1,1660 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jul 19 10:26:33 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/xilinx/tools/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'juju' on host 'c04' (Linux_x86_64 version 5.15.0-130-generic) on Sat Jul 19 10:26:35 PDT 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/scratch/juju/HP-FFT-HLS/n128/UF1'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'project.tcl'
+n128/UF1
+INFO: [HLS 200-1510] Running: open_project ./build 
+INFO: [HLS 200-10] Creating and opening project '/scratch/juju/HP-FFT-HLS/n128/UF1/build'.
+INFO: [HLS 200-1510] Running: add_files ./FFT.cpp 
+INFO: [HLS 200-10] Adding design file './FFT.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ./testbench.cpp 
+INFO: [HLS 200-10] Adding design file './testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution FFT_250MHz 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvp1802-lsvc4072-3HP-e-S 
+INFO: [HLS 200-1611] Setting target device to 'xcvp1802-lsvc4072-3HP-e-S'
+INFO: [HLS 200-1510] Running: set_top FFT_TOP 
+INFO: [HLS 200-1510] Running: create_clock -period 4.0 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: config_compile -unsafe_math_optimizations 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [HLS 200-1510] Running: add_files -tb ./testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file './testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../FFT.cpp in debug mode
+   Generating csim.exe
+FFT run FFT_TOP
+FFT Comparison
+(0,0.927539)(0,0.927539)
+(0.00401603,0.93004)(0.00401601,0.93004)
+(0.0081527,0.937618)(0.00815371,0.937618)
+(0.0125454,0.950503)(0.0125456,0.950503)
+(0.0173418,0.969101)(0.0173421,0.969101)
+(0.0227288,0.994019)(0.0227288,0.994019)
+(0.0289458,1.02612)(0.0289444,1.02613)
+(0.0363082,1.06662)(0.0363082,1.06663)
+(0.0452681,1.11718)(0.0452681,1.11718)
+(0.0564712,1.18012)(0.0564713,1.18012)
+(0.0708935,-62.7413)(0.070893,-62.7413)
+(0.0900626,1.35768)(0.0900627,1.35769)
+(0.1165,1.4841)(0.1165,1.4841)
+(0.154596,1.64888)(0.154596,1.64888)
+(0.212572,1.86976)(0.212569,1.86976)
+(0.307254,2.17736)(0.307254,2.17736)
+(0.477541,2.62855)(0.477541,2.62855)
+(0.829576,3.33831)(0.829576,3.33831)
+(1.73177,4.54724)(1.73177,4.54724)
+(4.92382,6.3673)(4.92382,6.3673)
+(12.7084,0.165827)(12.7084,0.165828)
+(4.92428,-6.03535)(4.92429,-6.03535)
+(1.7327,-4.21442)(1.7327,-4.21442)
+(0.830973,-3.00404)(0.830972,-3.00404)
+(0.479421,-2.29223)(0.479421,-2.29223)
+(0.309631,-1.83837)(0.309631,-1.83837)
+(0.215465,-1.52747)(0.215465,-1.52747)
+(0.158036,-1.30262)(0.158036,-1.30262)
+(0.120514,-1.13317)(0.120514,-1.13317)
+(0.094687,-1.00134)(0.0946869,-1.00134)
+(0.0761701,-0.896156)(0.0761701,-0.896155)
+(0.0624535,-0.810513)(0.0624536,-0.810513)
+(0.0520151,-0.739603)(0.0520152,-0.739603)
+(0.043891,-0.680069)(0.0438912,-0.680069)
+(0.0374463,-0.629496)(0.0374463,-0.629496)
+(0.0322499,-0.586104)(0.0322497,-0.586104)
+(0.0279982,-0.548555)(0.0279985,-0.548556)
+(0.0244766,-0.515823)(0.0244766,-0.515822)
+(0.0215256,-0.487106)(0.0215267,-0.487106)
+(0.0190295,-0.461774)(0.0190295,-0.461774)
+(0.0168971,-0.439322)(0.0168972,-0.439322)
+(0.0150608,-0.419341)(0.0150608,-0.419341)
+(0.0134671,-0.401497)(0.0134673,-0.401498)
+(0.0120742,-0.385518)(0.0120741,-0.385518)
+(0.010848,-0.371172)(0.0108482,-0.371172)
+(0.00976229,-0.358269)(0.00976249,-0.358269)
+(0.00879568,-0.346648)(0.00879456,-0.34665)
+(0.00792778,-0.336176)(0.00792782,-0.336176)
+(0.00714603,-0.326735)(0.00714614,-0.326734)
+(0.00643754,-0.318224)(0.00643748,-0.318224)
+(32.0058,-0.310564)(32.0058,-0.310563)
+(0.00519958,-0.303675)(0.00519945,-0.303675)
+(0.00465369,-0.2975)(0.00465377,-0.2975)
+(0.00414801,-0.291983)(0.004148,-0.291983)
+(0.00367546,-0.287083)(0.00367654,-0.287078)
+(0.00323468,-0.282746)(0.00323465,-0.282746)
+(0.00281794,-0.278951)(0.00281794,-0.278952)
+(0.00242265,-0.275666)(0.00242257,-0.275666)
+(0.00204489,-0.272866)(0.00204528,-0.272865)
+(0.00168271,-0.270528)(0.00168267,-0.270528)
+(0.00133219,-0.268637)(0.00133222,-0.268637)
+(0.000991143,-0.267181)(0.000991143,-0.267181)
+(0.000657164,-0.266147)(0.000657158,-0.266147)
+(0.00032727,-0.26553)(0.000327306,-0.26553)
+(0,-0.265325)(4.88498e-15,-0.265325)
+(-0.00032727,-0.26553)(-0.000327306,-0.26553)
+(-0.000656806,-0.266148)(-0.000656732,-0.266147)
+(-0.000991143,-0.267181)(-0.000991143,-0.267181)
+(-0.00133219,-0.268637)(-0.00133222,-0.268637)
+(-0.00168271,-0.270528)(-0.00168267,-0.270528)
+(-0.00204501,-0.272863)(-0.00204512,-0.272865)
+(-0.00242265,-0.275666)(-0.00242257,-0.275666)
+(-0.00281794,-0.278951)(-0.00281794,-0.278952)
+(-0.00323468,-0.282746)(-0.00323465,-0.282746)
+(-0.00367618,-0.287075)(-0.00367666,-0.287078)
+(-0.00414801,-0.291983)(-0.004148,-0.291983)
+(-0.00465369,-0.2975)(-0.00465377,-0.2975)
+(-0.00519958,-0.303675)(-0.00519945,-0.303675)
+(31.9942,-0.310562)(31.9942,-0.310562)
+(-0.00643754,-0.318224)(-0.00643748,-0.318224)
+(-0.00714603,-0.326735)(-0.00714614,-0.326734)
+(-0.00792778,-0.336176)(-0.00792782,-0.336176)
+(-0.00879622,-0.34665)(-0.00879545,-0.346649)
+(-0.00976229,-0.358269)(-0.00976249,-0.358269)
+(-0.010848,-0.371172)(-0.0108482,-0.371172)
+(-0.0120742,-0.385518)(-0.0120741,-0.385518)
+(-0.0134677,-0.401498)(-0.013467,-0.401498)
+(-0.0150608,-0.419341)(-0.0150608,-0.419341)
+(-0.0168971,-0.439322)(-0.0168972,-0.439322)
+(-0.0190295,-0.461774)(-0.0190295,-0.461774)
+(-0.0215249,-0.487106)(-0.0215259,-0.487106)
+(-0.0244766,-0.515823)(-0.0244766,-0.515822)
+(-0.0279982,-0.548555)(-0.0279985,-0.548556)
+(-0.0322499,-0.586104)(-0.0322497,-0.586104)
+(-0.0374475,-0.629497)(-0.037447,-0.629496)
+(-0.043891,-0.680069)(-0.0438912,-0.680069)
+(-0.0520151,-0.739603)(-0.0520152,-0.739603)
+(-0.0624535,-0.810513)(-0.0624536,-0.810513)
+(-0.0761712,-0.896157)(-0.076171,-0.896156)
+(-0.094687,-1.00134)(-0.0946869,-1.00134)
+(-0.120514,-1.13317)(-0.120514,-1.13317)
+(-0.158036,-1.30262)(-0.158036,-1.30262)
+(-0.215464,-1.52747)(-0.215466,-1.52747)
+(-0.309631,-1.83837)(-0.309631,-1.83837)
+(-0.479421,-2.29223)(-0.479421,-2.29223)
+(-0.830973,-3.00404)(-0.830972,-3.00404)
+(-1.7327,-4.21442)(-1.7327,-4.21442)
+(-4.92428,-6.03535)(-4.92429,-6.03535)
+(-12.7084,0.165827)(-12.7084,0.165828)
+(-4.92382,6.3673)(-4.92382,6.3673)
+(-1.73177,4.54724)(-1.73177,4.54724)
+(-0.829576,3.33831)(-0.829576,3.33831)
+(-0.477541,2.62855)(-0.477541,2.62855)
+(-0.307254,2.17736)(-0.307254,2.17736)
+(-0.21257,1.86976)(-0.212569,1.86976)
+(-0.154596,1.64888)(-0.154596,1.64888)
+(-0.1165,1.4841)(-0.1165,1.4841)
+(-0.0900626,1.35768)(-0.0900627,1.35769)
+(-0.0708923,65.2587)(-0.0708927,65.2587)
+(-0.0564712,1.18012)(-0.0564713,1.18012)
+(-0.0452681,1.11718)(-0.0452681,1.11718)
+(-0.0363082,1.06662)(-0.0363082,1.06663)
+(-0.0289439,1.02613)(-0.0289438,1.02613)
+(-0.0227288,0.994019)(-0.0227288,0.994019)
+(-0.0173418,0.969101)(-0.0173421,0.969101)
+(-0.0125454,0.950503)(-0.0125456,0.950503)
+(-0.00815364,0.937618)(-0.0081545,0.937618)
+(-0.00401603,0.93004)(-0.00401601,0.93004)
+
+FFT difference
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(-0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(-0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,-0.0000)
+(-0.0000,-0.0000)
+(-0.0000,0.0000)
+(-0.0000,0.0000)
+(0.0000,-0.0000)
+(0.0000,0.0000)
+(0.0000,0.0000)
+(-0.0000,0.0000)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 64
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 1.242 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 642.133 MB.
+INFO: [HLS 200-10] Analyzing design file 'testbench.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'data_type' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:113:72)
+WARNING: [HLS 207-5292] unused parameter 'cp_len_enable' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:137:61)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:150:63)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:327:66)
+WARNING: [HLS 207-5292] unused parameter 'has_ovflo' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:340:61)
+WARNING: [HLS 207-5292] unused parameter 'in' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:2027:45)
+WARNING: [HLS 207-5292] unused parameter 'out' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:2028:45)
+INFO: [HLS 200-10] Analyzing design file 'FFT.cpp' ... 
+WARNING: [HLS 207-5577] Unroll pragma is ignored, because 'factor' is not positive integer  (FFT.cpp:214:27)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'FFT_stage_spatial_unroll<2>' requested here (FFT.cpp:411:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'FFT_stage_spatial_unroll<3>' requested here (FFT.cpp:412:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'FFT_stage_spatial_unroll<4>' requested here (FFT.cpp:413:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'FFT_stage_spatial_unroll<5>' requested here (FFT.cpp:414:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'FFT_stage_spatial_unroll<6>' requested here (FFT.cpp:415:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'FFT_stage_spatial_unroll<7>' requested here (FFT.cpp:416:5)
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:83:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:85:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (FFT.cpp:93:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (FFT.cpp:326:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:386:24)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:387:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:388:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:389:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:390:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:391:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (FFT.cpp:392:27)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (FFT.cpp:426:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 12 issue(s) in file FFT.cpp
+Resolution: For help on HLS 200-471 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+WARNING: [HLS 207-5292] unused parameter 'data_type' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:113:72)
+WARNING: [HLS 207-5292] unused parameter 'cp_len_enable' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:137:61)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:150:63)
+WARNING: [HLS 207-5292] unused parameter 'scaling_opt' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:327:66)
+WARNING: [HLS 207-5292] unused parameter 'has_ovflo' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:340:61)
+WARNING: [HLS 207-5292] unused parameter 'in' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:2027:45)
+WARNING: [HLS 207-5292] unused parameter 'out' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_fft.h:2028:45)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.91 seconds. CPU system time: 1.49 seconds. Elapsed time: 8.45 seconds; current allocated memory: 650.352 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 26,406 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,957 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,633 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,366 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 723 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 927 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 662 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 666 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 762 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 760 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 764 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 758 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 780 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 772 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 765 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 876 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'ap_uint<7> bit_reverse<7>(ap_uint<7>)' into 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:119:27)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_onlycompute(std::complex<float>, std::complex<float>, std::complex<float>&, std::complex<float>&, bool, bool, std::complex<float>)' into 'FFT_Stage1_vectorstream_parameterize(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, std::complex<float>*)' (FFT.cpp:338:13)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_CY(std::complex<float>*, std::complex<float>*, int, int, bool, bool, std::complex<float>)' into 'void FFT_stage_spatial_unroll<2>(std::complex<float>*, std::complex<float>*)' (FFT.cpp:258:2)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_CY(std::complex<float>*, std::complex<float>*, int, int, bool, bool, std::complex<float>)' into 'void FFT_stage_spatial_unroll<3>(std::complex<float>*, std::complex<float>*)' (FFT.cpp:258:2)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_CY(std::complex<float>*, std::complex<float>*, int, int, bool, bool, std::complex<float>)' into 'void FFT_stage_spatial_unroll<4>(std::complex<float>*, std::complex<float>*)' (FFT.cpp:258:2)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_CY(std::complex<float>*, std::complex<float>*, int, int, bool, bool, std::complex<float>)' into 'void FFT_stage_spatial_unroll<5>(std::complex<float>*, std::complex<float>*)' (FFT.cpp:258:2)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_CY(std::complex<float>*, std::complex<float>*, int, int, bool, bool, std::complex<float>)' into 'void FFT_stage_spatial_unroll<6>(std::complex<float>*, std::complex<float>*)' (FFT.cpp:258:2)
+INFO: [HLS 214-131] Inlining function 'RADIX2_BFLY_double_buffer_quarter_CY(std::complex<float>*, std::complex<float>*, int, int, bool, bool, std::complex<float>)' into 'void FFT_stage_spatial_unroll<7>(std::complex<float>*, std::complex<float>*)' (FFT.cpp:240:17)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_59_1' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:59:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_334_1' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:334:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_193_6' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:193:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_138_3' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:138:20)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:143:17)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_145_4' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:145:20)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:149:24)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_167_5' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:167:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_113_1' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:113:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_118_2' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:118:20)
+INFO: [HLS 214-291] Loop 'Loop_Reverse' is marked as complete unroll implied by the pipeline pragma (FFT.cpp:70:19)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/opt/xilinx/tools/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:94:12)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_59_1' (FFT.cpp:59:26) in function 'output_result_array_to_stream' completely with a factor of 2 (FFT.cpp:53:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_334_1' (FFT.cpp:334:27) in function 'FFT_Stage1_vectorstream_parameterize' completely with a factor of 1 (FFT.cpp:325:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_193_6' (FFT.cpp:193:27) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_138_3' (FFT.cpp:138:20) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT.cpp:143:17) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_145_4' (FFT.cpp:145:20) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT.cpp:149:24) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_167_5' (FFT.cpp:167:27) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_113_1' (FFT.cpp:113:20) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_118_2' (FFT.cpp:118:20) in function 'reverse_input_stream_UF1' completely with a factor of 2 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'Loop_Reverse' (FFT.cpp:70:19) in function 'reverse_input_stream_UF1' completely with a factor of 7 (FFT.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/opt/xilinx/tools/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:94:12) in function 'std::array<std::complex<float>, 2ul>::array' completely with a factor of 2 (/opt/xilinx/tools/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:94:0)
+WARNING: [HLS 214-366] Duplicating function 'std::complex<float>::complex(float, float) (.24.27)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT.cpp:46:19)
+WARNING: [HLS 214-366] Duplicating function 'std::complex<float>::complex(float, float) (.24.27)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT.cpp:47:19)
+WARNING: [HLS 214-366] Duplicating function 'std::complex<float>::complex(float, float) (.24.27)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT.cpp:316:13)
+WARNING: [HLS 214-366] Duplicating function 'std::complex<float>::complex(float, float) (.24.27)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT.cpp:317:13)
+WARNING: [HLS 214-366] Duplicating function 'std::complex<float>::complex(float, float) (.24.27)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT.cpp:337:28)
+WARNING: [HLS 214-366] Duplicating function 'std::complex<float>::complex(float, float) (.24.27)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT.cpp:337:39)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<std::complex<float>, 2ul>::_S_ref(std::complex<float> const (&) [2], unsigned long)' into 'std::array<std::complex<float>, 2ul>::operator[](unsigned long)' (/opt/xilinx/tools/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::array<std::complex<float>, 2ul>::array()' into 'hls::vector<std::complex<float>, 2ul>::vector()' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h:109:0)
+INFO: [HLS 214-178] Inlining function 'std::array<std::complex<float>, 2ul>::array() (.34.40.46)' into 'hls::vector<std::complex<float>, 2ul>::vector() (.21.31)' (/opt/xilinx/tools/Vitis/2024.2/common/technology/autopilot/hls_vector.h:109:0)
+INFO: [HLS 214-178] Inlining function 'std::array<std::complex<float>, 2ul>::operator[](unsigned long)' into 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:81:0)
+INFO: [HLS 214-178] Inlining function 'hls::vector<std::complex<float>, 2ul>::vector()' into 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:81:0)
+INFO: [HLS 214-178] Inlining function 'hls::vector<std::complex<float>, 2ul>::vector() (.21.31)' into 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:81:0)
+INFO: [HLS 214-178] Inlining function 'std::array<std::complex<float>, 2ul>::operator[](unsigned long)' into 'FFT_Stage1_vectorstream_parameterize(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, std::complex<float>*)' (FFT.cpp:325:0)
+INFO: [HLS 214-178] Inlining function 'hls::vector<std::complex<float>, 2ul>::vector()' into 'FFT_Stage1_vectorstream_parameterize(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, std::complex<float>*)' (FFT.cpp:325:0)
+INFO: [HLS 214-178] Inlining function 'std::array<std::complex<float>, 2ul>::operator[](unsigned long)' into 'output_result_array_to_stream(std::complex<float>*, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:53:0)
+INFO: [HLS 214-178] Inlining function 'hls::vector<std::complex<float>, 2ul>::vector()' into 'output_result_array_to_stream(std::complex<float>*, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:53:0)
+INFO: [HLS 214-248] Applying array_partition to 'twiddles.1': Complete partitioning on dimension 1. (FFT.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'twiddles.0': Complete partitioning on dimension 1. (FFT.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ24reverse_input_stream_UF1RN3hls6streamINS_6vectorISt7complexIfELm2EEELi0EEES6_E14data_in_cyclic.1': Complete partitioning on dimension 1. (FFT.cpp:83:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ24reverse_input_stream_UF1RN3hls6streamINS_6vectorISt7complexIfELm2EEELi0EEES6_E14data_in_cyclic.0': Complete partitioning on dimension 1. (FFT.cpp:83:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'reverse_in_stream_vector' with compact=bit mode in 128-bits (FFT.cpp:407:48)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out' with compact=bit mode in 128-bits (FFT.cpp:424:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'in' with compact=bit mode in 128-bits (FFT.cpp:424:0)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'PostP_Fwd_loop' (FFT.cpp:55:18) in function 'output_result_array_to_stream' due to performance pragma (FFT.cpp:56:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'R_Group_loop_bflySize_equal_FFT_NUM' (FFT.cpp:230:13) in function 'FFT_stage_spatial_unroll<7>' due to performance pragma (FFT.cpp:233:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<6>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-339] Inferring pragma 'loop_flatten on' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<6>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<5>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-339] Inferring pragma 'loop_flatten on' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<5>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<4>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-339] Inferring pragma 'loop_flatten on' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<4>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<3>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-339] Inferring pragma 'loop_flatten on' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<3>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<2>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-339] Inferring pragma 'loop_flatten on' for loop 'R_Group_loop' (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<2>' due to performance pragma (FFT.cpp:246:9)
+INFO: [HLS 214-269] Inferring pragma 'pipeline II=1' for loop 'FFT_Stage1' (FFT.cpp:328:14) in function 'FFT_Stage1_vectorstream_parameterize' due to performance pragma (FFT.cpp:329:9)
+WARNING: [HLS 214-346] Cannot apply performance pragma for function 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:81)because dataflow pragma takes precedence (FFT.cpp:94:9)
+Resolution: For help on HLS 214-346 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-346.html
+WARNING: [HLS 214-346] Cannot apply performance pragma for function 'FFT_DIT_spatial_unroll_CY_stream_vector(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)' (FFT.cpp:381)because dataflow pragma takes precedence (FFT.cpp:384:9)
+Resolution: For help on HLS 214-346 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-346.html
+INFO: [HLS 214-449] Automatically partitioning array '_ZZ24reverse_input_stream_UF1RN3hls6streamINS_6vectorISt7complexIfELm2EEELi0EEES6_E15data_rev_stream.0' dimension 1 completely based on constant index. (FFT.cpp:85:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZZ24reverse_input_stream_UF1RN3hls6streamINS_6vectorISt7complexIfELm2EEELi0EEES6_E15data_rev_stream.1' dimension 1 completely based on constant index. (FFT.cpp:85:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)::data_rev_stream (.0)' due to pipeline pragma (FFT.cpp:85:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'reverse_input_stream_UF1(hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 2ul>, 0>&)::data_rev_stream (.1)' due to pipeline pragma (FFT.cpp:85:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ24reverse_input_stream_UF1RN3hls6streamINS_6vectorISt7complexIfELm2EEELi0EEES6_E15data_rev_stream.1': Complete partitioning on dimension 1. (FFT.cpp:85:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ24reverse_input_stream_UF1RN3hls6streamINS_6vectorISt7complexIfELm2EEELi0EEES6_E15data_rev_stream.0': Complete partitioning on dimension 1. (FFT.cpp:85:0)
+INFO: [HLS 214-455] Changing loop 'reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc' (FFT.cpp:106:24) to a process function for dataflow in function 'reverse_input_stream_UF1' (FFT.cpp:106:24)
+INFO: [HLS 214-455] Changing loop 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc' (FFT.cpp:133:27) to a process function for dataflow in function 'reverse_input_stream_UF1' (FFT.cpp:133:27)
+INFO: [HLS 214-455] Changing loop 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc' (FFT.cpp:189:25) to a process function for dataflow in function 'reverse_input_stream_UF1' (FFT.cpp:189:25)
+INFO: [HLS 214-455] Changing loop 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc' (FFT.cpp:328:14) to a process function for dataflow in function 'FFT_Stage1_vectorstream_parameterize' (FFT.cpp:328:14)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.74 seconds. CPU system time: 1.06 seconds. Elapsed time: 7.95 seconds; current allocated memory: 661.324 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 661.324 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 664.512 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 668.773 MB.
+WARNING: [HLS 200-805] An internal stream 'reverse_in_stream_vector' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'reverse_input_stream_UF1' (FFT.cpp:90:1), detected/extracted 3 process function(s): 
+	 'reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc'
+	 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc'
+	 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc'.
+INFO: [XFORM 203-712] Applying dataflow to function 'FFT_Stage1_vectorstream_parameterize' (FFT.cpp:328:23), detected/extracted 1 process function(s): 
+	 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc'.
+INFO: [XFORM 203-712] Applying dataflow to function 'FFT_DIT_spatial_unroll_CY_stream_vector' (FFT.cpp:383:1), detected/extracted 9 process function(s): 
+	 'reverse_input_stream_UF1'
+	 'FFT_Stage1_vectorstream_parameterize'
+	 'FFT_stage_spatial_unroll<2>'
+	 'FFT_stage_spatial_unroll<3>'
+	 'FFT_stage_spatial_unroll<4>'
+	 'FFT_stage_spatial_unroll<5>'
+	 'FFT_stage_spatial_unroll<6>'
+	 'FFT_stage_spatial_unroll<7>'
+	 'output_result_array_to_stream'.
+INFO: [XFORM 203-712] Applying dataflow to function 'FFT_TOP' (FFT.cpp:422:1), detected/extracted 1 process function(s): 
+	 'FFT_DIT_spatial_unroll_CY_stream_vector'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FFT.cpp:0:11) to (FFT.cpp:248:13) in function 'FFT_stage_spatial_unroll<2>'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 692.789 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'R_Pair_loop' (FFT.cpp:245:9) in function 'FFT_stage_spatial_unroll<6>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'R_Pair_loop' (FFT.cpp:245:9) in function 'FFT_stage_spatial_unroll<5>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'R_Pair_loop' (FFT.cpp:245:9) in function 'FFT_stage_spatial_unroll<4>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'R_Pair_loop' (FFT.cpp:245:9) in function 'FFT_stage_spatial_unroll<3>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'R_Pair_loop' (FFT.cpp:245:9) in function 'FFT_stage_spatial_unroll<2>'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.15 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.19 seconds; current allocated memory: 819.090 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'FFT_TOP' ...
+WARNING: [SYN 201-103] Legalizing function name 'FFT_stage_spatial_unroll<2>' to 'FFT_stage_spatial_unroll_2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FFT_stage_spatial_unroll<3>' to 'FFT_stage_spatial_unroll_3_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FFT_stage_spatial_unroll<4>' to 'FFT_stage_spatial_unroll_4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FFT_stage_spatial_unroll<5>' to 'FFT_stage_spatial_unroll_5_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FFT_stage_spatial_unroll<6>' to 'FFT_stage_spatial_unroll_6_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FFT_stage_spatial_unroll<7>' to 'FFT_stage_spatial_unroll_7_s'.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:19->FFT.cpp:258) on 'fmsub' operation 32 bit ('d1_real', FFT.cpp:28->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:20->FFT.cpp:258) on 'fmadd' operation 32 bit ('d1_imag', FFT.cpp:29->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:19->FFT.cpp:258) on 'fmsub' operation 32 bit ('d1_real', FFT.cpp:28->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:20->FFT.cpp:258) on 'fmadd' operation 32 bit ('d1_imag', FFT.cpp:29->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:19->FFT.cpp:258) on 'fmsub' operation 32 bit ('d1_real', FFT.cpp:28->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:20->FFT.cpp:258) on 'fmadd' operation 32 bit ('d1_imag', FFT.cpp:29->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:19->FFT.cpp:258) on 'fmsub' operation 32 bit ('d1_real', FFT.cpp:28->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:20->FFT.cpp:258) on 'fmadd' operation 32 bit ('d1_imag', FFT.cpp:29->FFT.cpp:258) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (FFT.cpp:236) on 'load' operation 6 bit ('i0', FFT.cpp:230) on local variable 'i0', FFT.cpp:7->FFT.cpp:240 due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:19->FFT.cpp:240) on 'fmsub' operation 32 bit ('d1_real', FFT.cpp:28->FFT.cpp:240) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (FFT.cpp:20->FFT.cpp:240) on 'fmadd' operation 32 bit ('d1_imag', FFT.cpp:29->FFT.cpp:240) due to incompatible operation sets.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'READ_STREAM_INPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'READ_STREAM_INPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.29 seconds; current allocated memory: 821.055 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 821.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FROM_BLOCK_TO_CYCLIC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'FROM_BLOCK_TO_CYCLIC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 821.578 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 821.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STREAM_OUT_REVERSE'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'STREAM_OUT_REVERSE'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 822.023 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 822.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reverse_input_stream_UF1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 822.023 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 822.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FFT_Stage1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'FFT_Stage1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 822.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 822.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_Stage1_vectorstream_parameterize' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 822.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 822.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_stage_spatial_unroll_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'R_Pair_loop_R_Group_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 823.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 823.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_stage_spatial_unroll_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'R_Pair_loop_R_Group_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 825.023 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 825.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_stage_spatial_unroll_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'R_Pair_loop_R_Group_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 826.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 826.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_stage_spatial_unroll_5_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'R_Pair_loop_R_Group_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 827.156 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 827.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_stage_spatial_unroll_6_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'R_Pair_loop_R_Group_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 828.133 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 828.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_stage_spatial_unroll_7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'R_Group_loop_bflySize_equal_FFT_NUM'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'R_Group_loop_bflySize_equal_FFT_NUM'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 829.105 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 829.105 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'output_result_array_to_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PostP_Fwd_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'PostP_Fwd_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 829.887 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 829.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_DIT_spatial_unroll_CY_stream_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 830.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 830.066 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FFT_TOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 830.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 830.066 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 830.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc' pipeline 'FROM_BLOCK_TO_CYCLIC' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 831.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc' pipeline 'STREAM_OUT_REVERSE' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 832.934 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reverse_input_stream_UF1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-656] Deadlocks can occur since process reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_rev_stream_0_0_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_databkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_rev_stream_0_1_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_datacud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_rev_stream_1_0_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_datadEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_rev_stream_1_1_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_dataeOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_in_cyclic_0_0_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_datafYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_in_cyclic_0_1_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_datag8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_in_cyclic_1_0_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_datahbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_data_in_cyclic_1_1_RAM_AUTO_1R1W' to 'reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_dataibs' due to the length limit 80
+WARNING: [HLS 200-656] Deadlocks can occur since process reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+WARNING: [RTGEN 206-101] Setting dangling out port 'reverse_input_stream_UF1/reverse_in_stream_vector_read' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reverse_input_stream_UF1'.
+INFO: [HLS 200-741] Implementing PIPO FFT_TOP_reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_databkb using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'FFT_TOP_reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_databkb_memcore' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 834.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc' pipeline 'FFT_Stage1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 836.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_Stage1_vectorstream_parameterize' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-656] Deadlocks can occur since process FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+WARNING: [HLS 200-656] Deadlocks can occur since process FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_Stage1_vectorstream_parameterize'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 836.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_stage_spatial_unroll_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_stage_spatial_unroll_2_s' pipeline 'R_Pair_loop_R_Group_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_stage_spatial_unroll_2_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 837.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_stage_spatial_unroll_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_stage_spatial_unroll_3_s' pipeline 'R_Pair_loop_R_Group_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_stage_spatial_unroll_3_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 841.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_stage_spatial_unroll_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_stage_spatial_unroll_4_s' pipeline 'R_Pair_loop_R_Group_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_stage_spatial_unroll_4_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 843.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_stage_spatial_unroll_5_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_stage_spatial_unroll_5_s' pipeline 'R_Pair_loop_R_Group_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_stage_spatial_unroll_5_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.18 seconds; current allocated memory: 846.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_stage_spatial_unroll_6_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_stage_spatial_unroll_6_s' pipeline 'R_Pair_loop_R_Group_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_65_5_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_stage_spatial_unroll_6_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 849.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_stage_spatial_unroll_7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'FFT_stage_spatial_unroll_7_s' pipeline 'R_Group_loop_bflySize_equal_FFT_NUM' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_stage_spatial_unroll_7_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 853.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'output_result_array_to_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'output_result_array_to_stream' pipeline 'PostP_Fwd_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'output_result_array_to_stream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 856.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_DIT_spatial_unroll_CY_stream_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-656] Deadlocks can occur since process reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+WARNING: [HLS 200-656] Deadlocks can occur since process FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+WARNING: [HLS 200-656] Deadlocks can occur since process reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_DIT_spatial_unroll_CY_stream_vector'.
+INFO: [HLS 200-740] Implementing PIPO FFT_TOP_FFT_DIT_spatial_unroll_CY_stream_vector_data_1_RAM_AUTO_1R1W using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'FFT_TOP_FFT_DIT_spatial_unroll_CY_stream_vector_data_1_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'reverse_in_stream_vector_U(FFT_TOP_fifo_w128_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 859.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FFT_TOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'FFT_TOP/in_r' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'FFT_TOP/out_r' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'FFT_TOP' to 'ap_ctrl_hs'.
+WARNING: [HLS 200-656] Deadlocks can occur since process reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+Resolution: For help on HLS 200-656 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-656.html
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FFT_TOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 860.305 MB.
+INFO: [HLS 200-1958] Successfully applied performance pragma with Target TI='64' on function 'FFT_DIT_spatial_unroll_CY_stream_vector'.
+INFO: [HLS 200-1958] Successfully applied performance pragma with Target TI='64' on function 'reverse_input_stream_UF1'.
+INFO: [HLS 200-1958] Failed to apply performance pragma with Target TI='64' on function 'reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc'.
+INFO: [HLS 200-1958] Failed to apply performance pragma with Target TI='64' on function 'reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc'.
+INFO: [HLS 200-1958] Failed to apply performance pragma with Target TI='64' on function 'reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'FFT_Stage1'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'R_Pair_loop_R_Group_loop'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'R_Group_loop_bflySize_equal_FFT_NUM'.
+INFO: [HLS 200-1958] Failed to apply performance pragma with Target TI='64' on function 'output_result_array_to_stream'.
+INFO: [HLS 200-1957] Successfully applied performance pragma with Target TI='64' on loop 'PostP_Fwd_loop'.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.44 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.5 seconds; current allocated memory: 862.633 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.39 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.42 seconds; current allocated memory: 869.949 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for FFT_TOP.
+INFO: [VLOG 209-307] Generating Verilog RTL for FFT_TOP.
+INFO: [HLS 200-789] **** Estimated Fmax: 346.62 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:22; Allocated memory: 228.816 MB.
+INFO: [HLS 200-1510] Running: export_design -flow syn -rtl verilog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+WARNING: /opt/xilinx/tools/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jul 19 10:27:07 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/FFT_250MHz_data.json outdir=/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip srcdir=/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/misc
+INFO: Copied 37 verilog file(s) to /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/hdl/verilog
+INFO: Copied 32 vhdl file(s) to /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/hdl/vhdl
+Generating 5 subcores in /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/hdl/ip.tmp:
+impl/misc/FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip.tcl
+impl/misc/FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+impl/misc/FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+impl/misc/FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+impl/misc/FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip.tcl
+INFO: Using COE_DIR=/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/hdl/verilog
+INFO: Generating FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip via file impl/misc/FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/tools/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip'...
+INFO: Done generating FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip via file impl/misc/FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1_ip.tcl
+INFO: Generating FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip via file impl/misc/FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip'...
+INFO: Done generating FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip via file impl/misc/FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+INFO: Generating FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip via file impl/misc/FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip'...
+INFO: Done generating FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip via file impl/misc/FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+INFO: Generating FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip via file impl/misc/FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip'...
+INFO: Done generating FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip via file impl/misc/FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1_ip.tcl
+INFO: Generating FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip via file impl/misc/FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip'...
+INFO: Done generating FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip via file impl/misc/FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1_ip.tcl
+INFO: Import ports from HDL: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/hdl/vhdl/FFT_TOP.vhd (FFT_TOP)
+INFO: Add ap_fifo interface in_r
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/tools/Vivado/2024.2/data/ip'.
+INFO: Add ap_fifo interface out_r
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/component.xml
+INFO: Created IP archive /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip/xilinx_com_hls_FFT_TOP_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 19 10:27:30 2025...
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+WARNING: /opt/xilinx/tools/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jul 19 10:27:42 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_vivadosyn.tcl
+# source ./settings.tcl
+## set top_module FFT_TOP
+## set language verilog
+## set family versal
+## set device xcvp1802
+## set package -lsvc4072
+## set speed -3HP-e-S
+## set clock ap_clk
+## set fsm_ext "off"
+## set add_io_buffers false 
+# source -notrace ./extraction.tcl
+# set vivado_proj_name project
+# set vivado_proj_dir .
+# set target_device "${device}${package}${speed}"
+# set target_clk_period_ns "4.000"
+# set target_clk_freq_hz [expr {floor(1000 / $target_clk_period_ns) * 1000000}]
+# set other_clks_freq_hz {}
+# set ip_vlnv xilinx.com:hls:FFT_TOP:1.0
+# set ip_repo_path ../ip
+# set bd_design_name bd_0
+# set bd_inst_name hls_inst
+# set bd_props {}
+# set has_synth true
+# set synth_design_args {-directive sdx_optimization_effort_high}
+# set synth_dcp ""
+# set synth_props {}
+# set has_impl false
+# set impl_props {}
+# set report_options [dict create]
+# dict set report_options report_level 2
+# dict set report_options report_max_paths 10
+# dict set report_options stdout_hls_reports 1
+# dict set report_options stdout_vivado_reports 0
+# dict set report_options hls_project build
+# dict set report_options hls_solution FFT_250MHz
+# dict set report_options has_synth $has_synth
+# dict set report_options has_impl $has_impl
+# dict set report_options vivado_reportbasename $top_module
+# dict set report_options vivado_reportdir ./report
+# dict set report_options hls_impl_dir ..
+# dict set report_options hls_reportdir ../report/$language
+# dict set report_options target_clk_period $target_clk_period_ns
+# dict set report_options target_device $target_device
+# dict set report_options language $language
+# dict set report_options clock_name $clock
+# dict set report_options error_if_impl_timing_fails false
+# dict set report_options topmodule "FFT_TOP"
+# dict set report_options funcmodules {FFT_TOP_reverse_input_stream_UF1_Loop_READ_STREAM_INPUT_proc FFT_TOP_reverse_input_stream_UF1_Loop_FROM_BLOCK_TO_CYCLIC_proc FFT_TOP_reverse_input_stream_UF1_Loop_STREAM_OUT_REVERSE_proc FFT_TOP_reverse_input_stream_UF1 FFT_TOP_FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc FFT_TOP_FFT_Stage1_vectorstream_parameterize FFT_TOP_FFT_stage_spatial_unroll_2_s FFT_TOP_FFT_stage_spatial_unroll_3_s FFT_TOP_FFT_stage_spatial_unroll_4_s FFT_TOP_FFT_stage_spatial_unroll_5_s FFT_TOP_FFT_stage_spatial_unroll_6_s FFT_TOP_FFT_stage_spatial_unroll_7_s FFT_TOP_output_result_array_to_stream FFT_TOP_FFT_DIT_spatial_unroll_CY_stream_vector}
+# dict set report_options bindmodules {FFT_TOP_flow_control_loop_pipe FFT_TOP_reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_databkb_memcore FFT_TOP_reverse_input_stream_UF1_reverse_input_stream_UF1_stream_stream_vector_0_databkb FFT_TOP_fadd_32ns_32ns_32_4_no_dsp_1 FFT_TOP_fsub_32ns_32ns_32_4_no_dsp_1 FFT_TOP_flow_control_loop_delay_pipe FFT_TOP_fmul_32ns_32ns_32_1_primitive_dsp_1 FFT_TOP_fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1 FFT_TOP_fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1 FFT_TOP_sparsemux_9_2_32_1_1 FFT_TOP_sparsemux_17_3_32_1_1 FFT_TOP_sparsemux_33_4_32_1_1 FFT_TOP_sparsemux_65_5_32_1_1 FFT_TOP_sparsemux_129_6_32_1_1 FFT_TOP_FFT_DIT_spatial_unroll_CY_stream_vector_data_1_RAM_AUTO_1R1W_memcore FFT_TOP_FFT_DIT_spatial_unroll_CY_stream_vector_data_1_RAM_AUTO_1R1W FFT_TOP_fifo_w128_d2_S}
+# dict set report_options max_module_depth 8
+# create_project $vivado_proj_name $vivado_proj_dir -part $target_device -force
+# set_property target_language $language [current_project]
+# if { ![file exists $ip_repo_path] } {
+#   error "Cannot find packaged HLS IP"
+# }
+# set_property ip_repo_paths [file normalize $ip_repo_path] [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/tools/Vivado/2024.2/data/ip'.
+# create_bd_design bd_0
+Wrote  : </scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.srcs/sources_1/bd/bd_0/bd_0.bd> 
+# set cell_inst [create_bd_cell -type ip -vlnv $ip_vlnv $bd_inst_name]
+# if { [llength $bd_props] } { 
+#   set_property -dict $bd_props $cell_inst 
+# }
+# make_bd_pins_external $cell_inst
+# make_bd_intf_pins_external $cell_inst
+# set bd_clk_ports [get_bd_ports -filter {TYPE==clk}]
+# if { $target_clk_freq_hz ne "" } { 
+#   foreach bd_clk_port $bd_clk_ports {
+#     # Remove "_0" suffix from BD ports & interfaces so they match IP ports 
+#     set clk_name [regsub {_0$} [get_property name $bd_clk_port] {}]
+#     set port_freq_hz $target_clk_freq_hz
+#     if { [dict exists $other_clks_freq_hz $clk_name] } {
+#         set port_freq_hz [dict get $other_clks_freq_hz $clk_name]
+#     }
+#     set_property CONFIG.FREQ_HZ $port_freq_hz $bd_clk_port
+#   }
+# }
+# foreach bd_port [get_bd_intf_ports] {
+#   set_property name [regsub {_0$} [get_property name $bd_port] {}] $bd_port
+# }
+# foreach bd_port [get_bd_ports -filter {INTF!=TRUE}] {
+#   set_property name [regsub {_0$} [get_property name $bd_port] {}] $bd_port
+# }
+# set s_axi_addr_width_min 32
+WARNING: [BD 5-233] No interface ports matched 'get_bd_intf_ports -filter {MODE == "Slave" && VLNV =~ "xilinx.com:interface:aximm_rtl:*"}'
+# foreach bd_port [get_bd_intf_ports -filter {MODE == "Slave" && VLNV =~ "xilinx.com:interface:aximm_rtl:*"}] {
+#   set bd_port_addr_width [get_property CONFIG.ADDR_WIDTH $bd_port]
+#   if { $bd_port_addr_width < $s_axi_addr_width_min } {
+#     puts "INFO: Updating $bd_port CONFIG.ADDR_WIDTH to $s_axi_addr_width_min"
+#     set_property CONFIG.ADDR_WIDTH $s_axi_addr_width_min $bd_port
+#   }
+# }
+# set_msg_config -id {[BD 41-1265]} -severity {CRITICAL WARNING} -new_severity {INFO}
+# assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Wrote  : </scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.srcs/sources_1/bd/bd_0/bd_0.bd> 
+Verilog Output written to : /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v
+Verilog Output written to : /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/sim/bd_0.v
+Verilog Output written to : /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v
+# set toprtl [make_wrapper -files [get_files ${bd_design_name}.bd] -top]
+# add_files -norecurse $toprtl
+# set top_inst_name [file root [file tail $toprtl]]
+# puts "Using BD top: $top_inst_name"
+Using BD top: bd_0_wrapper
+# set xdc_files [glob -nocomplain ./*.xdc]
+# if { [llength $xdc_files] } {
+#     add_files -fileset constrs_1 -norecurse $xdc_files
+# }
+# launch_runs synth_1 -scripts_only
+INFO: [BD 41-1662] The design 'bd_0.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v
+Verilog Output written to : /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/sim/bd_0.v
+Verilog Output written to : /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hls_inst .
+Exporting to file /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/hw_handoff/bd_0.hwh
+Generated Hardware Definition File /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_0_hls_inst_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+# foreach run [get_runs -filter {IS_SYNTHESIS == 1}] {
+#   reset_run [get_runs $run]
+# }
+# set_property XPM_LIBRARIES {XPM_MEMORY XPM_FIFO} [current_project]
+# hls_vivado_reports_setup $report_options
+TIMESTAMP: HLS-REPORT: initialize report directories: 2025-07-19 10:28:50 PDT
+# if { $has_synth || $has_impl } {
+#   # synth properties setting
+#   set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value {-mode out_of_context} -objects [get_runs synth_1]
+#   set ip_inst [get_ips -quiet ${bd_design_name}*${bd_inst_name}*]
+#   if { ![llength $ip_inst] } {
+#       error "Cannot find HLS IP instance: ${bd_design_name}*${bd_inst_name}*"
+#   }
+#   set synth_run [get_runs -filter {IS_SYNTHESIS == 1} ${ip_inst}*]
+#   if { ![llength $synth_run] } {
+#       error "Cannot find synth run for HLS IP: ${ip_inst}*"
+#   }
+# 
+#   if { [llength $synth_design_args] } {
+#       set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value $synth_design_args -objects $synth_run
+#   }
+# 
+#   if { [llength $synth_props] } {
+#     set_property -dict $synth_props $synth_run
+#   }
+# 
+#   # launch run synth
+#   launch_runs synth_1
+#   wait_on_run synth_1
+#   # synth reports
+#   hls_vivado_reports_synth synth_1 $report_options
+#   if { $synth_dcp ne "" } {
+#     file mkdir [file dirname $synth_dcp]
+#     set run_dcp [glob -nocomplain [get_property DIRECTORY $synth_run]/*.dcp]
+#     if { [llength $run_dcp] != 1 } { error "Cannot find single dcp file for run $synth_run" }
+#     file copy -force $run_dcp $synth_dcp
+#   }
+# }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_0_hls_inst_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sat Jul 19 10:28:50 2025] Launched bd_0_hls_inst_0_synth_1...
+Run output will be captured here: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/runme.log
+[Sat Jul 19 10:28:50 2025] Launched synth_1...
+Run output will be captured here: /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/synth_1/runme.log
+[Sat Jul 19 10:28:50 2025] Waiting for synth_1 to finish...
+WARNING: /opt/xilinx/tools/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+*** Running vivado
+    with args -log bd_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_wrapper.tcl
+
+WARNING: /opt/xilinx/tools/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jul 19 10:32:37 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_0_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/tools/Vivado/2024.2/data/ip'.
+Command: synth_design -top bd_0_wrapper -part xcvp1802-lsvc4072-3HP-e-S -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvp1802'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvp1802'
+INFO: [Device 21-403] Loading part xcvp1802-lsvc4072-3HP-e-S
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1232225
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3529.520 ; gain = 57.875 ; free physical = 315796 ; free virtual = 760906
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_wrapper' [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bd_0' [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/synth_1/.Xil/Vivado-1232205-c04/realtime/bd_0_hls_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/synth_1/.Xil/Vivado-1232205-c04/realtime/bd_0_hls_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_wrapper' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3606.457 ; gain = 134.812 ; free physical = 315700 ; free virtual = 760815
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3621.301 ; gain = 149.656 ; free physical = 315694 ; free virtual = 760813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3621.301 ; gain = 149.656 ; free physical = 315694 ; free virtual = 760813
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3621.301 ; gain = 0.000 ; free physical = 315693 ; free virtual = 760813
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Device 21-9335] Optimized delay calculation is enabled for this device.
+INFO: [Constraints 18-13227] Created floorplan with Advanced Flow Feature Set
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Finished Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/FFT_TOP.xdc]
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3902.469 ; gain = 100.719 ; free physical = 315808 ; free virtual = 760890
+Finished Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/FFT_TOP.xdc]
+Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Ipconfig 75-709] Read and Merge Traffic Stats:  Before Read: 0 insts (0 INI), 0 paths (0 INI). Read In: 0 insts (0 INI), 0 paths (0 INI). After Merge: 0 insts (0 INI), 0 paths (0 INI). 0 error slaves
+INFO: [Ipconfig 75-709] Read and Merge Traffic Stats:  Before Read: 0 insts (0 INI), 0 paths (0 INI). Read In: 8 insts (0 INI), 12 paths (0 INI). After Merge: 8 insts (0 INI), 12 paths (0 INI). 0 error slaves
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3916.344 ; gain = 0.000 ; free physical = 315801 ; free virtual = 760883
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+validate_noc  -part xcvp1802-lsvc4072-3HP-e-S
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3925.250 ; gain = 2.969 ; free physical = 315800 ; free virtual = 760882
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3925.250 ; gain = 453.605 ; free physical = 315793 ; free virtual = 760874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcvp1802-lsvc4072-3HP-e-S
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3933.254 ; gain = 461.609 ; free physical = 315793 ; free virtual = 760874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for bd_0_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for bd_0_i/hls_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3933.254 ; gain = 461.609 ; free physical = 315793 ; free virtual = 760874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3933.254 ; gain = 461.609 ; free physical = 315791 ; free virtual = 760874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 14352 (col length:149)
+BRAMs: 9882 (col length: RAMB18 600 RAMB36 300)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3933.254 ; gain = 461.609 ; free physical = 315792 ; free virtual = 760874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 5166.199 ; gain = 1694.555 ; free physical = 314553 ; free virtual = 759635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 5166.199 ; gain = 1694.555 ; free physical = 314553 ; free virtual = 759635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11328] No retiming is needed, due to no register satisfying retiming conditions
+INFO: [Synth 8-5816] Retiming module `bd_0`
+   Worst Slack before retiming is invalid and worst slack after retiming is invalid
+   Numbers of local forward move = 0, and local backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `bd_0' done
+
+
+INFO: [Synth 8-11328] No retiming is needed, due to no register satisfying retiming conditions
+INFO: [Synth 8-5816] Retiming module `bd_0_wrapper`
+   Worst Slack before retiming is invalid and worst slack after retiming is invalid
+   Numbers of local forward move = 0, and local backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `bd_0_wrapper' done
+
+
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 5176.215 ; gain = 1704.570 ; free physical = 314544 ; free virtual = 759626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `bd_0`
+   Worst Slack before retiming is invalid and worst slack after retiming is invalid
+   Numbers of local forward move = 0, and local backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `bd_0' done
+
+
+INFO: [Synth 8-5816] Retiming module `bd_0_wrapper`
+   Worst Slack before retiming is invalid and worst slack after retiming is invalid
+   Numbers of local forward move = 0, and local backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `bd_0_wrapper' done
+
+
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |bd_0_hls_inst_0 |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |bd_0_hls_inst |     1|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 5338.027 ; gain = 1562.434 ; free physical = 314403 ; free virtual = 759485
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 5338.027 ; gain = 1866.383 ; free physical = 314403 ; free virtual = 759485
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5338.027 ; gain = 0.000 ; free physical = 314402 ; free virtual = 759484
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Device 21-9335] Optimized delay calculation is enabled for this device.
+INFO: [Constraints 18-13227] Created floorplan with Advanced Flow Feature Set
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Ipconfig 75-709] Read and Merge Traffic Stats:  Before Read: 0 insts (0 INI), 0 paths (0 INI). Read In: 0 insts (0 INI), 0 paths (0 INI). After Merge: 0 insts (0 INI), 0 paths (0 INI). 0 error slaves
+INFO: [Ipconfig 75-709] Read and Merge Traffic Stats:  Before Read: 0 insts (0 INI), 0 paths (0 INI). Read In: 8 insts (0 INI), 12 paths (0 INI). After Merge: 8 insts (0 INI), 12 paths (0 INI). 0 error slaves
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5338.027 ; gain = 0.000 ; free physical = 314566 ; free virtual = 759648
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f54c65b2
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 5338.027 ; gain = 3768.973 ; free physical = 314566 ; free virtual = 759648
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 4712.700; main = 4490.677; forked = 275.556
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 6219.367; main = 5324.930; forked = 909.148
+INFO: [Common 17-1381] The checkpoint '/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.runs/synth_1/bd_0_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_0_wrapper_utilization_synth.rpt -pb bd_0_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 19 10:33:52 2025...
+[Sat Jul 19 10:34:03 2025] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:04:33 ; elapsed = 00:05:13 . Memory (MB): peak = 1753.348 ; gain = 0.000 ; free physical = 318819 ; free virtual = 763901
+TIMESTAMP: HLS-REPORT: synthesis open_run: 2025-07-19 10:34:03 PDT
+INFO: HLS-REPORT: Opening synthesis design database: open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xcvp1802-lsvc4072-3HP-e-S
+INFO: [Device 21-403] Loading part xcvp1802-lsvc4072-3HP-e-S
+INFO: [Project 1-454] Reading design checkpoint '/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0.dcp' for cell 'bd_0_i/hls_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.36 . Memory (MB): peak = 3602.398 ; gain = 0.000 ; free physical = 316920 ; free virtual = 762001
+INFO: [Netlist 29-17] Analyzing 3240 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Device 21-9335] Optimized delay calculation is enabled for this device.
+INFO: [Constraints 18-13227] Created floorplan with Advanced Flow Feature Set
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/FFT_TOP.xdc]
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3848.363 ; gain = 98.719 ; free physical = 316701 ; free virtual = 761782
+Finished Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/FFT_TOP.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Ipconfig 75-709] Read and Merge Traffic Stats:  Before Read: 0 insts (0 INI), 0 paths (0 INI). Read In: 0 insts (0 INI), 0 paths (0 INI). After Merge: 0 insts (0 INI), 0 paths (0 INI). 0 error slaves
+INFO: [Ipconfig 75-709] Read and Merge Traffic Stats:  Before Read: 0 insts (0 INI), 0 paths (0 INI). Read In: 8 insts (0 INI), 12 paths (0 INI). After Merge: 8 insts (0 INI), 12 paths (0 INI). 0 error slaves
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4672.824 ; gain = 0.000 ; free physical = 315872 ; free virtual = 760953
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3240 instances were transformed.
+  (CARRY8) => LUT6CY (LUTCY1, LUTCY2): 3052 instances
+  DSPFP32 => DSPFP32 (DSP_FPA_CREG, DSP_FPA_OPM_REG, DSP_FPM_PIPEREG, DSP_FPM_STAGE0, DSP_FPM_STAGE1, DSP_FP_ADDER, DSP_FP_INMUX, DSP_FP_INREG, DSP_FP_OUTPUT, DSP_FP_SRCMX_OPTINV): 20 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 88 instances
+  RAM64M8 => RAM64M8 (RAMD64E5(x8), VCC): 80 instances
+
+open_run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 4672.824 ; gain = 2919.477 ; free physical = 315872 ; free virtual = 760953
+TIMESTAMP: HLS-REPORT: synthesis generate_reports_vivado: 2025-07-19 10:34:47 PDT
+INFO: HLS-REPORT: Running report: report_utilization -file ./report/FFT_TOP_utilization_synth.rpt
+INFO: HLS-REPORT: Running report: report_utilization -hierarchical -hierarchical_depth 8 -file ./report/FFT_TOP_utilization_hierarchical_synth.rpt
+INFO: HLS-REPORT: Running report: report_timing_summary -file ./report/FFT_TOP_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3HP, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:45 ; elapsed = 00:00:42 . Memory (MB): peak = 7438.512 ; gain = 2765.688 ; free physical = 313267 ; free virtual = 758348
+INFO: HLS-REPORT: Running report: report_power -file ./report/FFT_TOP_power_synth.rpt -xpe ./FFT_TOP_power.xpe
+Command: report_power -file ./report/FFT_TOP_power_synth.rpt -xpe ./FFT_TOP_power.xpe
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Designutils 20-5774] No environmental constraints detected, worst case junction temperature (Tj) will be used, this will not impact the dynamic power estimate but will impact the static power shown.
+To more accurately reflect the environmental and thermal operating condition of the application the following constraints should be applied, to reflect the applications specifications:
+   set_operating_conditions -ambient_temp 25
+   set_operating_conditions -thetaja 1.0
+
+Where Ambient Temperature is defined as degrees Celsius and Theta Ja is the effectiveness of the thermal solution described as C/W to represent the rise in junction temperature for every watt dissipated
+To set the junction temperature to a specific value the following constraint should be used:
+   set_operating_conditions -junction_temp 25
+
+For the Versal architecture, a default junction temperature of 100C is assumed when no environmental conditions are set (Ta/Tj/TJA).
+17 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 8014.125 ; gain = 575.613 ; free physical = 313152 ; free virtual = 758234
+INFO: HLS-REPORT: Running report: report_timing -max_paths 10 -file ./report/FFT_TOP_timing_paths_synth.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3HP, Temperature grade: E, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 10 -nworst 1 -delay_type max -sort_by slack.
+INFO: HLS-REPORT: Running report: report_design_analysis -file ./report/FFT_TOP_design_analysis_synth.rpt
+INFO: [Implflow 30-839]  
+INFO: HLS-REPORT: Running report: ::tclapp::xilinx::designutils::report_failfast -detailed_report synth -file ./report/FFT_TOP_failfast_synth.rpt
+ -I- design metrics completed in 1 seconds
+ -I- DONT_TOUCH metric completed in 0 seconds
+ -I- MARK_DEBUG metric completed in 0 seconds
+ -I- utilization metrics completed in 3 seconds
+ -I- control set metrics completed in 0 seconds
+ -I- methodology check metrics completed in 2 seconds
+ -I- average fanout metrics completed in 2 seconds (0 modules)
+ -I- non-FD high fanout nets completed in 2 seconds
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[23]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[23]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[25]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[25]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[16]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[22]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[24]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[16]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[22]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[24]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[23]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[23]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[21]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[21]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[25]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[25]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[16]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[22]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[24]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[16]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[22]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[24]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[18]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[18]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[21]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[21]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[27]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[27]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[18]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[18]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[15]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[15]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[20]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[20]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[27]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[27]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[15]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[15]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[13]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[13]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[20]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[20]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[12]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[12]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[13]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[13]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[12]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[12]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[17]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[17]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[8]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[8]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[17]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[17]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[26]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[26]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[8]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[8]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[19]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[19]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[26]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[26]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[6]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[6]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[19]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[19]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[9]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[9]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[28]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[28]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[6]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[6]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[9]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[9]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[28]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[28]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[14]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[14]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[2]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[2]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[11]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[11]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[14]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[14]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[2]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[2]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[11]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[11]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[1]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[1]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[3]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[3]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[1]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[1]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[4]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[4]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_imag_reg_848_reg[31]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/zext_ln10_reg_753_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_4_U0/d1_real_reg_843_reg[31]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_imag_reg_800_reg[3]/D})
+ -W- LUT/Net budgeting - the number of pins (10) and cells (9) differ. Skipping path ({bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/zext_ln10_reg_705_pp0_iter1_reg_reg[0]/C --> bd_0_i/hls_inst/inst/FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_3_U0/d1_real_reg_795_reg[3]/D})
+ -I- path budgeting metrics completed in 1 seconds
+#  +-----------------------------------------------------------------------------------------+
+#  | Design Summary                                                                          |
+#  | design_1                                                                                |
+#  | xcvp1802-lsvc4072-3HP-e-S                                                               |
+#  +-----------------------------------------------------------+-----------+--------+--------+
+#  | Criteria                                                  | Guideline | Actual | Status |
+#  +-----------------------------------------------------------+-----------+--------+--------+
+#  | LUT                                                       | 70%       | 0.52%  | OK     |
+#  | FD                                                        | 50%       | 0.16%  | OK     |
+#  | LUTRAM+SRL                                                | 25%       | 0.04%  | OK     |
+#  | LOOKAHEAD8                                                | 25%       | 0.11%  | OK     |
+#  | DSP                                                       | 80%       | 0.14%  | OK     |
+#  | RAMB                                                      | 80%       | 0.57%  | OK     |
+#  | URAM                                                      | 80%       | 0.00%  | OK     |
+#  | DSP+RAMB+URAM (Avg)                                       | 70%       | 0.35%  | OK     |
+#  | BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+#  | DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+#  | MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+#  | Control Sets                                              | 63017     | 178    | OK     |
+#  | Average Fanout for modules > 100k cells                   | 4         | 1.83   | OK     |
+#  | Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+#  | Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
+#  +-----------------------------------------------------------+-----------+--------+--------+
+#  | TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+#  | TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+#  | TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+#  | TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+#  | TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
+#  +-----------------------------------------------------------+-----------+--------+--------+
+#  | Number of paths above max LUT budgeting (0.250ns)         | 0         | 0      | OK     |
+#  | Number of paths above max Net budgeting (0.177ns)         | 0         | 0      | OK     |
+#  +-----------------------------------------------------------+-----------+--------+--------+
+ -I- Generated file /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/report/FFT_TOP_failfast_synth.rpt
+ -I- Number of criteria to review: 0
+ -I- This report should be run before placing the design and uses conservative guidelines beyond which runtime and timing closure will likely be more challenging
+ -I- report_failfast completed in 11 seconds
+TIMESTAMP: HLS-REPORT: synthesis gen_data_dict_vivado: 2025-07-19 10:35:52 PDT
+TIMESTAMP: HLS-REPORT: synth extract_util_hier: 2025-07-19 10:35:52 PDT
+TIMESTAMP: HLS-REPORT: synth get_cell_hier_data: 2025-07-19 10:35:52 PDT
+TIMESTAMP: HLS-REPORT: synth get_timing_paths: 2025-07-19 10:35:52 PDT
+TIMESTAMP: HLS-REPORT: synth process timing paths: 2025-07-19 10:35:52 PDT
+TIMESTAMP: HLS-REPORT: synth get_all_vv_rpt_files: 2025-07-19 10:35:52 PDT
+TIMESTAMP: HLS-REPORT: synthesis write_reports_vivado: 2025-07-19 10:35:52 PDT
+HLS EXTRACTION: synth area_totals:  0 3360896 6721792 14352 9882 0 2549
+HLS EXTRACTION: synth area_current: 0 17311 10881 20 56 0 49 0 0 0
+HLS EXTRACTION: synth resources_dict: AVAIL_LUT 3360896 LUT 17311 AVAIL_FF 6721792 FF 10881 AVAIL_DSP 14352 DSP 20 AVAIL_BRAM 9882 BRAM 56 AVAIL_URAM 2549 URAM 0 LATCH 0 SRL 49 AVAIL_CLB 0 CLB 0
+INFO: HLS-REPORT: generated /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/verilog/report/vivado_syn.xml
+INFO: HLS-REPORT: generated /scratch/juju/HP-FFT-HLS/n128/UF1/build/FFT_250MHz/impl/report/verilog/FFT_TOP_export.rpt
+
+
+Implementation tool: Xilinx Vivado v.2024.2
+Project:             build
+Solution:            FFT_250MHz
+Device target:       xcvp1802-lsvc4072-3HP-e-S
+Report date:         Sat Jul 19 10:35:52 PDT 2025
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:          17311
+FF:           10881
+DSP:             20
+BRAM:            56
+URAM:             0
+LATCH:            0
+SRL:             49
+CLB:              0
+
+#=== Final timing ===
+CP required:                     4.000
+CP achieved post-synthesis:      3.433
+Timing met
+
+TIMESTAMP: HLS-REPORT: synthesis end: 2025-07-19 10:35:52 PDT
+# if { $has_impl } {
+#   # launch run impl
+#   if { [llength $impl_props] } {
+#     set_property -dict $impl_props [get_runs impl_1]
+#   }
+#   launch_runs impl_1
+#   wait_on_run impl_1
+#   # impl reports
+#   hls_vivado_reports_impl impl_1 $report_options
+# }
+# hls_vivado_reports_finalize $report_options
+TIMESTAMP: HLS-REPORT: all reports complete: 2025-07-19 10:35:52 PDT
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 19 10:35:52 2025...
+INFO: [HLS 200-802] Generated output file build/FFT_250MHz/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:09:00; Allocated memory: 8.359 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 446.13 seconds. Total CPU system time: 37.83 seconds. Total elapsed time: 572.33 seconds; peak allocated memory: 879.309 MB.

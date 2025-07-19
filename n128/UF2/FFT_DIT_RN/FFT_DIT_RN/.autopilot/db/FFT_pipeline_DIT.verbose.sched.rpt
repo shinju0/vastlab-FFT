@@ -1,0 +1,119 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_pipeline_DIT'
+================================================================
+* Date:           Wed Jul 16 18:22:36 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  5.091 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      477|      477|  2.428 us|  2.428 us|  256|  256|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 2, States = { 1 2 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [2/2] (0.00ns)   --->   "%call_ln652 = call void @FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc, i7 %revIdxTab" [FFT.cpp:652]   --->   Operation 3 'call' 'call_ln652' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 4 [2/2] (0.00ns)   --->   "%call_ln659 = call void @FFT_DIT_spatial_unroll_CY_stream_vector, i256 %in_r, i256 %mid, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1" [FFT.cpp:659]   --->   Operation 4 'call' 'call_ln659' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln644 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_71" [FFT.cpp:644]   --->   Operation 5 'specdataflowpipeline' 'specdataflowpipeline_ln644' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %mid, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %in_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/2] (0.00ns)   --->   "%call_ln652 = call void @FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc, i7 %revIdxTab" [FFT.cpp:652]   --->   Operation 8 'call' 'call_ln652' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln659 = call void @FFT_DIT_spatial_unroll_CY_stream_vector, i256 %in_r, i256 %mid, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1" [FFT.cpp:659]   --->   Operation 9 'call' 'call_ln659' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%ret_ln660 = ret" [FFT.cpp:660]   --->   Operation 10 'ret' 'ret_ln660' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

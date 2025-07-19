@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vitis HLS Report for 'output_result_array_to_stream'
+================================================================
+* Date:           Wed Jul 16 18:22:38 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  4.956 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       35|       35|  0.173 us|  0.173 us|   33|   33|  loop auto-rewind stp (delay=1 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PostP_Fwd_loop  |       33|       33|         3|          1|          1|    32|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     32|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     45|    -|
+|Register         |        -|    -|      12|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      12|     77|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |i_fu_203_p2                |         +|   0|  0|  13|           5|           1|
+    |ap_condition_159           |       and|   0|  0|   2|           1|           1|
+    |icmp_ln56_fu_209_p2        |      icmp|   0|  0|  13|           5|           2|
+    |ap_block_pp0_stage0_01001  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  32|          13|           7|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i45_load         |   9|          2|    5|         10|
+    |i45_fu_52                         |   9|          2|    5|         10|
+    |mid_blk_n                         |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  45|         10|   13|         26|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------+---+----+-----+-----------+
+    |                       Name                       | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                         |  1|   0|    1|          0|
+    |ap_condition_exit_pp0_iter0_stage0_pp0_iter1_reg  |  1|   0|    1|          0|
+    |ap_done_reg                                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg                  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg                  |  1|   0|    1|          0|
+    |i45_fu_52                                         |  5|   0|    5|          0|
+    +--------------------------------------------------+---+----+-----+-----------+
+    |Total                                             | 12|   0|   12|          0|
+    +--------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+|                                      RTL Ports                                     | Dir | Bits|  Protocol  |                               Source Object                               |    C Type    |
++------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+|ap_clk                                                                              |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_rst                                                                              |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_start                                                                            |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_done                                                                             |  out|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_continue                                                                         |   in|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_idle                                                                             |  out|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|ap_ready                                                                            |  out|    1|  ap_ctrl_hs|                                              output_result_array_to_stream|  return value|
+|mid_din                                                                             |  out|  256|     ap_fifo|                                                                        mid|       pointer|
+|mid_full_n                                                                          |   in|    1|     ap_fifo|                                                                        mid|       pointer|
+|mid_write                                                                           |  out|    1|     ap_fifo|                                                                        mid|       pointer|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_address0  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_ce0       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_q0        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_address1  |  out|    6|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_ce1       |  out|    1|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|         array|
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_q1        |   in|   32|   ap_memory|  FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|         array|
++------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+

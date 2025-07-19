@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc'
+================================================================
+* Date:           Wed Jul 16 18:22:37 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  4.956 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       46|       46|  0.228 us|  0.228 us|   32|   32|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- FFT_Stage1  |       44|       44|        14|          1|          1|    32|       yes|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     34|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    0|    5088|   4760|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     54|    -|
+|Register         |        -|    -|      33|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    5121|   4848|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       4|      9|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |              Instance             |             Module            | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |fadd_32ns_32ns_32_14_no_dsp_1_U47  |fadd_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fadd_32ns_32ns_32_14_no_dsp_1_U48  |fadd_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fadd_32ns_32ns_32_14_no_dsp_1_U51  |fadd_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fadd_32ns_32ns_32_14_no_dsp_1_U52  |fadd_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fsub_32ns_32ns_32_14_no_dsp_1_U49  |fsub_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fsub_32ns_32ns_32_14_no_dsp_1_U50  |fsub_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fsub_32ns_32ns_32_14_no_dsp_1_U53  |fsub_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    |fsub_32ns_32ns_32_14_no_dsp_1_U54  |fsub_32ns_32ns_32_14_no_dsp_1  |        0|   0|  636|  595|    0|
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |Total                              |                               |        0|   0| 5088| 4760|    0|
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |m_fu_281_p2                       |         +|   0|  0|  13|           5|           1|
+    |ap_condition_261                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln496_fu_287_p2              |      icmp|   0|  0|  13|           5|           2|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  34|          14|           8|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                        |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter13_reg  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_m1_load           |   9|          2|    5|         10|
+    |data_s1_stream_vector_blk_n        |   9|          2|    1|          2|
+    |m1_fu_102                          |   9|          2|    5|         10|
+    |reverse_in_stream_vector_blk_n     |   9|          2|    1|          2|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  54|         12|   14|         28|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+---+----+-----+-----------+
+    |                Name               | FF| LUT| Bits| Const Bits|
+    +-----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                          |  1|   0|    1|          0|
+    |ap_done_reg                        |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9            |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter10_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter11_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter12_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter13_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg   |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg   |  1|   0|    1|          0|
+    |m1_fu_102                          |  5|   0|    5|          0|
+    +-----------------------------------+---+----+-----+-----------+
+    |Total                              | 33|   0|   33|          0|
+    +-----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++-----------------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk                                   |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|ap_rst                                   |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|ap_start                                 |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|ap_done                                  |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|ap_continue                              |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|ap_idle                                  |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|ap_ready                                 |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc|  return value|
+|reverse_in_stream_vector_dout            |   in|  256|     ap_fifo|                                   reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_empty_n         |   in|    1|     ap_fifo|                                   reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_read            |  out|    1|     ap_fifo|                                   reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_num_data_valid  |   in|    3|     ap_fifo|                                   reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_fifo_cap        |   in|    3|     ap_fifo|                                   reverse_in_stream_vector|       pointer|
+|data_s1_stream_vector_din                |  out|  256|     ap_fifo|                                      data_s1_stream_vector|       pointer|
+|data_s1_stream_vector_full_n             |   in|    1|     ap_fifo|                                      data_s1_stream_vector|       pointer|
+|data_s1_stream_vector_write              |  out|    1|     ap_fifo|                                      data_s1_stream_vector|       pointer|
+|data_s1_stream_vector_num_data_valid     |   in|   32|     ap_fifo|                                      data_s1_stream_vector|       pointer|
+|data_s1_stream_vector_fifo_cap           |   in|   32|     ap_fifo|                                      data_s1_stream_vector|       pointer|
++-----------------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

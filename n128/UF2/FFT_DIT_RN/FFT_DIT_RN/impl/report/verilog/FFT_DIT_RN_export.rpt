@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2024.2
+Project:             FFT_DIT_RN
+Solution:            FFT_DIT_RN
+Device target:       xc7z020-clg400-1
+Report date:         Wed Jul 16 19:04:07 PDT 2025
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:          43186
+FF:           72277
+DSP:            120
+BRAM:           112
+URAM:             0
+LATCH:            0
+SRL:           3916
+CLB:              0
+
+#=== Final timing ===
+CP required:                     4.000
+CP achieved post-synthesis:      4.219
+Timing not met

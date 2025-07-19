@@ -1,0 +1,324 @@
+<stg><name>FFT_DIT_RN</name>
+
+
+<trans_list>
+
+<trans id="24" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="25" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="26" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="27" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="28" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="63" bw="256" op_0_bw="64">
+<![CDATA[
+entry:5 %mid = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="mid"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="66" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="256" op_3_bw="7" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32">
+<![CDATA[
+entry:8 %call_ln754 = call void @FFT_pipeline_DIT, i256 %in_r, i256 %mid, i7 %revIdxTab, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1
+
+]]></Node>
+<StgValue><ssdm name="call_ln754"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="9" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="66" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="256" op_3_bw="7" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32">
+<![CDATA[
+entry:8 %call_ln754 = call void @FFT_pipeline_DIT, i256 %in_r, i256 %mid, i7 %revIdxTab, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1
+
+]]></Node>
+<StgValue><ssdm name="call_ln754"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="10" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="67" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="0" op_11_bw="0" op_12_bw="0">
+<![CDATA[
+entry:9 %call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1, i256 %mid, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="11" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<![CDATA[
+entry:10 %call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1, i7 %revIdxTab, i32 %p_buf_1, i32 %p_buf
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="12" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="67" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="0" op_11_bw="0" op_12_bw="0">
+<![CDATA[
+entry:9 %call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1, i256 %mid, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="13" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<![CDATA[
+entry:10 %call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1, i7 %revIdxTab, i32 %p_buf_1, i32 %p_buf
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="14" st_id="5" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="69" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="0" op_11_bw="0">
+<![CDATA[
+entry:11 %call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2, i256 %out_r, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="15" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+entry:0 %spectopmodule_ln745 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_72
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln745"/></StgValue>
+</operation>
+
+<operation id="16" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="59" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %in_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="17" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="60" bw="0" op_0_bw="0" op_1_bw="256">
+<![CDATA[
+entry:2 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i256 %in_r
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="18" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="61" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %out_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="19" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="0" op_0_bw="0" op_1_bw="256">
+<![CDATA[
+entry:4 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i256 %out_r
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="20" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="64" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="256" op_8_bw="256">
+<![CDATA[
+entry:6 %empty = specchannel i32 @_ssdm_op_SpecChannel, void @mid_str, i32 1, void @p_str, void @p_str, i32 8, i32 8, i256 %mid, i256 %mid
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+
+<operation id="21" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="65" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %mid, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="22" st_id="6" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="69" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="0" op_11_bw="0">
+<![CDATA[
+entry:11 %call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2, i256 %out_r, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="23" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="70" bw="0">
+<![CDATA[
+entry:12 %ret_ln768 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln768"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

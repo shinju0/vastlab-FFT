@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1'
+================================================================
+* Date:           Wed Jul 16 18:22:36 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  1.870 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |      131|      131|  0.524 us|  0.524 us|  130|  130|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_757_1  |      129|      129|         4|          2|          1|    64|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [FFT.cpp:757]   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %mid, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.58ns)   --->   "%store_ln757 = store i7 0, i7 %i" [FFT.cpp:757]   --->   Operation 9 'store' 'store_ln757' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln757 = br void %for.inc" [FFT.cpp:757]   --->   Operation 10 'br' 'br_ln757' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.87>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i_2 = load i7 %i" [FFT.cpp:757]   --->   Operation 11 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.87ns)   --->   "%icmp_ln757 = icmp_eq  i7 %i_2, i7 64" [FFT.cpp:757]   --->   Operation 12 'icmp' 'icmp_ln757' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (1.87ns)   --->   "%add_ln757 = add i7 %i_2, i7 1" [FFT.cpp:757]   --->   Operation 13 'add' 'add_ln757' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln757 = br i1 %icmp_ln757, void %for.inc.split, void %for.body.i.preheader.exitStub" [FFT.cpp:757]   --->   Operation 14 'br' 'br_ln757' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 54 'ret' 'ret_ln0' <Predicate = (icmp_ln757)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 15 [1/1] ( I:1.46ns O:1.46ns )   --->   "%mid_read = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %mid" [FFT.cpp:758]   --->   Operation 15 'read' 'mid_read' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 8> <FIFO>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%trunc_ln758 = trunc i256 %mid_read" [FFT.cpp:758]   --->   Operation 16 'trunc' 'trunc_ln758' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln758_2 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 32, i32 63" [FFT.cpp:758]   --->   Operation 17 'partselect' 'trunc_ln758_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln758_3 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 64, i32 95" [FFT.cpp:758]   --->   Operation 18 'partselect' 'trunc_ln758_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln758_4 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 96, i32 127" [FFT.cpp:758]   --->   Operation 19 'partselect' 'trunc_ln758_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln758_5 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 128, i32 159" [FFT.cpp:758]   --->   Operation 20 'partselect' 'trunc_ln758_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln758_6 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 160, i32 191" [FFT.cpp:758]   --->   Operation 21 'partselect' 'trunc_ln758_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%trunc_ln758_7 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 192, i32 223" [FFT.cpp:758]   --->   Operation 22 'partselect' 'trunc_ln758_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln758_8 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %mid_read, i32 224, i32 255" [FFT.cpp:758]   --->   Operation 23 'partselect' 'trunc_ln758_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.58ns)   --->   "%store_ln757 = store i7 %add_ln757, i7 %i" [FFT.cpp:757]   --->   Operation 24 'store' 'store_ln757' <Predicate = true> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 1.68>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln757 = zext i7 %i_2" [FFT.cpp:757]   --->   Operation 25 'zext' 'zext_ln757' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln757 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_71" [FFT.cpp:757]   --->   Operation 26 'specpipeline' 'specpipeline_ln757' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%speclooptripcount_ln757 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [FFT.cpp:757]   --->   Operation 27 'speclooptripcount' 'speclooptripcount_ln757' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln757 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [FFT.cpp:757]   --->   Operation 28 'specloopname' 'specloopname_ln757' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%bitcast_ln758 = bitcast i32 %trunc_ln758" [FFT.cpp:758]   --->   Operation 29 'bitcast' 'bitcast_ln758' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%bitcast_ln758_1 = bitcast i32 %trunc_ln758_2" [FFT.cpp:758]   --->   Operation 30 'bitcast' 'bitcast_ln758_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%bitcast_ln758_2 = bitcast i32 %trunc_ln758_3" [FFT.cpp:758]   --->   Operation 31 'bitcast' 'bitcast_ln758_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%bitcast_ln758_3 = bitcast i32 %trunc_ln758_4" [FFT.cpp:758]   --->   Operation 32 'bitcast' 'bitcast_ln758_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%bitcast_ln758_4 = bitcast i32 %trunc_ln758_5" [FFT.cpp:758]   --->   Operation 33 'bitcast' 'bitcast_ln758_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%bitcast_ln758_5 = bitcast i32 %trunc_ln758_6" [FFT.cpp:758]   --->   Operation 34 'bitcast' 'bitcast_ln758_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln758_6 = bitcast i32 %trunc_ln758_7" [FFT.cpp:758]   --->   Operation 35 'bitcast' 'bitcast_ln758_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%bitcast_ln758_7 = bitcast i32 %trunc_ln758_8" [FFT.cpp:758]   --->   Operation 36 'bitcast' 'bitcast_ln758_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 37 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 38 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 39 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 40 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 41 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 42 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 43 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_addr" [FFT.cpp:758]   --->   Operation 44 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 45 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_2, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1_addr" [FFT.cpp:758]   --->   Operation 45 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 46 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_4, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2_addr" [FFT.cpp:758]   --->   Operation 46 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 47 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_6, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3_addr" [FFT.cpp:758]   --->   Operation 47 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3_addr = getelementptr i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3, i64 0, i64 %zext_ln757" [FFT.cpp:758]   --->   Operation 48 'getelementptr' 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_1, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0_addr" [FFT.cpp:758]   --->   Operation 49 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 50 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_3, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1_addr" [FFT.cpp:758]   --->   Operation 50 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 51 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_5, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2_addr" [FFT.cpp:758]   --->   Operation 51 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 52 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln758 = store i32 %bitcast_ln758_7, i6 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3_addr" [FFT.cpp:758]   --->   Operation 52 'store' 'store_ln758' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln757 = br void %for.inc" [FFT.cpp:757]   --->   Operation 53 'br' 'br_ln757' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 1.588ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln757', FFT.cpp:757) of constant 0 on local variable 'i', FFT.cpp:757 [12]  (1.588 ns)
+
+ <State 2>: 1.870ns
+The critical path consists of the following:
+	'load' operation 7 bit ('i', FFT.cpp:757) on local variable 'i', FFT.cpp:757 [15]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln757', FFT.cpp:757) [16]  (1.870 ns)
+
+ <State 3>: 1.588ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln757', FFT.cpp:757) of variable 'add_ln757', FFT.cpp:757 on local variable 'i', FFT.cpp:757 [57]  (1.588 ns)
+
+ <State 4>: 1.682ns
+The critical path consists of the following:
+	'getelementptr' operation 6 bit ('FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_addr', FFT.cpp:758) [41]  (0.000 ns)
+	'store' operation 0 bit ('store_ln758', FFT.cpp:758) of variable 'bitcast_ln758', FFT.cpp:758 on array 'FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0' [48]  (1.682 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

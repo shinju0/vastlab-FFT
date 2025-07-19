@@ -1,0 +1,305 @@
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:2272:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:2272:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:2286:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:2286:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:2300:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:2300:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:3922:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:3922:7: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41328:3: warning: Added loop label VITIS_LOOP_463_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_463_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41328:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41330:4: warning: Added loop label VITIS_LOOP_465_2:   [xilinx-label-all-loops]
+   for (int c = 0; c < FFT_CHANNELS; ++c)
+   ^~~
+   VITIS_LOOP_465_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41330:4: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41396:3: warning: Added loop label VITIS_LOOP_848_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_848_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41396:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41454:3: warning: Added loop label VITIS_LOOP_927_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_927_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41454:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41514:3: warning: Added loop label VITIS_LOOP_987_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_987_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41514:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41573:3: warning: Added loop label VITIS_LOOP_1046_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_1046_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41573:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41575:4: warning: Added loop label VITIS_LOOP_1048_2:   [xilinx-label-all-loops]
+   for (int c = 0; c < FFT_CHANNELS; ++c)
+   ^~~
+   VITIS_LOOP_1048_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41575:4: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41618:2: warning: Added loop label VITIS_LOOP_1091_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1091_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41618:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41633:2: warning: Added loop label VITIS_LOOP_1106_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1106_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:41633:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42003:2: warning: Added loop label VITIS_LOOP_1576_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1576_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42003:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42018:2: warning: Added loop label VITIS_LOOP_1591_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1591_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42018:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42075:2: warning: Added loop label VITIS_LOOP_1648_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < FFT_LENGTH; ++i) {
+ ^~~
+ VITIS_LOOP_1648_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42075:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42126:2: warning: Added loop label VITIS_LOOP_1699_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < FFT_LENGTH; ++i) {
+ ^~~
+ VITIS_LOOP_1699_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42126:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42352:9: warning: Added loop label VITIS_LOOP_1967_1:   [xilinx-label-all-loops]
+        for (int i=0; i<length; i++) {
+        ^~~
+        VITIS_LOOP_1967_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42352:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42403:9: warning: Added loop label VITIS_LOOP_2018_1:   [xilinx-label-all-loops]
+        for (int i=0; i<length; i++) {
+        ^~~
+        VITIS_LOOP_2018_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:42403:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50232:5: warning: Added loop label VITIS_LOOP_127_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_127_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50232:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50248:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_143_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50248:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50264:75: warning: Added loop label VITIS_LOOP_169_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ++() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_169_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50264:75: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50269:75: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator --() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_170_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50269:75: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50278:106: warning: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator +=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_198_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50278:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50283:106: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator -=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_199_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50283:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50288:106: warning: Added loop label VITIS_LOOP_200_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator *=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_200_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50288:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50293:106: warning: Added loop label VITIS_LOOP_201_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator /=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_201_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50293:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50298:106: warning: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator %=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_202_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50298:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50303:106: warning: Added loop label VITIS_LOOP_203_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator &=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_203_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50303:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50308:106: warning: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator |=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_204_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50308:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50313:106: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ^=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_205_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50313:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50318:107: warning: Added loop label VITIS_LOOP_206_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator <<=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_206_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50318:107: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50323:107: warning: Added loop label VITIS_LOOP_207_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator >>=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_207_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50323:107: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50329:91: warning: Added loop label VITIS_LOOP_222_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_add() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_222_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50329:91: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50334:92: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_mult() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                           ^~~
+                                                                                           VITIS_LOOP_223_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50334:92: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50339:91: warning: Added loop label VITIS_LOOP_224_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_and() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_224_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50339:91: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50344:90: warning: Added loop label VITIS_LOOP_225_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_or() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                         ^~~
+                                                                                         VITIS_LOOP_225_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50344:90: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50349:91: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_xor() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_226_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50349:91: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50355:132: warning: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_256_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50355:132: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50360:133: warning: Added loop label VITIS_LOOP_257_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_257_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50360:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50365:133: warning: Added loop label VITIS_LOOP_258_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator ==(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_258_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50365:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50370:133: warning: Added loop label VITIS_LOOP_259_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator !=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_259_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50370:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50375:133: warning: Added loop label VITIS_LOOP_260_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_260_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50375:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50380:132: warning: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_261_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50380:132: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50567:2: warning: Added loop label VITIS_LOOP_7_1:   [xilinx-label-all-loops]
+ for (int k = 0; k < 128; ++k) {
+ ^~~
+ VITIS_LOOP_7_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50567:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50569:3: warning: Added loop label VITIS_LOOP_9_2:   [xilinx-label-all-loops]
+  for (int n = 0; n < 128; ++n) {
+  ^~~
+  VITIS_LOOP_9_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50569:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50586:2: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
+ for (int b = 0; b < 1; b++){
+ ^~~
+ VITIS_LOOP_26_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50586:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50587:3: warning: Added loop label VITIS_LOOP_27_2:   [xilinx-label-all-loops]
+  for (int i = 0; i < 128; i++) {
+  ^~~
+  VITIS_LOOP_27_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50587:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50613:2: warning: Added loop label VITIS_LOOP_53_3:   [xilinx-label-all-loops]
+ for (auto &v : variants) {
+ ^~~
+ VITIS_LOOP_53_3: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50613:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50617:3: warning: Added loop label VITIS_LOOP_57_4:   [xilinx-label-all-loops]
+  while (!xn_input_strm.empty()) xn_input_strm.read();
+  ^~~~~
+  VITIS_LOOP_57_4: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50617:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50618:3: warning: Added loop label VITIS_LOOP_58_5:   [xilinx-label-all-loops]
+  while (!xk_output_strm.empty()) xk_output_strm.read();
+  ^~~~~
+  VITIS_LOOP_58_5: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50618:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50621:3: warning: Added loop label VITIS_LOOP_61_6:   [xilinx-label-all-loops]
+  for (int b = 0; b < 1; ++b) {
+  ^~~
+  VITIS_LOOP_61_6: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50621:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50622:4: warning: Added loop label VITIS_LOOP_62_7:   [xilinx-label-all-loops]
+   for (int idx = 0; idx < 128/(2*2); ++idx) {
+   ^~~
+   VITIS_LOOP_62_7: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50622:4: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50624:5: warning: Added loop label VITIS_LOOP_64_8:   [xilinx-label-all-loops]
+    for (int u = 0; u < 2*2; ++u)
+    ^~~
+    VITIS_LOOP_64_8: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50624:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50634:3: warning: Added loop label VITIS_LOOP_74_9:   [xilinx-label-all-loops]
+  for (int b = 0; b < 1; ++b) {
+  ^~~
+  VITIS_LOOP_74_9: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50634:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50635:4: warning: Added loop label VITIS_LOOP_75_10:   [xilinx-label-all-loops]
+   for (int idx = 0; idx < 128/(2*2); ++idx) {
+   ^~~
+   VITIS_LOOP_75_10: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50635:4: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50637:5: warning: Added loop label VITIS_LOOP_77_11:   [xilinx-label-all-loops]
+    for (int u = 0; u < 2*2; ++u)
+    ^~~
+    VITIS_LOOP_77_11: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50637:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50644:3: warning: Added loop label VITIS_LOOP_84_12:   [xilinx-label-all-loops]
+  for (int i = 0; i < 128; ++i) {
+  ^~~
+  VITIS_LOOP_84_12: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50644:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50660:2: warning: Added loop label VITIS_LOOP_100_13:   [xilinx-label-all-loops]
+ for (int b = 0; b < 1; b++){
+ ^~~
+ VITIS_LOOP_100_13: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50660:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50665:2: warning: Added loop label VITIS_LOOP_105_14:   [xilinx-label-all-loops]
+ for (int i = 0; i < 128; i++)
+ ^~~
+ VITIS_LOOP_105_14: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50665:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50670:2: warning: Added loop label VITIS_LOOP_110_15:   [xilinx-label-all-loops]
+ for (int i = 0; i < 128; i++)
+ ^~~
+ VITIS_LOOP_110_15: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/testbench.pp.0.cpp:50670:2: note: FIX-IT applied suggested code changes

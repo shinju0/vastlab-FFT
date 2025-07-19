@@ -1,10 +1,10 @@
 #!/bin/bash
 ### You can also run run.sh directly after logging into the server in interactive mode using: srun -c32 --mem=180G --pty bash
-source env.sh 
+source env_juju.sh 
 
 # List of (n, UF) pairs
 # declare -a CONFIGS=("256 1" "256 4")
-declare -a CONFIGS=("1024 Baseline2_no_StagePipeline")
+declare -a CONFIGS=("128 1")
 
 # Ensure the main build directory exists
 mkdir -p "$CUR_RSN_WORKSPACE/build"
@@ -17,11 +17,11 @@ do
     echo "--- Building configuration: n=$n, UF=$UF ---"
 
     # Prepare build directories
-    rm -rf "$BUILD_LOC/n${n}/UF${UF}"
+    rm -rf "$BUILD_LOC/n${n}/UF${UF}_build"
     mkdir -p "$BUILD_LOC/n${n}"
 
     # Copy relevant source files
-    cp -R "$CUR_RSN_WORKSPACE/n${n}/${UF}" "$BUILD_LOC/n${n}/UF${UF}"
+    cp -R "$CUR_RSN_WORKSPACE/n${n}/UF${UF}" "$BUILD_LOC/n${n}/UF${UF}"
     cp "$CUR_RSN_WORKSPACE/common.tcl" "$BUILD_LOC"
 
     # Run Vitis HLS build

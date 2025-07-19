@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "FFT_DIF_NR",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "FFT_DIF_NR"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/scratch/juju/HP-FFT-HLS/n128/UF2/project.tcl",
+    "sourceLine": 7,
+    "success": true
+  }
+]

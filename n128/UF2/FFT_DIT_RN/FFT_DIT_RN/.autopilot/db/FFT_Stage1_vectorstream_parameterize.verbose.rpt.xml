@@ -1,0 +1,120 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'FFT_Stage1_vectorstream_parameterize'" level="0">
+<item name = "Date">Wed Jul 16 18:22:37 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">FFT_DIT_RN</item>
+<item name = "Solution">FFT_DIT_RN (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 4.956 ns, 1.08 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">46, 46, 0.228 us, 0.228 us, 32, 32, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc_U0">FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc, 46, 46, 0.228 us, 0.228 us, 32, 32, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 0, 5121, 4848, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 4, 9, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc_U0">FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc, 0, 0, 5121, 4848, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="reverse_in_stream_vector_dout">in, 256, ap_fifo, reverse_in_stream_vector, pointer</column>
+<column name="reverse_in_stream_vector_empty_n">in, 1, ap_fifo, reverse_in_stream_vector, pointer</column>
+<column name="reverse_in_stream_vector_read">out, 1, ap_fifo, reverse_in_stream_vector, pointer</column>
+<column name="data_s1_stream_vector_din">out, 256, ap_fifo, data_s1_stream_vector, pointer</column>
+<column name="data_s1_stream_vector_full_n">in, 1, ap_fifo, data_s1_stream_vector, pointer</column>
+<column name="data_s1_stream_vector_write">out, 1, ap_fifo, data_s1_stream_vector, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="data_s1_stream_vector_dout">in, 256, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="data_s1_stream_vector_empty_n">in, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="data_s1_stream_vector_read">out, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="data_s1_stream_vector_num_data_valid">in, 32, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="data_s1_stream_vector_fifo_cap">in, 32, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, FFT_Stage1_vectorstream_parameterize, return value</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,153 @@
+<stg><name>FFT_pipeline_DIT</name>
+
+
+<trans_list>
+
+<trans id="11" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="0" op_0_bw="0" op_1_bw="7">
+<![CDATA[
+entry:3 %call_ln652 = call void @FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc, i7 %revIdxTab
+
+]]></Node>
+<StgValue><ssdm name="call_ln652"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="256" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32">
+<![CDATA[
+entry:4 %call_ln659 = call void @FFT_DIT_spatial_unroll_CY_stream_vector, i256 %in_r, i256 %mid, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1
+
+]]></Node>
+<StgValue><ssdm name="call_ln659"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="5" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
+<![CDATA[
+entry:0 %specdataflowpipeline_ln644 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_71
+
+]]></Node>
+<StgValue><ssdm name="specdataflowpipeline_ln644"/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %mid, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="50" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %in_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="0" op_0_bw="0" op_1_bw="7">
+<![CDATA[
+entry:3 %call_ln652 = call void @FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc, i7 %revIdxTab
+
+]]></Node>
+<StgValue><ssdm name="call_ln652"/></StgValue>
+</operation>
+
+<operation id="9" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="256" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32">
+<![CDATA[
+entry:4 %call_ln659 = call void @FFT_DIT_spatial_unroll_CY_stream_vector, i256 %in_r, i256 %mid, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1
+
+]]></Node>
+<StgValue><ssdm name="call_ln659"/></StgValue>
+</operation>
+
+<operation id="10" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="0">
+<![CDATA[
+entry:5 %ret_ln660 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln660"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

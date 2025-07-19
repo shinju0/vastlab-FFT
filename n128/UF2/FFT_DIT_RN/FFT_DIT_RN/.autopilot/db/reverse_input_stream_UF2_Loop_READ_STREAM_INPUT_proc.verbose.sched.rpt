@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc'
+================================================================
+* Date:           Wed Jul 16 18:22:35 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  4.956 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       33|       33|  0.164 us|  0.164 us|   32|   32|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- READ_STREAM_INPUT  |       31|       31|         1|          1|          1|    32|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.95>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i45 = alloca i32 1"   --->   Operation 4 'alloca' 'i45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %in_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specperformance_ln258 = specperformance void @_ssdm_op_SpecPerformance, i32 0, i64 32, i64 0, i64 0, i64 0, i64 0, i64 0, i32 0, void @empty_71" [FFT.cpp:258]   --->   Operation 6 'specperformance' 'specperformance_ln258' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %i45"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln258 = br void %VITIS_LOOP_265_1.split.i" [FFT.cpp:258]   --->   Operation 8 'br' 'br_ln258' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i45_load = load i5 %i45" [FFT.cpp:258]   --->   Operation 9 'load' 'i45_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln259 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_71" [FFT.cpp:259]   --->   Operation 10 'specpipeline' 'specpipeline_ln259' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%speclooptripcount_ln258 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [FFT.cpp:258]   --->   Operation 11 'speclooptripcount' 'speclooptripcount_ln258' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specloopname_ln258 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [FFT.cpp:258]   --->   Operation 12 'specloopname' 'specloopname_ln258' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] ( I:1.46ns O:1.46ns )   --->   "%in_r_read = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %in_r" [FFT.cpp:262]   --->   Operation 13 'read' 'in_r_read' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln262 = trunc i256 %in_r_read" [FFT.cpp:262]   --->   Operation 14 'trunc' 'trunc_ln262' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln262_7 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 32, i32 63" [FFT.cpp:262]   --->   Operation 15 'partselect' 'trunc_ln262_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%trunc_ln262_8 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 64, i32 95" [FFT.cpp:262]   --->   Operation 16 'partselect' 'trunc_ln262_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln262_9 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 96, i32 127" [FFT.cpp:262]   --->   Operation 17 'partselect' 'trunc_ln262_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln262_s = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 128, i32 159" [FFT.cpp:262]   --->   Operation 18 'partselect' 'trunc_ln262_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln262_1 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 160, i32 191" [FFT.cpp:262]   --->   Operation 19 'partselect' 'trunc_ln262_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln262_2 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 192, i32 223" [FFT.cpp:262]   --->   Operation 20 'partselect' 'trunc_ln262_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln262_3 = partselect i32 @_ssdm_op_PartSelect.i32.i256.i32.i32, i256 %in_r_read, i32 224, i32 255" [FFT.cpp:262]   --->   Operation 21 'partselect' 'trunc_ln262_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%bitcast_ln262 = bitcast i32 %trunc_ln262" [FFT.cpp:262]   --->   Operation 22 'bitcast' 'bitcast_ln262' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%bitcast_ln262_1 = bitcast i32 %trunc_ln262_7" [FFT.cpp:262]   --->   Operation 23 'bitcast' 'bitcast_ln262_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%bitcast_ln262_2 = bitcast i32 %trunc_ln262_8" [FFT.cpp:262]   --->   Operation 24 'bitcast' 'bitcast_ln262_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%bitcast_ln262_3 = bitcast i32 %trunc_ln262_9" [FFT.cpp:262]   --->   Operation 25 'bitcast' 'bitcast_ln262_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%bitcast_ln262_4 = bitcast i32 %trunc_ln262_s" [FFT.cpp:262]   --->   Operation 26 'bitcast' 'bitcast_ln262_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%bitcast_ln262_5 = bitcast i32 %trunc_ln262_1" [FFT.cpp:262]   --->   Operation 27 'bitcast' 'bitcast_ln262_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%bitcast_ln262_6 = bitcast i32 %trunc_ln262_2" [FFT.cpp:262]   --->   Operation 28 'bitcast' 'bitcast_ln262_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%bitcast_ln262_7 = bitcast i32 %trunc_ln262_3" [FFT.cpp:262]   --->   Operation 29 'bitcast' 'bitcast_ln262_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%input = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %i45_load, i2 0" [FFT.cpp:266]   --->   Operation 30 'bitconcatenate' 'input' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%input_1 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %i45_load, i2 1" [FFT.cpp:266]   --->   Operation 31 'bitconcatenate' 'input_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%input_2 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %i45_load, i2 2" [FFT.cpp:266]   --->   Operation 32 'bitconcatenate' 'input_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%input_3 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %i45_load, i2 3" [FFT.cpp:266]   --->   Operation 33 'bitconcatenate' 'input_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %input, i32 6, i32 2" [FFT.cpp:70]   --->   Operation 34 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln70_1 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %input_1, i32 6, i32 2" [FFT.cpp:70]   --->   Operation 35 'partselect' 'trunc_ln70_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln70_2 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %input_2, i32 6, i32 2" [FFT.cpp:70]   --->   Operation 36 'partselect' 'trunc_ln70_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln70_3 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %input_3, i32 6, i32 2" [FFT.cpp:70]   --->   Operation 37 'partselect' 'trunc_ln70_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln273 = zext i5 %trunc_ln" [FFT.cpp:273]   --->   Operation 38 'zext' 'zext_ln273' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i64 0, i64 %zext_ln273" [FFT.cpp:273]   --->   Operation 39 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i64 0, i64 %zext_ln273" [FFT.cpp:273]   --->   Operation 40 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln274 = zext i5 %trunc_ln70_1" [FFT.cpp:274]   --->   Operation 41 'zext' 'zext_ln274' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i64 0, i64 %zext_ln274" [FFT.cpp:274]   --->   Operation 42 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i64 0, i64 %zext_ln274" [FFT.cpp:274]   --->   Operation 43 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln275 = zext i5 %trunc_ln70_2" [FFT.cpp:275]   --->   Operation 44 'zext' 'zext_ln275' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i64 0, i64 %zext_ln275" [FFT.cpp:275]   --->   Operation 45 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i64 0, i64 %zext_ln275" [FFT.cpp:275]   --->   Operation 46 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln276 = zext i5 %trunc_ln70_3" [FFT.cpp:276]   --->   Operation 47 'zext' 'zext_ln276' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i64 0, i64 %zext_ln276" [FFT.cpp:276]   --->   Operation 48 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3_addr = getelementptr i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i64 0, i64 %zext_ln276" [FFT.cpp:276]   --->   Operation 49 'getelementptr' 'reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln273 = store i32 %bitcast_ln262, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0_addr" [FFT.cpp:273]   --->   Operation 50 'store' 'store_ln273' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 51 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln274 = store i32 %bitcast_ln262_2, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2_addr" [FFT.cpp:274]   --->   Operation 51 'store' 'store_ln274' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 52 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln275 = store i32 %bitcast_ln262_4, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1_addr" [FFT.cpp:275]   --->   Operation 52 'store' 'store_ln275' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 53 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln276 = store i32 %bitcast_ln262_6, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3_addr" [FFT.cpp:276]   --->   Operation 53 'store' 'store_ln276' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 54 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln273 = store i32 %bitcast_ln262_1, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0_addr" [FFT.cpp:273]   --->   Operation 54 'store' 'store_ln273' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 55 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln274 = store i32 %bitcast_ln262_3, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2_addr" [FFT.cpp:274]   --->   Operation 55 'store' 'store_ln274' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 56 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln275 = store i32 %bitcast_ln262_5, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1_addr" [FFT.cpp:275]   --->   Operation 56 'store' 'store_ln275' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 57 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln276 = store i32 %bitcast_ln262_7, i5 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3_addr" [FFT.cpp:276]   --->   Operation 57 'store' 'store_ln276' <Predicate = true> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 58 [1/1] (1.78ns)   --->   "%i = add i5 %i45_load, i5 1" [FFT.cpp:258]   --->   Operation 58 'add' 'i' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (1.78ns)   --->   "%icmp_ln258 = icmp_eq  i5 %i45_load, i5 31" [FFT.cpp:258]   --->   Operation 59 'icmp' 'icmp_ln258' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (1.58ns)   --->   "%store_ln258 = store i5 %i, i5 %i45" [FFT.cpp:258]   --->   Operation 60 'store' 'store_ln258' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln258 = br i1 %icmp_ln258, void %VITIS_LOOP_265_1.split.i, void %reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc.exit" [FFT.cpp:258]   --->   Operation 61 'br' 'br_ln258' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 62 'ret' 'ret_ln0' <Predicate = (icmp_ln258)> <Delay = 1.58>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 4.956ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'i45' [13]  (1.588 ns)
+	'load' operation 5 bit ('i45_load', FFT.cpp:258) on local variable 'i45' [16]  (0.000 ns)
+	'add' operation 5 bit ('i', FFT.cpp:258) [65]  (1.780 ns)
+	'store' operation 0 bit ('store_ln258', FFT.cpp:258) of variable 'i', FFT.cpp:258 on local variable 'i45' [67]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

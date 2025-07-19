@@ -1,0 +1,458 @@
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:2271:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:2271:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:2285:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:2285:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:2299:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:2299:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:3921:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:3921:7: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41327:3: warning: Added loop label VITIS_LOOP_463_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_463_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41327:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41329:4: warning: Added loop label VITIS_LOOP_465_2:   [xilinx-label-all-loops]
+   for (int c = 0; c < FFT_CHANNELS; ++c)
+   ^~~
+   VITIS_LOOP_465_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41329:4: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41395:3: warning: Added loop label VITIS_LOOP_848_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_848_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41395:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41453:3: warning: Added loop label VITIS_LOOP_927_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_927_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41453:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41513:3: warning: Added loop label VITIS_LOOP_987_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_987_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41513:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41572:3: warning: Added loop label VITIS_LOOP_1046_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < FFT_LENGTH; ++i)
+  ^~~
+  VITIS_LOOP_1046_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41572:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41574:4: warning: Added loop label VITIS_LOOP_1048_2:   [xilinx-label-all-loops]
+   for (int c = 0; c < FFT_CHANNELS; ++c)
+   ^~~
+   VITIS_LOOP_1048_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41574:4: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41617:2: warning: Added loop label VITIS_LOOP_1091_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1091_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41617:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41632:2: warning: Added loop label VITIS_LOOP_1106_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1106_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:41632:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42002:2: warning: Added loop label VITIS_LOOP_1576_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1576_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42002:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42017:2: warning: Added loop label VITIS_LOOP_1591_1:   [xilinx-label-all-loops]
+ for (unsigned i = 0; i < (1 << CONFIG_T::max_nfft); i++) {
+ ^~~
+ VITIS_LOOP_1591_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42017:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42074:2: warning: Added loop label VITIS_LOOP_1648_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < FFT_LENGTH; ++i) {
+ ^~~
+ VITIS_LOOP_1648_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42074:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42125:2: warning: Added loop label VITIS_LOOP_1699_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < FFT_LENGTH; ++i) {
+ ^~~
+ VITIS_LOOP_1699_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42125:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42351:9: warning: Added loop label VITIS_LOOP_1967_1:   [xilinx-label-all-loops]
+        for (int i=0; i<length; i++) {
+        ^~~
+        VITIS_LOOP_1967_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42351:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42402:9: warning: Added loop label VITIS_LOOP_2018_1:   [xilinx-label-all-loops]
+        for (int i=0; i<length; i++) {
+        ^~~
+        VITIS_LOOP_2018_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:42402:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50231:5: warning: Added loop label VITIS_LOOP_127_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_127_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50231:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50247:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_143_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50247:5: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50263:75: warning: Added loop label VITIS_LOOP_169_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ++() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_169_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50263:75: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50268:75: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator --() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_170_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50268:75: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50277:106: warning: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator +=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_198_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50277:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50282:106: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator -=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_199_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50282:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50287:106: warning: Added loop label VITIS_LOOP_200_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator *=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_200_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50287:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50292:106: warning: Added loop label VITIS_LOOP_201_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator /=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_201_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50292:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50297:106: warning: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator %=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_202_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50297:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50302:106: warning: Added loop label VITIS_LOOP_203_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator &=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_203_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50302:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50307:106: warning: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator |=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_204_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50307:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50312:106: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ^=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_205_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50312:106: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50317:107: warning: Added loop label VITIS_LOOP_206_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator <<=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_206_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50317:107: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50322:107: warning: Added loop label VITIS_LOOP_207_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator >>=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_207_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50322:107: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50328:91: warning: Added loop label VITIS_LOOP_222_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_add() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_222_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50328:91: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50333:92: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_mult() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                           ^~~
+                                                                                           VITIS_LOOP_223_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50333:92: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50338:91: warning: Added loop label VITIS_LOOP_224_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_and() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_224_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50338:91: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50343:90: warning: Added loop label VITIS_LOOP_225_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_or() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                         ^~~
+                                                                                         VITIS_LOOP_225_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50343:90: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50348:91: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_xor() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_226_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50348:91: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50354:132: warning: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_256_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50354:132: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50359:133: warning: Added loop label VITIS_LOOP_257_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_257_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50359:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50364:133: warning: Added loop label VITIS_LOOP_258_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator ==(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_258_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50364:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50369:133: warning: Added loop label VITIS_LOOP_259_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator !=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_259_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50369:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50374:133: warning: Added loop label VITIS_LOOP_260_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_260_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50374:133: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50379:132: warning: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_261_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50379:132: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50580:9: error: Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d1_real op=fsub impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50581:9: error: Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d1_imag op=fadd impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50596:9: error: Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d2_real op=fadd impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50597:9: error: Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d2_imag op=fadd impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50598:9: error: Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d3_real op=fsub impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50599:9: error: Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d3_imag op=fsub impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50620:9: warning: Added loop label VITIS_LOOP_60_1:   [xilinx-label-all-loops]
+        for (int u = 0; u < 2*2; u++) {
+        ^~~
+        VITIS_LOOP_60_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50620:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50656:2: warning: Added loop label VITIS_LOOP_96_1:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_96_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50656:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50661:2: warning: Added loop label VITIS_LOOP_101_2:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_101_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50661:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50695:2: warning: Added loop label VITIS_LOOP_135_1:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_135_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50695:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50760:2: warning: Added loop label VITIS_LOOP_200_2:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_200_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50760:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50781:9: warning: Added loop label VITIS_LOOP_221_1:   [xilinx-label-all-loops]
+        for (int u = 0; u < 2*2; u++) {
+        ^~~
+        VITIS_LOOP_221_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50781:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50794:27: warning: Implicit constructor of 'data_in_cyclic' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_in_cyclic[2*2][128/(2*2)];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50796:27: warning: Implicit constructor of 'data_rev_stream' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_rev_stream[2*2][128/(2*2)];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50825:2: warning: Added loop label VITIS_LOOP_265_1:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_265_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50825:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50830:2: warning: Added loop label VITIS_LOOP_270_2:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_270_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50830:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50844:2: warning: Added loop label VITIS_LOOP_284_3:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_284_3: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50844:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50851:2: warning: Added loop label VITIS_LOOP_291_4:   [xilinx-label-all-loops]
+ for (int u = 0; u < 2*2; u++) {
+ ^~~
+ VITIS_LOOP_291_4: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50851:2: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50903:9: warning: Added loop label VITIS_LOOP_343_5:   [xilinx-label-all-loops]
+        for (int u = 0; u < 2*2; u++) {
+        ^~~
+        VITIS_LOOP_343_5: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50903:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50912:9: warning: Added loop label VITIS_LOOP_361_6:   [xilinx-label-all-loops]
+        for (int u = 0; u < 2*2; u++) {
+        ^~~
+        VITIS_LOOP_361_6: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50912:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50939:9: error: Invalid Directive: for current device, mul + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=index op=mul impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50955:9: error: Invalid Directive: for current device, mul + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=index op=mul impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50972:9: error: Invalid Directive: for current device, mul + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=index op=mul impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50996:9: error: Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d1_real op=fsub impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:50997:9: error: Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d1_imag op=fadd impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51021:9: error: Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d2_real op=fadd impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51022:9: error: Invalid Directive: for current device, fadd + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d2_imag op=fadd impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51023:9: error: Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d3_real op=fsub impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51024:9: error: Invalid Directive: for current device, fsub + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS bind_op variable=d3_imag op=fsub impl=fabric
+        ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51054:9: warning: Added loop label VITIS_LOOP_503_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 2; i++){
+        ^~~
+        VITIS_LOOP_503_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51054:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51078:9: warning: Added loop label VITIS_LOOP_527_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 2*2; i+= 4){
+        ^~~
+        VITIS_LOOP_527_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51078:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51107:24: warning: Implicit constructor of 'data_0' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+ static complex<float> data_0[128];
+                       ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51108:27: warning: Implicit constructor of 'data_1' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_1[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51109:27: warning: Implicit constructor of 'data_2' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_2[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51110:27: warning: Implicit constructor of 'data_3' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_3[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51111:27: warning: Implicit constructor of 'data_4' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_4[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51112:27: warning: Implicit constructor of 'data_5' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_5[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51118:47: error: Invalid Directive: for current device, RAM_2P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=data_0 type=RAM_2P impl=LUTRAM
+                                              ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51156:24: warning: Implicit constructor of 'data_0' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+ static complex<float> data_0[128];
+                       ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51157:27: warning: Implicit constructor of 'data_1' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_1[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51158:27: warning: Implicit constructor of 'data_2' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_2[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51159:27: warning: Implicit constructor of 'data_3' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_3[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51160:27: warning: Implicit constructor of 'data_4' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_4[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51161:27: warning: Implicit constructor of 'data_5' may lead to multiple writers in dataflow. Can inhibit constructor with __attribute__((no_ctor)) [xilinx-warn-mayneed-no-ctor-attribute]
+    static complex<float> data_5[128];
+                          ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51165:47: error: Invalid Directive: for current device, RAM_2P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=data_0 type=RAM_2P impl=LUTRAM
+                                              ^
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51204:9: warning: Added loop label VITIS_LOOP_653_1:   [xilinx-label-all-loops]
+        for (int j = 0; j < 7; ++j) {
+        ^~~
+        VITIS_LOOP_653_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51204:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51229:9: warning: Added loop label VITIS_LOOP_678_1:   [xilinx-label-all-loops]
+        for (int j = 0; j < 7; ++j) {
+        ^~~
+        VITIS_LOOP_678_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51229:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51241:9: warning: Added loop label VITIS_LOOP_690_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128/2; ++i) {
+        ^~~
+        VITIS_LOOP_690_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51241:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51243:13: warning: Added loop label VITIS_LOOP_692_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < 2*2; ++k)
+            ^~~
+            VITIS_LOOP_692_3: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51243:13: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51246:9: warning: Added loop label VITIS_LOOP_695_4:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128/2; ++i) {
+        ^~~
+        VITIS_LOOP_695_4: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51246:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51248:13: warning: Added loop label VITIS_LOOP_697_5:   [xilinx-label-all-loops]
+            for (int k = 0; k < 2*2; ++k)
+            ^~~
+            VITIS_LOOP_697_5: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51248:13: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51253:9: warning: Added loop label VITIS_LOOP_702_6:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128/2; ++i)
+        ^~~
+        VITIS_LOOP_702_6: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51253:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51264:9: warning: Added loop label VITIS_LOOP_713_7:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128/2; ++i) {
+        ^~~
+        VITIS_LOOP_713_7: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51264:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51266:13: warning: Added loop label VITIS_LOOP_715_8:   [xilinx-label-all-loops]
+            for (int k = 0; k < 2*2; ++k)
+            ^~~
+            VITIS_LOOP_715_8: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51266:13: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51269:9: warning: Added loop label VITIS_LOOP_718_9:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128/2; ++i) {
+        ^~~
+        VITIS_LOOP_718_9: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51269:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51271:13: warning: Added loop label VITIS_LOOP_720_10:   [xilinx-label-all-loops]
+            for (int k = 0; k < 2*2; ++k)
+            ^~~
+            VITIS_LOOP_720_10: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51271:13: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51276:9: warning: Added loop label VITIS_LOOP_725_11:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128/2; ++i)
+        ^~~
+        VITIS_LOOP_725_11: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51276:9: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51285:3: warning: Added loop label VITIS_LOOP_734_1:   [xilinx-label-all-loops]
+  for(int i=0; i<128; ++i) {
+  ^~~
+  VITIS_LOOP_734_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51285:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51308:3: warning: Added loop label VITIS_LOOP_757_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < 128/2; i++) {
+  ^~~
+  VITIS_LOOP_757_1: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51308:3: note: FIX-IT applied suggested code changes
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51315:3: warning: Added loop label VITIS_LOOP_764_2:   [xilinx-label-all-loops]
+  for (int i = 0; i < 128/2; i++) {
+  ^~~
+  VITIS_LOOP_764_2: 
+/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIF_NR/FFT_DIF_NR/.autopilot/db/FFT.pp.0.cpp:51315:3: note: FIX-IT applied suggested code changes

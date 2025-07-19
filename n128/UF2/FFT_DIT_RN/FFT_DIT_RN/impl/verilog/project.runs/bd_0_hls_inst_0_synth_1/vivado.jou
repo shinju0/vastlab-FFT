@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Jul 16 18:35:43 2025
+# Process ID         : 946861
+# Current directory  : /scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line       : vivado -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file           : /scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file       : /scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
+# Running On         : c04
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD EPYC 9654 96-Core Processor
+# CPU Frequency      : 1500.000 MHz
+# CPU Physical cores : 192
+# CPU Logical cores  : 384
+# Host memory        : 811201 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 819791 MB
+# Available Virtual  : 797601 MB
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace

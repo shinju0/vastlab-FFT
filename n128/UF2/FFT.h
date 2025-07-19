@@ -1,0 +1,50 @@
+#ifndef FFT_H
+#define FFT_H
+
+#include "ap_fixed.h"
+#include "hls_fft.h"
+#include <complex>
+#include <hls_stream.h>
+#include <iomanip>   // std::setprecision, std::setw
+#include <iostream>  // std::cout, std::fixed
+#include <cmath>
+#include "hls_vector.h"
+#include "hls_streamofblocks.h"
+
+using namespace std;
+typedef float dtype_test;
+typedef double dtype_gold;
+#define batch_size 1 
+#define FFT_NUM 128
+#define EXP2_FFT 7
+
+#define UF 2
+using std::complex;
+
+#ifndef PI
+#define PI  3.14159265358979323846
+#endif
+
+void FFT_pipeline_DIT(hls::stream<hls::vector<complex<float>, UF*2>> & in, 
+    hls::stream<hls::vector<complex<float>, UF*2>> & out
+);
+
+void FFT_pipeline_DIF(hls::stream<hls::vector<complex<float>, UF*2>> & in,
+    hls::stream<hls::vector<complex<float>, UF*2>> & out
+);
+
+// Three wrappers:
+void FFT_DIT_RN(hls::stream<hls::vector<std::complex<float>, UF*2>> & in,
+    hls::stream<hls::vector<std::complex<float>, UF*2>> & out
+);
+
+void FFT_DIF_NR(hls::stream<hls::vector<std::complex<float>, UF*2>> & in,
+    hls::stream<hls::vector<std::complex<float>, UF*2>> & out
+);
+
+void FFT_DIF_RN(hls::stream<hls::vector<std::complex<float>, UF*2>> & in,
+    hls::stream<hls::vector<std::complex<float>, UF*2>> & out
+);
+
+
+#endif

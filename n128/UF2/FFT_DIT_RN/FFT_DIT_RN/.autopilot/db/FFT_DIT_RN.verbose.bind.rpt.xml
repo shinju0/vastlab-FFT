@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'FFT_DIT_RN'" level="0">
+<item name = "Date">Wed Jul 16 18:22:37 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">FFT_DIT_RN</item>
+<item name = "Solution">FFT_DIT_RN (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 5.091 ns, 1.08 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1258, 1258, 6.404 us, 6.404 us, 1259, 1259, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_FFT_pipeline_DIT_fu_154">FFT_pipeline_DIT, 477, 477, 2.428 us, 2.428 us, 256, 256, dataflow</column>
+<column name="grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1_fu_251">FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1, 131, 131, 0.524 us, 0.524 us, 130, 130, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_fu_272">FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1, 644, 644, 2.576 us, 2.576 us, 643, 643, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2_fu_282">FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2, 132, 132, 0.528 us, 0.528 us, 130, 130, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,1078 @@
+
+*** Running vivado
+    with args -log bd_0_hls_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+
+WARNING: /opt/xilinx/tools/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Jul 16 18:35:43 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/tools/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_0_hls_inst_0
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg400-1 -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 946888
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2137.004 ; gain = 417.828 ; free physical = 280837 ; free virtual = 759413
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_revIdxTab_RAM_AUTO_1R1W' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_revIdxTab_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-3876] $readmem data file './FFT_DIT_RN_revIdxTab_RAM_AUTO_1R1W.dat' is read successfully [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_revIdxTab_RAM_AUTO_1R1W.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_revIdxTab_RAM_AUTO_1R1W' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_revIdxTab_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_RAM_AUTO_2R1W' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_RAM_AUTO_2R1W.v:7]
+INFO: [Synth 8-3876] $readmem data file './FFT_DIT_RN_FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_RAM_AUTO_2R1W.dat' is read successfully [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_RAM_AUTO_2R1W.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_RAM_AUTO_2R1W' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_RAM_AUTO_2R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_pipeline_DIT' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_pipeline_DIT.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_flow_control_loop_delay_pipe' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_flow_control_loop_delay_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_flow_control_loop_delay_pipe' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_flow_control_loop_delay_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_flow_control_loop_pipe' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_flow_control_loop_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_flow_control_loop_pipe' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_flow_control_loop_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_sparsemux_7_2_5_1_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_7_2_5_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_sparsemux_7_2_5_1_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_7_2_5_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore.v:7]
+INFO: [Synth 8-3876] $readmem data file './FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore.dat' is read successfully [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_reverse_input_stream_UF2' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_reverse_input_stream_UF2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/ip/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/opt/xilinx/tools/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84087]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [/opt/xilinx/tools/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84087]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/ip/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/ip/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/ip/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_Stage1_vectorstream_parameterize.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_Stage2_vectorstreamIn_arrayOut_parametize' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_Stage2_vectorstreamIn_arrayOut_parametize.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_Stage2_vectorstreamIn_arrayOut_parametize' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_Stage2_vectorstreamIn_arrayOut_parametize.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_3_s' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_3_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/ip/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/ip/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_3_s' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_3_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_4_s' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_4_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_sparsemux_9_3_32_1_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_9_3_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_sparsemux_9_3_32_1_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_9_3_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_4_s' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_4_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_5_s' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_5_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_sparsemux_17_4_32_1_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_17_4_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_sparsemux_17_4_32_1_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_17_4_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_5_s' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_5_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_6_s' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_6_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_sparsemux_33_5_32_1_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_33_5_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_sparsemux_33_5_32_1_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_33_5_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_6_s' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_6_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_7_s' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_7_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_sparsemux_65_6_32_1_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_65_6_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_sparsemux_65_6_32_1_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_sparsemux_65_6_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_stage_spatial_unroll_7_s' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_7_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_output_result_array_to_stream' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_output_result_array_to_stream.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_output_result_array_to_stream' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_output_result_array_to_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore.v:7]
+INFO: [Synth 8-3876] $readmem data file './FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore.dat' is read successfully [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore.v:7]
+INFO: [Synth 8-3876] $readmem data file './FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore.dat' is read successfully [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fifo_w256_d2_S' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d2_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fifo_w256_d2_S_ShiftReg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d2_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fifo_w256_d2_S_ShiftReg' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d2_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fifo_w256_d2_S' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d2_S.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_pipeline_DIT' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_pipeline_DIT.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_flow_control_loop_pipe_sequential_init' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_flow_control_loop_pipe_sequential_init' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W.v:7]
+INFO: [Synth 8-3876] $readmem data file './FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W.dat' is read successfully [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fifo_w256_d8_A' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d8_A.v:11]
+INFO: [Synth 8-6157] synthesizing module 'FFT_DIT_RN_fifo_w256_d8_A_ram' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d8_A.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fifo_w256_d8_A_ram' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d8_A.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN_fifo_w256_d8_A' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fifo_w256_d8_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_DIT_RN' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port reset in module FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_p_buf_1_RAM_AUTO_2R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module FFT_DIT_RN_fifo_w256_d2_S_ShiftReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectrcU_memcore is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ap_done_int in module FFT_DIT_RN_flow_control_loop_delay_pipe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized97 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized97 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized97 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized97 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized97 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized61 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized61 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized61 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized61 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized61 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized122 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized122 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized122 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized122 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized122 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized120 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized120 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized120 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized120 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized120 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized104 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized104 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized104 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized104 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized104 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_dsp_opt_full is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized59 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized59 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized59 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized118 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized118 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized118 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized118 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized118 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_10_viv__parameterized116 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_10_viv__parameterized116 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized116 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized116 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized116 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized114 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized114 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized114 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized112 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized112 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized112 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized110 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized110 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized110 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized108 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized108 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized108 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized106 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized106 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized106 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_10_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_10_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_10_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[2] in module carry_chain__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[1] in module carry_chain__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module carry_chain__parameterized8 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2436.613 ; gain = 717.438 ; free physical = 280536 ; free virtual = 759115
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2436.613 ; gain = 717.438 ; free physical = 280536 ; free virtual = 759115
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2436.613 ; gain = 717.438 ; free physical = 280536 ; free virtual = 759115
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2600.340 ; gain = 4.000 ; free physical = 280375 ; free virtual = 758954
+INFO: [Netlist 29-17] Analyzing 17276 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/FFT_DIT_RN_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/FFT_DIT_RN_ooc.xdc] for cell 'inst'
+Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3047.965 ; gain = 0.000 ; free physical = 280056 ; free virtual = 758635
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1944 instances were transformed.
+  FDE => FDRE: 1944 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3126.965 ; gain = 79.000 ; free physical = 279968 ; free virtual = 758547
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 3126.965 ; gain = 1407.789 ; free physical = 279954 ; free virtual = 758534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 3134.969 ; gain = 1415.793 ; free physical = 279954 ; free virtual = 758534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 3134.969 ; gain = 1415.793 ; free physical = 279954 ; free virtual = 758534
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'i_2_reg_342_reg' and it is trimmed from '7' to '6' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1.v:267]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore:/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:43 . Memory (MB): peak = 3134.969 ; gain = 1415.793 ; free physical = 279934 ; free virtual = 758534
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_logic:/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized14) to 'flt_add_logic:/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1:/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1:/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1:/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1:/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized14) to 'FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1:/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U79/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U80/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U81/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U86/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U88/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U88/din0_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U86/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U88/din1_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U86/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U90/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U91/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U92/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U92/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U90/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U92/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U91/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U93/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U93/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U91/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U93/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U90/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U94/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U95/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U96/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U96/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U94/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U96/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U95/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U97/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U78/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U97/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U95/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U97/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U94/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'd1_real_13_reg_1177_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U91/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_3_s.v:1836]
+INFO: [Synth 8-4471] merging register 'a_reg_1169_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U90/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_FFT_stage_spatial_unroll_3_s.v:1711]
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_reg[0]' (FDE) to 'tmp_reg_955_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter2_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter3_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter3_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter4_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter5_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter5_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter6_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter6_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter7_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter7_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter8_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter8_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter9_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter9_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter10_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter10_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter11_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter11_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter12_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter12_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter13_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter13_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter14_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter14_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter15_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter15_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter16_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter16_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter17_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter17_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter18_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter18_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter19_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter19_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter20_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter20_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter21_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter21_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter22_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter22_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter23_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter23_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter24_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter24_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter25_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter25_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter26_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter26_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter27_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter27_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter28_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter28_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter29_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter29_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter30_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter30_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter31_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter31_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter32_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter32_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter33_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter33_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter34_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter34_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter35_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter35_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter36_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter36_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter37_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter37_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter38_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter38_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter39_reg_reg[0]' (FDE) to 'tmp_reg_955_pp0_iter39_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_reg[1]' (FDE) to 'tmp_reg_955_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter2_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter2_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter3_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter3_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter4_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter5_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter5_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter6_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter6_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter7_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter7_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter8_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter8_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter9_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter9_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter10_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter10_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter11_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter11_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter12_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter12_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter13_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter13_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter14_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter14_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter15_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter15_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter16_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter16_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter17_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter17_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter18_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter18_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter19_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter19_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter20_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter20_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter21_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter21_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter22_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter22_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter23_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter23_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter24_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter24_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter25_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter25_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter26_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter26_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter27_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter27_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter28_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter28_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter29_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter29_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter30_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter30_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter31_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter31_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter32_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter32_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter33_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter33_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter34_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter34_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter35_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter35_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter36_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter36_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter37_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter37_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter38_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter38_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter39_reg_reg[1]' (FDE) to 'tmp_reg_955_pp0_iter39_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_reg[2]' (FDE) to 'tmp_reg_955_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter2_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter2_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter3_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter3_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter4_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter5_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter5_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter6_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter6_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter7_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter7_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter8_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter8_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter9_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter9_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter10_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter10_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter11_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter11_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter12_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter12_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter13_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter13_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter14_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter14_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter15_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter15_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter16_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter16_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter17_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter17_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter18_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter18_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter19_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter19_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter20_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter20_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter21_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter21_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_s_reg_967_pp0_iter22_reg_reg[2]' (FDE) to 'tmp_reg_955_pp0_iter22_reg_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U95/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U94/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d_reg_1063_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\c_reg_1057_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\c_reg_1057_reg[26] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\c_reg_1057_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ap_phi_reg_pp0_iter2_d1_imag_14_reg_487_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[24] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[25] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[26] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[27] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[28] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_reg_1057_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d_reg_1063_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[19] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[20] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tw_reg_1185_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tw_reg_1185_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U95/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U95/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U91/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U90/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U93/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U92/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U97/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fmul_32ns_32ns_32_8_max_dsp_1_U96/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1_ip_u/inst /i_synth/\MULT.OP/i_non_prim.EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsub_32ns_32ns_32_14_no_dsp_1_U80/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst /i_synth/\ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsub_32ns_32ns_32_14_no_dsp_1_U78/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst /i_synth/\ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fadd_32ns_32ns_32_14_no_dsp_1_U79/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst /i_synth/\ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsub_32ns_32ns_32_14_no_dsp_1_U88/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1_ip_u/inst /i_synth/\ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fadd_32ns_32ns_32_14_no_dsp_1_U81/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst /i_synth/\ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fadd_32ns_32ns_32_14_no_dsp_1_U86/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1_ip_u/inst /i_synth/\ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ap_phi_reg_pp0_iter3_d1_imag_14_reg_487_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\trunc_ln423_reg_950_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\trunc_ln423_reg_950_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\trunc_ln423_reg_950_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\trunc_ln423_reg_950_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\trunc_ln423_reg_950_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\trunc_ln423_reg_950_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[0].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:361]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:379]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/d531/hdl/xbip_pipe_v3_0_vh_rfs.vhd:366]
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U87/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U87/din0_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U87/din1_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U85/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U84/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U83/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U83/din0_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U85/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U83/din1_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U85/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U82/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U89/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U82/din0_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U84/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U82/din1_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U84/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U112/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U115/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U116/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U117/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U117/din0_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U115/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U117/din1_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U115/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U118/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U118/din0_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U116/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U118/din1_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U116/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U123/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U124/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U125/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U125/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U123/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U125/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U124/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U126/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U111/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U126/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U124/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U126/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U123/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U129/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U128/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U128/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U128/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U129/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U127/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U127/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U129/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U127/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U122/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U121/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U120/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U120/din0_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U122/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U120/din1_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U122/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U119/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U119/din0_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U121/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U119/din1_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U121/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U114/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U113/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U130/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U145/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U148/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U149/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U150/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U150/din0_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U148/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U150/din1_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U148/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U151/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U151/din0_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U149/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U151/din1_buf1_reg[31:0]' into 'fadd_32ns_32ns_32_14_no_dsp_1_U149/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U156/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U157/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U158/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U158/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U156/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U158/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U157/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U159/ce_r_reg' into 'fsub_32ns_32ns_32_14_no_dsp_1_U144/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U159/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U157/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U159/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U156/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U162/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U161/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U161/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U161/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U162/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U160/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U160/din0_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U162/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_8_max_dsp_1_U160/din1_buf1_reg[31:0]' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fmul_32ns_32ns_32_8_max_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U155/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fsub_32ns_32ns_32_14_no_dsp_1_U154/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fsub_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U153/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U153/din0_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U155/din0_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:53]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U153/din1_buf1_reg[31:0]' into 'fsub_32ns_32ns_32_14_no_dsp_1_U155/din1_buf1_reg[31:0]' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:55]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_14_no_dsp_1_U152/ce_r_reg' into 'fmul_32ns_32ns_32_8_max_dsp_1_U163/ce_r_reg' [/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/b283/hdl/verilog/FFT_DIT_RN_fadd_32ns_32ns_32_14_no_dsp_1.v:51]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3_U/FFT_DIT_RN_reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb_memcore_U/ram_reg was removed. 
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0_U/gen_buffer[0].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0_U/gen_buffer[1].FFT_DIT_RN_FFT_DIT_spatial_unroll_CY_stream_vector_FFT_DIT_spatial_unroll_CY_stream_vectzec_memcore_U/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:10:06 . Memory (MB): peak = 3162.902 ; gain = 1443.727 ; free physical = 272994 ; free virtual = 751736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:11 ; elapsed = 00:10:22 . Memory (MB): peak = 3162.902 ; gain = 1443.727 ; free physical = 274536 ; free virtual = 753287
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:51 ; elapsed = 00:11:03 . Memory (MB): peak = 3162.902 ; gain = 1443.727 ; free physical = 274411 ; free virtual = 753170
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:07 ; elapsed = 00:11:30 . Memory (MB): peak = 3170.906 ; gain = 1451.730 ; free physical = 273078 ; free virtual = 751866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:21 ; elapsed = 00:11:45 . Memory (MB): peak = 3170.906 ; gain = 1451.730 ; free physical = 273071 ; free virtual = 751859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:21 ; elapsed = 00:11:45 . Memory (MB): peak = 3170.906 ; gain = 1451.730 ; free physical = 273071 ; free virtual = 751859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:33 ; elapsed = 00:11:57 . Memory (MB): peak = 3303.828 ; gain = 1584.652 ; free physical = 272935 ; free virtual = 751723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:33 ; elapsed = 00:11:57 . Memory (MB): peak = 3303.828 ; gain = 1584.652 ; free physical = 272935 ; free virtual = 751724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:35 ; elapsed = 00:12:00 . Memory (MB): peak = 3327.641 ; gain = 1608.465 ; free physical = 272935 ; free virtual = 751723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:36 ; elapsed = 00:12:00 . Memory (MB): peak = 3327.641 ; gain = 1608.465 ; free physical = 272935 ; free virtual = 751723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                           | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper_12731                 | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12732 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12720 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12672                 | ((A'*B')')'           | 24     | 0      | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12673 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12661 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12613                 | ((A'*B')')'           | 24     | 0      | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12614 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12602 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12554                 | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12555 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12543 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12495                 | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12496 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12484 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12436                 | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12437 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12425 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12377                 | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12378 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12366 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_12318                 | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_12319 | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_12307 | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9934                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9935  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9923  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9875                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9876  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9864  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9816                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9817  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9805  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9757                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9758  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9746  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9698                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9699  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9687  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9639                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9640  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9628  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9580                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9581  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9569  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_9521                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_9522  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_9510  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_7137                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_7138  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_7126  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_7078                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_7079  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_7067  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_7019                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_7020  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_7008  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_6960                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_6961  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_6949  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_6901                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_6902  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_6890  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_6842                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_6843  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_6831  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_6783                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_6784  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_6772  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_6724                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_6725  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_6713  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_4340                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_4341  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_4329  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_4281                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_4282  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_4270  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_4222                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_4223  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_4211  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_4163                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_4164  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_4152  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_4104                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_4105  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_4093  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_4045                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_4046  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_4034  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_3986                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_3987  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_3975  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_3927                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_3928  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_3916  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1545                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1546  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1534  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1486                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1487  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1475  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1427                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1428  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1416  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1368                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1369  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1357  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1309                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1310  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1298  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1250                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1251  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1239  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper_1191                  | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0_1192  | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1_1180  | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper                       | ((A'*B')')'           | 24     | 17     | -      | -      | 41     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized0       | (PCIN>>17+(A'*B'')')' | 0      | 7      | -      | -      | 31     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper__parameterized1       | (PCIN+A:B+C')'        | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   456|
+|2     |DSP48E1  |   120|
+|5     |LUT1     |   744|
+|6     |LUT2     |  4426|
+|7     |LUT3     | 14016|
+|8     |LUT4     |  9139|
+|9     |LUT5     |  7253|
+|10    |LUT6     |  9583|
+|11    |MUXCY    |  8846|
+|12    |MUXF7    |   152|
+|13    |MUXF8    |    76|
+|14    |RAM32X1D |   512|
+|15    |RAMB18E1 |    24|
+|17    |RAMB36E1 |    44|
+|19    |SRL16E   |  2909|
+|20    |SRLC32E  |  1007|
+|21    |XORCY    |  4918|
+|22    |FDE      |  1944|
+|23    |FDRE     | 70277|
+|24    |FDSE     |    56|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:36 ; elapsed = 00:12:01 . Memory (MB): peak = 3327.641 ; gain = 1608.465 ; free physical = 272935 ; free virtual = 751723
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 717 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:10 ; elapsed = 00:11:44 . Memory (MB): peak = 3331.555 ; gain = 922.027 ; free physical = 279435 ; free virtual = 758223
+Synthesis Optimization Complete : Time (s): cpu = 00:03:36 ; elapsed = 00:12:05 . Memory (MB): peak = 3331.555 ; gain = 1612.379 ; free physical = 279459 ; free virtual = 758223
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3354.938 ; gain = 0.000 ; free physical = 279393 ; free virtual = 758157
+INFO: [Netlist 29-17] Analyzing 17092 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3546.250 ; gain = 0.000 ; free physical = 279262 ; free virtual = 758027
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4936 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 2480 instances
+  FDE => FDRE: 1944 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 512 instances
+
+Synth Design complete | Checksum: a6463b9f
+INFO: [Common 17-83] Releasing license: Synthesis
+613 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:59 ; elapsed = 00:12:29 . Memory (MB): peak = 3546.250 ; gain = 2043.805 ; free physical = 279262 ; free virtual = 758027
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 9175.943; main = 2687.815; forked = 7054.154
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 17521.227; main = 3546.254; forked = 14362.238
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3570.262 ; gain = 0.000 ; free physical = 279247 ; free virtual = 758026
+INFO: [Common 17-1381] The checkpoint '/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3570.262 ; gain = 24.012 ; free physical = 279244 ; free virtual = 758029
+write_vhdl: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3666.277 ; gain = 0.000 ; free physical = 278994 ; free virtual = 757949
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 07863be938c12e0a
+INFO: [Coretcl 2-1174] Renamed 17464 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3666.277 ; gain = 0.000 ; free physical = 278961 ; free virtual = 757950
+INFO: [Common 17-1381] The checkpoint '/scratch/juju/HP-FFT-HLS/n128/UF2/FFT_DIT_RN/FFT_DIT_RN/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3666.277 ; gain = 0.000 ; free physical = 278973 ; free virtual = 757948
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+write_vhdl: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3666.277 ; gain = 0.000 ; free physical = 278782 ; free virtual = 757948
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 16 18:57:32 2025...

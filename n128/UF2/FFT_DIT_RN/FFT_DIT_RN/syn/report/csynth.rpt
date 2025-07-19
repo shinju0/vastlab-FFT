@@ -1,0 +1,608 @@
+
+
+================================================================
+== Synthesis Summary Report of 'FFT_DIT_RN'
+================================================================
++ General Information: 
+    * Date:           Wed Jul 16 18:22:39 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        FFT_DIT_RN
+    * Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+-----------+-------------+--------------+-----+
+    |                             Modules                             |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |           |           |             |              |     |
+    |                             & Loops                             |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP    |      FF     |      LUT     | URAM|
+    +-----------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+-----------+-------------+--------------+-----+
+    |+ FFT_DIT_RN                                                     |  Timing|  -2.17|     1258|  6.404e+03|         -|     1259|     -|        no|  123 (43%)|  120 (54%)|  79998 (75%)|  65078 (122%)|    -|
+    | + FFT_pipeline_DIT*                                             |  Timing|  -2.17|      477|  2.428e+03|         -|      256|     -|  dataflow|   96 (34%)|  120 (54%)|  78743 (74%)|  64214 (120%)|    -|
+    |  + FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc                     |       -|   0.60|      258|  1.032e+03|         -|      258|     -|        no|          -|          -|     36 (~0%)|     100 (~0%)|    -|
+    |   o LOOP_REVIDTAB                                               |      II|   2.92|      256|  1.024e+03|         3|        2|   128|       yes|          -|          -|            -|             -|    -|
+    |  + FFT_DIT_spatial_unroll_CY_stream_vector*                     |  Timing|  -2.17|      477|  2.428e+03|         -|       32|     -|  dataflow|   96 (34%)|  120 (54%)|  78705 (73%)|  64080 (120%)|    -|
+    |   + reverse_input_stream_UF2*                                   |  Timing|  -2.04|      107|    530.292|         -|       32|     -|  dataflow|    16 (5%)|          -|    1370 (1%)|     1214 (2%)|    -|
+    |    + reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc       |  Timing|  -2.04|       33|    163.548|         -|       33|     -|        no|          -|          -|      7 (~0%)|      64 (~0%)|    -|
+    |     o READ_STREAM_INPUT                                         |       -|   2.92|       31|    153.636|         1|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |    + reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc    |  Timing|  -2.04|       37|    183.372|         -|       37|     -|        no|          -|          -|    837 (~0%)|     1045 (1%)|    -|
+    |     o FROM_BLOCK_TO_CYCLIC                                      |       -|   2.92|       35|    173.460|         5|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |    + reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc      |  Timing|  -2.04|       35|    173.460|         -|       35|     -|        no|          -|          -|     12 (~0%)|      77 (~0%)|    -|
+    |     o STREAM_OUT_REVERSE                                        |       -|   2.92|       33|    163.548|         3|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_Stage1_vectorstream_parameterize*                       |  Timing|  -2.04|       46|    227.976|         -|       32|     -|  dataflow|          -|          -|    5121 (4%)|     4848 (9%)|    -|
+    |    + FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc  |  Timing|  -2.04|       46|    227.976|         -|       46|     -|        no|          -|          -|    5121 (4%)|     4848 (9%)|    -|
+    |     o FFT_Stage1                                                |       -|   2.92|       44|    218.064|        14|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_Stage2_vectorstreamIn_arrayOut_parametize               |  Timing|  -2.17|       47|    239.277|         -|       47|     -|        no|          -|          -|    5452 (5%)|     4862 (9%)|    -|
+    |    o FFT_Stage2                                                 |       -|   2.92|       45|    229.095|        15|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_stage_spatial_unroll_3_s                                |  Timing|  -2.04|       74|    366.744|         -|       74|     -|        no|          -|   24 (10%)|  13276 (12%)|   10657 (20%)|    -|
+    |    o R_Pair_loop_R_Group_loop                                   |       -|   2.92|       72|    356.832|        42|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_stage_spatial_unroll_4_s                                |  Timing|  -2.04|       74|    366.744|         -|       74|     -|        no|          -|   24 (10%)|  12808 (12%)|   10326 (19%)|    -|
+    |    o R_Pair_loop_R_Group_loop                                   |       -|   2.92|       72|    356.832|        42|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_stage_spatial_unroll_5_s                                |  Timing|  -2.04|       74|    366.744|         -|       74|     -|        no|          -|   24 (10%)|  12810 (12%)|   10415 (19%)|    -|
+    |    o R_Pair_loop_R_Group_loop                                   |       -|   2.92|       72|    356.832|        42|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_stage_spatial_unroll_6_s                                |  Timing|  -2.04|       74|    366.744|         -|       74|     -|        no|          -|   24 (10%)|  12815 (12%)|   10511 (19%)|    -|
+    |    o R_Pair_loop_R_Group_loop                                   |       -|   2.92|       72|    356.832|        42|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + FFT_stage_spatial_unroll_7_s                                |  Timing|  -2.13|       72|    363.312|         -|       72|     -|        no|          -|   24 (10%)|  12531 (11%)|   10694 (20%)|    -|
+    |    o R_Group_loop_bflySize_equal_FFT_NUM                        |       -|   2.92|       70|    353.220|        40|        1|    32|       yes|          -|          -|            -|             -|    -|
+    |   + output_result_array_to_stream                               |  Timing|  -2.04|       35|    173.460|         -|       35|     -|        no|          -|          -|     12 (~0%)|      77 (~0%)|    -|
+    |    o PostP_Fwd_loop                                             |       -|   2.92|       33|    163.548|         3|        1|    32|       yes|          -|          -|            -|             -|    -|
+    | + FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1                          |       -|   1.05|      131|    524.000|         -|      131|     -|        no|          -|          -|    283 (~0%)|      94 (~0%)|    -|
+    |  o VITIS_LOOP_757_1                                             |      II|   2.92|      129|    516.000|         4|        2|    64|       yes|          -|          -|            -|             -|    -|
+    | + FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1                          |       -|   0.60|      644|  2.576e+03|         -|      644|     -|        no|     4 (1%)|          -|    269 (~0%)|     190 (~0%)|    -|
+    |  o VITIS_LOOP_734_1                                             |      II|   2.92|      642|  2.568e+03|         8|        5|   128|       yes|          -|          -|            -|             -|    -|
+    | + FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2                          |       -|   1.05|      132|    528.000|         -|      132|     -|        no|          -|          -|    279 (~0%)|     112 (~0%)|    -|
+    |  o VITIS_LOOP_764_2                                             |      II|   2.92|      130|    520.000|         5|        2|    64|       yes|          -|          -|            -|             -|    -|
+    +-----------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+-----------+-------------+--------------+-----+
+
++ Performance Pragma Report: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------------------+----------+------------+-------+----------+------------+-------+
+    |                             Modules                             | Target TI| Achieved TI|       | Target TL| Achieved TL|       |
+    |                             & Loops                             | (cycles) |  (cycles)  | TI met| (cycles) |  (cycles)  | TL met|
+    +-----------------------------------------------------------------+----------+------------+-------+----------+------------+-------+
+    |+ FFT_DIT_RN                                                     |         -|           -|      -|         -|           -|      -|
+    | + FFT_pipeline_DIT*                                             |         -|           -|      -|         -|           -|      -|
+    |  + FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc                     |         -|           -|      -|         -|           -|      -|
+    |   o LOOP_REVIDTAB                                               |         -|           -|      -|         -|           -|      -|
+    |  + FFT_DIT_spatial_unroll_CY_stream_vector*                     |        32|          32|    yes|         -|           -|      -|
+    |   + reverse_input_stream_UF2*                                   |        32|          32|    yes|         -|           -|      -|
+    |    + reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc       |        32|          33|     no|         -|           -|      -|
+    |     o READ_STREAM_INPUT                                         |         -|           -|      -|         -|           -|      -|
+    |    + reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc    |        32|          37|     no|         -|           -|      -|
+    |     o FROM_BLOCK_TO_CYCLIC                                      |         -|           -|      -|         -|           -|      -|
+    |    + reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc      |        32|          35|     no|         -|           -|      -|
+    |     o STREAM_OUT_REVERSE                                        |         -|           -|      -|         -|           -|      -|
+    |   + FFT_Stage1_vectorstream_parameterize*                       |         -|           -|      -|         -|           -|      -|
+    |    + FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc  |         -|           -|      -|         -|           -|      -|
+    |     o FFT_Stage1                                                |        32|          32|    yes|         -|           -|      -|
+    |   + FFT_Stage2_vectorstreamIn_arrayOut_parametize               |        32|          47|     no|         -|           -|      -|
+    |    o FFT_Stage2                                                 |        32|          32|    yes|         -|           -|      -|
+    |   + FFT_stage_spatial_unroll_3_s                                |         -|           -|      -|         -|           -|      -|
+    |    o R_Pair_loop_R_Group_loop                                   |        32|          32|    yes|         -|           -|      -|
+    |   + FFT_stage_spatial_unroll_4_s                                |         -|           -|      -|         -|           -|      -|
+    |    o R_Pair_loop_R_Group_loop                                   |        32|          32|    yes|         -|           -|      -|
+    |   + FFT_stage_spatial_unroll_5_s                                |         -|           -|      -|         -|           -|      -|
+    |    o R_Pair_loop_R_Group_loop                                   |        32|          32|    yes|         -|           -|      -|
+    |   + FFT_stage_spatial_unroll_6_s                                |         -|           -|      -|         -|           -|      -|
+    |    o R_Pair_loop_R_Group_loop                                   |        32|          32|    yes|         -|           -|      -|
+    |   + FFT_stage_spatial_unroll_7_s                                |         -|           -|      -|         -|           -|      -|
+    |    o R_Group_loop_bflySize_equal_FFT_NUM                        |        32|          32|    yes|         -|           -|      -|
+    |   + output_result_array_to_stream                               |        32|          35|     no|         -|           -|      -|
+    |    o PostP_Fwd_loop                                             |        32|          32|    yes|         -|           -|      -|
+    | + FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1                          |         -|           -|      -|         -|           -|      -|
+    |  o VITIS_LOOP_757_1                                             |         -|           -|      -|         -|           -|      -|
+    | + FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1                          |         -|           -|      -|         -|           -|      -|
+    |  o VITIS_LOOP_734_1                                             |         -|           -|      -|         -|           -|      -|
+    | + FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2                          |         -|           -|      -|         -|           -|      -|
+    |  o VITIS_LOOP_764_2                                             |         -|           -|      -|         -|           -|      -|
+    +-----------------------------------------------------------------+----------+------------+-------+----------+------------+-------+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++-----------+-----------+------------+
+| Interface | Direction | Data Width |
++-----------+-----------+------------+
+| in_r      | in        | 256        |
+| out_r     | out       | 256        |
++-----------+-----------+------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------------------------------------+
+| Argument | Direction | Datatype                                        |
++----------+-----------+-------------------------------------------------+
+| in       | in        | stream<hls::vector<std::complex<float>, 4>, 0>& |
+| out      | out       | stream<hls::vector<std::complex<float>, 4>, 0>& |
++----------+-----------+-------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| in       | in_r         | interface |
+| out      | out_r        | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------+-----+--------+-----------------+-----------+--------------------------+---------+
+| Name                                                            | DSP | Pragma | Variable        | Op        | Impl                     | Latency |
++-----------------------------------------------------------------+-----+--------+-----------------+-----------+--------------------------+---------+
+| + FFT_DIT_RN                                                    | 120 |        |                 |           |                          |         |
+|  + FFT_pipeline_DIT                                             | 120 |        |                 |           |                          |         |
+|   + FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc                    | 0   |        |                 |           |                          |         |
+|     number_fu_67_p2                                             |     |        | number          | add       | fabric                   | 0       |
+|     icmp_ln650_fu_73_p2                                         |     |        | icmp_ln650      | seteq     | auto                     | 0       |
+|   + FFT_DIT_spatial_unroll_CY_stream_vector                     | 120 |        |                 |           |                          |         |
+|    + reverse_input_stream_UF2                                   | 0   |        |                 |           |                          |         |
+|     + reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc      | 0   |        |                 |           |                          |         |
+|       i_fu_430_p2                                               |     |        | i               | add       | fabric                   | 0       |
+|       icmp_ln258_fu_436_p2                                      |     |        | icmp_ln258      | seteq     | auto                     | 0       |
+|     + reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc   | 0   |        |                 |           |                          |         |
+|       i_fu_312_p2                                               |     |        | i               | add       | fabric                   | 0       |
+|       add_ln285_1_fu_349_p2                                     |     |        | add_ln285_1     | add       | fabric                   | 0       |
+|       add_ln285_2_fu_354_p2                                     |     |        | add_ln285_2     | add       | fabric                   | 0       |
+|       icmp_ln298_fu_432_p2                                      |     |        | icmp_ln298      | seteq     | auto                     | 0       |
+|       select_ln298_fu_437_p3                                    |     |        | select_ln298    | select    | auto_sel                 | 0       |
+|       icmp_ln298_1_fu_444_p2                                    |     |        | icmp_ln298_1    | seteq     | auto                     | 0       |
+|       select_ln298_1_fu_595_p3                                  |     |        | select_ln298_1  | select    | auto_sel                 | 0       |
+|       icmp_ln298_2_fu_449_p2                                    |     |        | icmp_ln298_2    | seteq     | auto                     | 0       |
+|       p_0_079_i_fu_600_p3                                       |     |        | p_0_079_i       | select    | auto_sel                 | 0       |
+|       select_ln298_2_fu_454_p3                                  |     |        | select_ln298_2  | select    | auto_sel                 | 0       |
+|       select_ln298_3_fu_607_p3                                  |     |        | select_ln298_3  | select    | auto_sel                 | 0       |
+|       p_0_180_i_fu_612_p3                                       |     |        | p_0_180_i       | select    | auto_sel                 | 0       |
+|       select_ln298_4_fu_461_p3                                  |     |        | select_ln298_4  | select    | auto_sel                 | 0       |
+|       select_ln298_5_fu_619_p3                                  |     |        | select_ln298_5  | select    | auto_sel                 | 0       |
+|       p_0_079_1_i_fu_624_p3                                     |     |        | p_0_079_1_i     | select    | auto_sel                 | 0       |
+|       select_ln298_6_fu_469_p3                                  |     |        | select_ln298_6  | select    | auto_sel                 | 0       |
+|       select_ln298_7_fu_631_p3                                  |     |        | select_ln298_7  | select    | auto_sel                 | 0       |
+|       p_0_180_1_i_fu_636_p3                                     |     |        | p_0_180_1_i     | select    | auto_sel                 | 0       |
+|       select_ln298_8_fu_477_p3                                  |     |        | select_ln298_8  | select    | auto_sel                 | 0       |
+|       select_ln298_9_fu_643_p3                                  |     |        | select_ln298_9  | select    | auto_sel                 | 0       |
+|       p_0_079_2_i_fu_648_p3                                     |     |        | p_0_079_2_i     | select    | auto_sel                 | 0       |
+|       select_ln298_10_fu_485_p3                                 |     |        | select_ln298_10 | select    | auto_sel                 | 0       |
+|       select_ln298_11_fu_655_p3                                 |     |        | select_ln298_11 | select    | auto_sel                 | 0       |
+|       p_0_180_2_i_fu_660_p3                                     |     |        | p_0_180_2_i     | select    | auto_sel                 | 0       |
+|       select_ln298_12_fu_493_p3                                 |     |        | select_ln298_12 | select    | auto_sel                 | 0       |
+|       select_ln298_13_fu_667_p3                                 |     |        | select_ln298_13 | select    | auto_sel                 | 0       |
+|       p_0_079_3_i_fu_672_p3                                     |     |        | p_0_079_3_i     | select    | auto_sel                 | 0       |
+|       select_ln298_14_fu_500_p3                                 |     |        | select_ln298_14 | select    | auto_sel                 | 0       |
+|       select_ln298_15_fu_679_p3                                 |     |        | select_ln298_15 | select    | auto_sel                 | 0       |
+|       p_0_180_3_i_fu_684_p3                                     |     |        | p_0_180_3_i     | select    | auto_sel                 | 0       |
+|       sparsemux_7_2_5_1_1_U11                                   |     |        | cyclic_offset_3 | sparsemux | compactencoding_realdef  | 0       |
+|       sparsemux_7_2_5_1_1_U12                                   |     |        | cyclic_offset_4 | sparsemux | compactencoding_realdef  | 0       |
+|       sparsemux_7_2_5_1_1_U13                                   |     |        | cyclic_offset_5 | sparsemux | compactencoding_realdef  | 0       |
+|       sparsemux_7_2_5_1_1_U14                                   |     |        | cyclic_offset_6 | sparsemux | compactencoding_realdef  | 0       |
+|       icmp_ln279_fu_338_p2                                      |     |        | icmp_ln279      | seteq     | auto                     | 0       |
+|     + reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc     | 0   |        |                 |           |                          |         |
+|       i_fu_189_p2                                               |     |        | i               | add       | fabric                   | 0       |
+|       icmp_ln357_fu_195_p2                                      |     |        | icmp_ln357      | seteq     | auto                     | 0       |
+|    + FFT_Stage1_vectorstream_parameterize                       | 0   |        |                 |           |                          |         |
+|     + FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc | 0   |        |                 |           |                          |         |
+|       fadd_32ns_32ns_32_14_no_dsp_1_U47                         |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|       fadd_32ns_32ns_32_14_no_dsp_1_U48                         |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|       fsub_32ns_32ns_32_14_no_dsp_1_U49                         |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|       fsub_32ns_32ns_32_14_no_dsp_1_U50                         |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|       fadd_32ns_32ns_32_14_no_dsp_1_U51                         |     | yes    | d2_real_7       | fadd      | fabric                   | 13      |
+|       fadd_32ns_32ns_32_14_no_dsp_1_U52                         |     | yes    | d2_imag_7       | fadd      | fabric                   | 13      |
+|       fsub_32ns_32ns_32_14_no_dsp_1_U53                         |     | yes    | d3_real_7       | fsub      | fabric                   | 13      |
+|       fsub_32ns_32ns_32_14_no_dsp_1_U54                         |     | yes    | d3_imag_7       | fsub      | fabric                   | 13      |
+|       m_fu_281_p2                                               |     |        | m               | add       | fabric                   | 0       |
+|       icmp_ln496_fu_287_p2                                      |     |        | icmp_ln496      | seteq     | auto                     | 0       |
+|    + FFT_Stage2_vectorstreamIn_arrayOut_parametize              | 0   |        |                 |           |                          |         |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U61                          |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U62                          |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U63                          |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U64                          |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U65                          |     | yes    | d2_real_6       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U66                          |     | yes    | d2_imag_6       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U67                          |     | yes    | d3_real_6       | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U68                          |     | yes    | d3_imag_6       | fsub      | fabric                   | 13      |
+|      m_fu_460_p2                                                |     |        | m               | add       | fabric                   | 0       |
+|    + FFT_stage_spatial_unroll_3_s                               | 24  |        |                 |           |                          |         |
+|      select_ln413_fu_634_p3                                     |     |        | select_ln413    | select    | auto_sel                 | 0       |
+|      m_fu_642_p3                                                |     |        | m               | select    | auto_sel                 | 0       |
+|      empty_fu_650_p2                                            |     |        | empty           | seteq     | auto                     | 0       |
+|      c_fu_761_p3                                                |     |        | c               | select    | auto_sel                 | 0       |
+|      d_fu_768_p3                                                |     |        | d               | select    | auto_sel                 | 0       |
+|      icmp_ln11_fu_775_p2                                        |     |        | icmp_ln11       | setne     | auto                     | 0       |
+|      d0_real_fu_780_p3                                          |     |        | d0_real         | select    | auto_sel                 | 0       |
+|      d0_imag_fu_785_p3                                          |     |        | d0_imag         | select    | auto_sel                 | 0       |
+|      a_fu_790_p3                                                |     |        | a               | select    | auto_sel                 | 0       |
+|      d1_real_13_fu_797_p3                                       |     |        | d1_real_13      | select    | auto_sel                 | 0       |
+|      add_ln413_4_fu_608_p2                                      |     |        | add_ln413_4     | add       | fabric                   | 0       |
+|      xor_ln17_fu_859_p2                                         |     |        | xor_ln17        | xor       | auto                     | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U90                          | 3   |        | ac              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U91                          | 3   |        | bd              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U92                          | 3   |        | ad              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U93                          | 3   |        | bc              | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U78                          |     | yes    | d1_real         | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U79                          |     | yes    | d1_imag         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U82                          |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U83                          |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U84                          |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U85                          |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|      tw_fu_804_p3                                               |     |        | tw              | select    | auto_sel                 | 0       |
+|      icmp_ln11_1_fu_818_p2                                      |     |        | icmp_ln11_1     | seteq     | auto                     | 0       |
+|      select_ln11_fu_824_p3                                      |     |        | select_ln11     | select    | auto_sel                 | 0       |
+|      d1_fu_830_p3                                               |     |        | d1              | select    | auto_sel                 | 0       |
+|      select_ln11_2_fu_836_p3                                    |     |        | select_ln11_2   | select    | auto_sel                 | 0       |
+|      d1_22_fu_842_p3                                            |     |        | d1_22           | select    | auto_sel                 | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U94                          | 3   |        | ac_5            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U95                          | 3   |        | bd_5            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U96                          | 3   |        | ad_5            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U97                          | 3   |        | bc_5            | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U80                          |     | yes    | d1_real_15      | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U81                          |     | yes    | d1_imag_15      | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U86                          |     | yes    | d2_real_5       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U87                          |     | yes    | d2_imag_5       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U88                          |     | yes    | d3_real_5       | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U89                          |     | yes    | d3_imag_5       | fsub      | fabric                   | 13      |
+|      k_fu_720_p2                                                |     |        | k               | add       | fabric                   | 0       |
+|      xor_ln416_fu_734_p2                                        |     |        | xor_ln416       | xor       | auto                     | 0       |
+|      add_ln413_fu_740_p2                                        |     |        | add_ln413       | add       | fabric                   | 0       |
+|      icmp_ln413_fu_614_p2                                       |     |        | icmp_ln413      | seteq     | auto                     | 0       |
+|    + FFT_stage_spatial_unroll_4_s                               | 24  |        |                 |           |                          |         |
+|      select_ln413_fu_536_p3                                     |     |        | select_ln413    | select    | auto_sel                 | 0       |
+|      m_fu_544_p3                                                |     |        | m               | select    | auto_sel                 | 0       |
+|      sparsemux_9_3_32_1_1_U131                                  |     |        | c               | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_9_3_32_1_1_U132                                  |     |        | d               | sparsemux | compactencoding_dontcare | 0       |
+|      add_ln413_3_fu_510_p2                                      |     |        | add_ln413_3     | add       | fabric                   | 0       |
+|      xor_ln17_fu_764_p2                                         |     |        | xor_ln17        | xor       | auto                     | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U123                         | 3   |        | ac              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U124                         | 3   |        | bd              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U125                         | 3   |        | ad              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U126                         | 3   |        | bc              | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U111                         |     | yes    | d1_real         | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U112                         |     | yes    | d1_imag         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U115                         |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U116                         |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U117                         |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U118                         |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|      sparsemux_9_3_32_1_1_U133                                  |     |        | tw              | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_9_3_32_1_1_U134                                  |     |        | tw_18           | sparsemux | compactencoding_dontcare | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U127                         | 3   |        | ac_4            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U128                         | 3   |        | bd_4            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U129                         | 3   |        | ad_4            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U130                         | 3   |        | bc_4            | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U113                         |     | yes    | d1_real_12      | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U114                         |     | yes    | d1_imag_12      | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U119                         |     | yes    | d2_real_4       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U120                         |     | yes    | d2_imag_4       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U121                         |     | yes    | d3_real_4       | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U122                         |     | yes    | d3_imag_4       | fsub      | fabric                   | 13      |
+|      k_fu_620_p2                                                |     |        | k               | add       | fabric                   | 0       |
+|      xor_ln416_fu_634_p2                                        |     |        | xor_ln416       | xor       | auto                     | 0       |
+|      add_ln413_fu_640_p2                                        |     |        | add_ln413       | add       | fabric                   | 0       |
+|      icmp_ln413_fu_516_p2                                       |     |        | icmp_ln413      | seteq     | auto                     | 0       |
+|    + FFT_stage_spatial_unroll_5_s                               | 24  |        |                 |           |                          |         |
+|      select_ln413_fu_558_p3                                     |     |        | select_ln413    | select    | auto_sel                 | 0       |
+|      m_fu_566_p3                                                |     |        | m               | select    | auto_sel                 | 0       |
+|      sparsemux_17_4_32_1_1_U164                                 |     |        | c               | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_17_4_32_1_1_U165                                 |     |        | d               | sparsemux | compactencoding_dontcare | 0       |
+|      add_ln413_2_fu_532_p2                                      |     |        | add_ln413_2     | add       | fabric                   | 0       |
+|      xor_ln17_fu_850_p2                                         |     |        | xor_ln17        | xor       | auto                     | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U156                         | 3   |        | ac              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U157                         | 3   |        | bd              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U158                         | 3   |        | ad              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U159                         | 3   |        | bc              | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U144                         |     | yes    | d1_real         | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U145                         |     | yes    | d1_imag         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U148                         |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U149                         |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U150                         |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U151                         |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|      sparsemux_17_4_32_1_1_U166                                 |     |        | tw              | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_17_4_32_1_1_U167                                 |     |        | tw_14           | sparsemux | compactencoding_dontcare | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U160                         | 3   |        | ac_3            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U161                         | 3   |        | bd_3            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U162                         | 3   |        | ad_3            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U163                         | 3   |        | bc_3            | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U146                         |     | yes    | d1_real_9       | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U147                         |     | yes    | d1_imag_9       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U152                         |     | yes    | d2_real_3       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U153                         |     | yes    | d2_imag_3       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U154                         |     | yes    | d3_real_3       | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U155                         |     | yes    | d3_imag_3       | fsub      | fabric                   | 13      |
+|      k_fu_642_p2                                                |     |        | k               | add       | fabric                   | 0       |
+|      xor_ln416_fu_656_p2                                        |     |        | xor_ln416       | xor       | auto                     | 0       |
+|      add_ln413_fu_662_p2                                        |     |        | add_ln413       | add       | fabric                   | 0       |
+|      icmp_ln413_fu_538_p2                                       |     |        | icmp_ln413      | seteq     | auto                     | 0       |
+|    + FFT_stage_spatial_unroll_6_s                               | 24  |        |                 |           |                          |         |
+|      select_ln413_fu_604_p3                                     |     |        | select_ln413    | select    | auto_sel                 | 0       |
+|      m_fu_612_p3                                                |     |        | m               | select    | auto_sel                 | 0       |
+|      sparsemux_33_5_32_1_1_U197                                 |     |        | c               | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_33_5_32_1_1_U198                                 |     |        | d               | sparsemux | compactencoding_dontcare | 0       |
+|      add_ln413_1_fu_578_p2                                      |     |        | add_ln413_1     | add       | fabric                   | 0       |
+|      xor_ln17_fu_1022_p2                                        |     |        | xor_ln17        | xor       | auto                     | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U189                         | 3   |        | ac              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U190                         | 3   |        | bd              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U191                         | 3   |        | ad              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U192                         | 3   |        | bc              | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U177                         |     | yes    | d1_real         | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U178                         |     | yes    | d1_imag         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U181                         |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U182                         |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U183                         |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U184                         |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|      sparsemux_33_5_32_1_1_U199                                 |     |        | tw              | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_33_5_32_1_1_U200                                 |     |        | tw_9            | sparsemux | compactencoding_dontcare | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U193                         | 3   |        | ac_2            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U194                         | 3   |        | bd_2            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U195                         | 3   |        | ad_2            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U196                         | 3   |        | bc_2            | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U179                         |     | yes    | d1_real_6       | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U180                         |     | yes    | d1_imag_6       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U185                         |     | yes    | d2_real_2       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U186                         |     | yes    | d2_imag_2       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U187                         |     | yes    | d3_real_2       | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U188                         |     | yes    | d3_imag_2       | fsub      | fabric                   | 13      |
+|      k_fu_686_p2                                                |     |        | k               | add       | fabric                   | 0       |
+|      xor_ln416_fu_700_p2                                        |     |        | xor_ln416       | xor       | auto                     | 0       |
+|      add_ln413_fu_706_p2                                        |     |        | add_ln413       | add       | fabric                   | 0       |
+|      icmp_ln413_fu_584_p2                                       |     |        | icmp_ln413      | seteq     | auto                     | 0       |
+|    + FFT_stage_spatial_unroll_7_s                               | 24  |        |                 |           |                          |         |
+|      sparsemux_65_6_32_1_1_U230                                 |     |        | tw              | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_65_6_32_1_1_U231                                 |     |        | tw_3            | sparsemux | compactencoding_dontcare | 0       |
+|      xor_ln17_fu_1232_p2                                        |     |        | xor_ln17        | xor       | auto                     | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U222                         | 3   |        | ac              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U223                         | 3   |        | bd              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U224                         | 3   |        | ad              | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U225                         | 3   |        | bc              | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U210                         |     | yes    | d1_real         | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U211                         |     | yes    | d1_imag         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U214                         |     | yes    | d2_real         | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U215                         |     | yes    | d2_imag         | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U216                         |     | yes    | d3_real         | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U217                         |     | yes    | d3_imag         | fsub      | fabric                   | 13      |
+|      sparsemux_65_6_32_1_1_U232                                 |     |        | tw_4            | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_65_6_32_1_1_U233                                 |     |        | tw_5            | sparsemux | compactencoding_dontcare | 0       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U226                         | 3   |        | ac_1            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U227                         | 3   |        | bd_1            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U228                         | 3   |        | ad_1            | fmul      | maxdsp                   | 7       |
+|      fmul_32ns_32ns_32_8_max_dsp_1_U229                         | 3   |        | bc_1            | fmul      | maxdsp                   | 7       |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U212                         |     | yes    | d1_real_3       | fsub      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U213                         |     | yes    | d1_imag_3       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U218                         |     | yes    | d2_real_1       | fadd      | fabric                   | 13      |
+|      fadd_32ns_32ns_32_14_no_dsp_1_U219                         |     | yes    | d2_imag_1       | fadd      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U220                         |     | yes    | d3_real_1       | fsub      | fabric                   | 13      |
+|      fsub_32ns_32ns_32_14_no_dsp_1_U221                         |     | yes    | d3_imag_1       | fsub      | fabric                   | 13      |
+|      k_fu_662_p2                                                |     |        | k               | add       | fabric                   | 0       |
+|    + output_result_array_to_stream                              | 0   |        |                 |           |                          |         |
+|      i_fu_203_p2                                                |     |        | i               | add       | fabric                   | 0       |
+|      icmp_ln56_fu_209_p2                                        |     |        | icmp_ln56       | seteq     | auto                     | 0       |
+|  + FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1                         | 0   |        |                 |           |                          |         |
+|    icmp_ln757_fu_202_p2                                         |     |        | icmp_ln757      | seteq     | auto                     | 0       |
+|    add_ln757_fu_208_p2                                          |     |        | add_ln757       | add       | fabric                   | 0       |
+|  + FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1                         | 0   |        |                 |           |                          |         |
+|    icmp_ln734_fu_107_p2                                         |     |        | icmp_ln734      | seteq     | auto                     | 0       |
+|    add_ln734_fu_113_p2                                          |     |        | add_ln734       | add       | fabric                   | 0       |
+|    icmp_ln736_fu_136_p2                                         |     |        | icmp_ln736      | setlt     | auto                     | 0       |
+|  + FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2                         | 0   |        |                 |           |                          |         |
+|    icmp_ln764_fu_175_p2                                         |     |        | icmp_ln764      | seteq     | auto                     | 0       |
+|    add_ln764_fu_181_p2                                          |     |        | add_ln764       | add       | fabric                   | 0       |
++-----------------------------------------------------------------+-----+--------+-----------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------------------------------------------------------------------+-----------------+--------+------+------+--------+---------------------------------------------------------------------------+--------+---------+------------------+
+| Name                                                                            | Usage           | Type   | BRAM | URAM | Pragma | Variable                                                                  | Impl   | Latency | Bitwidth, Depth, |
+|                                                                                 |                 |        |      |      |        |                                                                           |        |         | Banks            |
++---------------------------------------------------------------------------------+-----------------+--------+------+------+--------+---------------------------------------------------------------------------+--------+---------+------------------+
+| + FFT_DIT_RN                                                                    |                 |        | 123  | 0    |        |                                                                           |        |         |                  |
+|   mid_fifo_U                                                                    | fifo array      |        | 15   |      |        | mid                                                                       | memory | 0       | 256, 8, 1        |
+|   revIdxTab_U                                                                   | ram_1p          |        |      |      |        | revIdxTab                                                                 | auto   | 1       | 7, 128, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2            | auto   | 2       | 32, 64, 1        |
+|   FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3_U              | ram_1p          |        | 1    |      |        | FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3            | auto   | 2       | 32, 64, 1        |
+|  + FFT_pipeline_DIT                                                             |                 |        | 96   | 0    |        |                                                                           |        |         |                  |
+|   + FFT_DIT_spatial_unroll_CY_stream_vector                                     |                 |        | 96   | 0    |        |                                                                           |        |         |                  |
+|     reverse_in_stream_vector_U                                                  | fifo channel    | stream |      |      |        | reverse_in_stream_vector                                                  | srl    | 0       | 256, 2, 1        |
+|     data_s1_stream_vector_U                                                     | fifo channel    | stream |      |      |        | data_s1_stream_vector                                                     | srl    | 0       | 256, 2, 1        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3_U | ram_2p channel  | pipo   |      |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3 | lutram | 1       | 32, 32, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0 | auto   | 2       | 32, 64, 2        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_U | ram_t2p channel | pipo   | 2    |      |        | FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1 | auto   | 2       | 32, 64, 2        |
+|    + reverse_input_stream_UF2                                                   |                 |        | 16   | 0    |        |                                                                           |        |         |                  |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3_U      | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3       | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2        | auto   | 2       | 32, 32, 2        |
+|      reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3_U       | ram_1p channel  | pipo   | 1    |      |        | reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3        | auto   | 2       | 32, 32, 2        |
+|  + FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1                                         |                 |        | 4    | 0    |        |                                                                           |        |         |                  |
+|    p_buf_1_U                                                                    | ram_2p          |        | 2    |      |        | p_buf_1                                                                   | auto   | 2       | 32, 128, 1       |
+|    p_buf_U                                                                      | ram_2p          |        | 2    |      |        | p_buf                                                                     | auto   | 2       | 32, 128, 1       |
++---------------------------------------------------------------------------------+-----------------+--------+------+------+--------+---------------------------------------------------------------------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++-------------+--------------------------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type        | Options                        | Location                                               | Messages                                                                                                                                                                                                                                                     |
++-------------+--------------------------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow    | disable_start_propagation      | FFT.cpp:245 in reverse_input_stream_uf2                | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region                                                                           |
+| performance | target_ti=128/(2*2) unit=cycle | FFT.cpp:246 in reverse_input_stream_uf2                | Cannot apply performance pragma for function 'reverse_input_stream_UF2(hls::stream<hls::vector<std::complex<float>, 4ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 4ul>, 0>&)' (FFT.cpp:232)because dataflow pragma takes precedence                |
+| unroll      | factor=2>>(stage-1)            | FFT.cpp:382 in fft_stage_spatial_unroll                | Unroll pragma is ignored, because 'factor' is not positive integer                                                                                                                                                                                           |
+| dataflow    | disable_start_propagation      | FFT.cpp:494 in fft_stage1_vectorstream_parameterize    | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region                                                                           |
+| performance | target_ti=128/(2*2) unit=cycle | FFT.cpp:554 in fft_dit_spatial_unroll_cy_stream_vector | Cannot apply performance pragma for function 'FFT_DIT_spatial_unroll_CY_stream_vector(hls::stream<hls::vector<std::complex<float>, 4ul>, 0>&, hls::stream<hls::vector<std::complex<float>, 4ul>, 0>&)' (FFT.cpp:551)because dataflow pragma takes precedence |
+| dataflow    | disable_start_propagation      | FFT.cpp:644 in fft_pipeline_dit                        | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region                                                                           |
+| dataflow    | disable_start_propagation      | FFT.cpp:669 in fft_pipeline_dif                        | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region                                                                           |
+|             |                                |                                                        | There are a total of 4 such instances of non-canonical statements in the dataflow region                                                                                                                                                                     |
++-------------+--------------------------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+------------------------------------------------------+-----------------------------------------------------------------------+
+| Type            | Options                                              | Location                                                              |
++-----------------+------------------------------------------------------+-----------------------------------------------------------------------+
+| inline          |                                                      | FFT.cpp:10 in radix2_bfly_double_buffer_quarter_cy                    |
+| bind_op         | variable=d1_real op=fsub impl=fabric                 | FFT.cpp:20 in radix2_bfly_double_buffer_quarter_cy, d1_real           |
+| bind_op         | variable=d1_imag op=fadd impl=fabric                 | FFT.cpp:21 in radix2_bfly_double_buffer_quarter_cy, d1_imag           |
+| bind_op         | variable=d2_real op=fadd impl=fabric                 | FFT.cpp:36 in radix2_bfly_double_buffer_quarter_cy, d2_real           |
+| bind_op         | variable=d2_imag op=fadd impl=fabric                 | FFT.cpp:37 in radix2_bfly_double_buffer_quarter_cy, d2_imag           |
+| bind_op         | variable=d3_real op=fsub impl=fabric                 | FFT.cpp:38 in radix2_bfly_double_buffer_quarter_cy, d3_real           |
+| bind_op         | variable=d3_imag op=fsub impl=fabric                 | FFT.cpp:39 in radix2_bfly_double_buffer_quarter_cy, d3_imag           |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:55 in output_result_array_to_stream                           |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:57 in output_result_array_to_stream                           |
+| pipeline        |                                                      | FFT.cpp:58 in output_result_array_to_stream                           |
+| inline          |                                                      | FFT.cpp:69 in bit_reverse                                             |
+| unroll          |                                                      | FFT.cpp:72 in bit_reverse                                             |
+| pipeline        | II=1                                                 | FFT.cpp:90 in reverse_read_stream_input                               |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:91 in reverse_read_stream_input                               |
+| array_partition | variable=original type=complete dim=1                | FFT.cpp:95 in reverse_read_stream_input, original                     |
+| array_partition | variable=reversed type=complete dim=1                | FFT.cpp:100 in reverse_read_stream_input, reversed                    |
+| dependence      | variable=data_rev_stream_0 inter direction=WAW false | FFT.cpp:105 in reverse_read_stream_input, data_rev_stream_0           |
+| dependence      | variable=data_rev_stream_1 inter direction=WAW false | FFT.cpp:106 in reverse_read_stream_input, data_rev_stream_1           |
+| dependence      | variable=data_rev_stream_2 inter direction=WAW false | FFT.cpp:107 in reverse_read_stream_input, data_rev_stream_2           |
+| dependence      | variable=data_rev_stream_3 inter direction=WAW false | FFT.cpp:108 in reverse_read_stream_input, data_rev_stream_3           |
+| pipeline        | II=1                                                 | FFT.cpp:131 in reverse_from_block_to_cyclic                           |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:132 in reverse_from_block_to_cyclic                           |
+| array_partition | variable=offset type=complete dim=1                  | FFT.cpp:134 in reverse_from_block_to_cyclic, offset                   |
+| array_partition | variable=cyclic_offset type=complete dim=1           | FFT.cpp:139 in reverse_from_block_to_cyclic, cyclic_offset            |
+| array_partition | variable=block_data type=complete dim=1              | FFT.cpp:141 in reverse_from_block_to_cyclic, block_data               |
+| array_partition | variable=cyclic_data type=complete dim=1             | FFT.cpp:151 in reverse_from_block_to_cyclic, cyclic_data              |
+| dependence      | variable=data_in_cyclic inter direction=WAW false    | FFT.cpp:198 in reverse_from_block_to_cyclic, data_in_cyclic           |
+| dependence      | variable=data_in_cyclic inter direction=WAW false    | FFT.cpp:202 in reverse_from_block_to_cyclic, data_in_cyclic           |
+| pipeline        | II=1                                                 | FFT.cpp:218 in reverse_write_stream_output                            |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:219 in reverse_write_stream_output                            |
+| array_partition | variable=data_in_cyclic type=complete dim=1          | FFT.cpp:238 in reverse_input_stream_uf2, data_in_cyclic               |
+| array_partition | variable=data_rev_stream type=complete dim=1         | FFT.cpp:239 in reverse_input_stream_uf2, data_rev_stream              |
+| stream          | type=pipo variable=data_in_cyclic                    | FFT.cpp:242 in reverse_input_stream_uf2, data_in_cyclic               |
+| stream          | type=pipo variable=data_rev_stream                   | FFT.cpp:243 in reverse_input_stream_uf2, data_rev_stream              |
+| pipeline        | II=1                                                 | FFT.cpp:259 in reverse_input_stream_uf2                               |
+| array_partition | variable=original type=complete dim=1                | FFT.cpp:264 in reverse_input_stream_uf2, original                     |
+| array_partition | variable=reversed type=complete dim=1                | FFT.cpp:269 in reverse_input_stream_uf2, reversed                     |
+| pipeline        | II=1                                                 | FFT.cpp:280 in reverse_input_stream_uf2                               |
+| array_partition | variable=offset type=complete dim=1                  | FFT.cpp:283 in reverse_input_stream_uf2, offset                       |
+| array_partition | variable=cyclic_offset type=complete dim=1           | FFT.cpp:288 in reverse_input_stream_uf2, cyclic_offset                |
+| array_partition | variable=block_data type=complete dim=1              | FFT.cpp:290 in reverse_input_stream_uf2, block_data                   |
+| array_partition | variable=cyclic_data type=complete dim=1             | FFT.cpp:296 in reverse_input_stream_uf2, cyclic_data                  |
+| pipeline        | II=1                                                 | FFT.cpp:358 in reverse_input_stream_uf2                               |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:381 in fft_stage_spatial_unroll                               |
+| pipeline        |                                                      | FFT.cpp:383 in fft_stage_spatial_unroll                               |
+| bind_op         | variable=index op=mul impl=fabric                    | FFT.cpp:388 in fft_stage_spatial_unroll, index                        |
+| pipeline        |                                                      | FFT.cpp:399 in fft_stage_spatial_unroll                               |
+| unroll          | factor=2                                             | FFT.cpp:400 in fft_stage_spatial_unroll                               |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:401 in fft_stage_spatial_unroll                               |
+| bind_op         | variable=index op=mul impl=fabric                    | FFT.cpp:404 in fft_stage_spatial_unroll, index                        |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:414 in fft_stage_spatial_unroll                               |
+| pipeline        |                                                      | FFT.cpp:417 in fft_stage_spatial_unroll                               |
+| unroll          | factor=2                                             | FFT.cpp:418 in fft_stage_spatial_unroll                               |
+| bind_op         | variable=index op=mul impl=fabric                    | FFT.cpp:421 in fft_stage_spatial_unroll, index                        |
+| array_partition | variable=twiddles complete                           | FFT.cpp:425 in fft_stage_spatial_unroll, twiddles                     |
+| inline          |                                                      | FFT.cpp:435 in radix2_bfly_double_buffer_quarter_onlycompute          |
+| bind_op         | variable=d1_real op=fsub impl=fabric                 | FFT.cpp:445 in radix2_bfly_double_buffer_quarter_onlycompute, d1_real |
+| bind_op         | variable=d1_imag op=fadd impl=fabric                 | FFT.cpp:446 in radix2_bfly_double_buffer_quarter_onlycompute, d1_imag |
+| bind_op         | variable=d2_real op=fadd impl=fabric                 | FFT.cpp:470 in radix2_bfly_double_buffer_quarter_onlycompute, d2_real |
+| bind_op         | variable=d2_imag op=fadd impl=fabric                 | FFT.cpp:471 in radix2_bfly_double_buffer_quarter_onlycompute, d2_imag |
+| bind_op         | variable=d3_real op=fsub impl=fabric                 | FFT.cpp:472 in radix2_bfly_double_buffer_quarter_onlycompute, d3_real |
+| bind_op         | variable=d3_imag op=fsub impl=fabric                 | FFT.cpp:473 in radix2_bfly_double_buffer_quarter_onlycompute, d3_imag |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:497 in fft_stage1_vectorstream_parameterize                   |
+| pipeline        |                                                      | FFT.cpp:498 in fft_stage1_vectorstream_parameterize                   |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:522 in fft_stage2_vectorstreamin_arrayout_parametize          |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:524 in fft_stage2_vectorstreamin_arrayout_parametize          |
+| pipeline        |                                                      | FFT.cpp:525 in fft_stage2_vectorstreamin_arrayout_parametize          |
+| dataflow        | disable_start_propagation                            | FFT.cpp:553 in fft_dit_spatial_unroll_cy_stream_vector                |
+| array_partition | variable=data_0 type=cyclic factor=2*2 dim=1         | FFT.cpp:566 in fft_dit_spatial_unroll_cy_stream_vector, data_0        |
+| bind_storage    | variable=data_0 type=RAM_2P impl=LUTRAM              | FFT.cpp:567 in fft_dit_spatial_unroll_cy_stream_vector, data_0        |
+| array_partition | variable=data_1 type=cyclic factor=2 dim=1           | FFT.cpp:570 in fft_dit_spatial_unroll_cy_stream_vector, data_1        |
+| array_partition | variable=data_2 type=cyclic factor=2 dim=1           | FFT.cpp:571 in fft_dit_spatial_unroll_cy_stream_vector, data_2        |
+| array_partition | variable=data_3 type=cyclic factor=2 dim=1           | FFT.cpp:572 in fft_dit_spatial_unroll_cy_stream_vector, data_3        |
+| array_partition | variable=data_4 type=cyclic factor=2 dim=1           | FFT.cpp:573 in fft_dit_spatial_unroll_cy_stream_vector, data_4        |
+| array_partition | variable=data_5 type=cyclic factor=2 dim=1           | FFT.cpp:574 in fft_dit_spatial_unroll_cy_stream_vector, data_5        |
+| dataflow        | disable_start_propagation                            | FFT.cpp:602 in fft_dft_spatial_unroll_cy_stream_vector                |
+| performance     | target_ti=128/(2*2) unit=cycle                       | FFT.cpp:603 in fft_dft_spatial_unroll_cy_stream_vector                |
+| array_partition | variable=data_0 type=cyclic factor=2*2 dim=1         | FFT.cpp:613 in fft_dft_spatial_unroll_cy_stream_vector, data_0        |
+| bind_storage    | variable=data_0 type=RAM_2P impl=LUTRAM              | FFT.cpp:614 in fft_dft_spatial_unroll_cy_stream_vector, data_0        |
+| array_partition | variable=data_1 type=cyclic factor=2 dim=1           | FFT.cpp:616 in fft_dft_spatial_unroll_cy_stream_vector, data_1        |
+| array_partition | variable=data_2 type=cyclic factor=2 dim=1           | FFT.cpp:617 in fft_dft_spatial_unroll_cy_stream_vector, data_2        |
+| array_partition | variable=data_3 type=cyclic factor=2 dim=1           | FFT.cpp:618 in fft_dft_spatial_unroll_cy_stream_vector, data_3        |
+| array_partition | variable=data_4 type=cyclic factor=2 dim=1           | FFT.cpp:619 in fft_dft_spatial_unroll_cy_stream_vector, data_4        |
+| array_partition | variable=data_5 type=cyclic factor=2 dim=1           | FFT.cpp:620 in fft_dft_spatial_unroll_cy_stream_vector, data_5        |
+| stream          | variable=stage0 depth=8                              | FFT.cpp:688 in fft_pipeline_dif, stage0                               |
+| stream          | variable=stage1 depth=8                              | FFT.cpp:708 in fft_pipeline_dif, stage1                               |
+| stream          | variable=mid depth=8                                 | FFT.cpp:751 in fft_dit_rn, mid                                        |
++-----------------+------------------------------------------------------+-----------------------------------------------------------------------+
+
+* Inferred Pragmas
++--------------------------+-----------------+---------+------------------------------------------------------------------------------------------------------+
+| Source                   | Inferred Pragma | Options | Location                                                                                             |
++--------------------------+-----------------+---------+------------------------------------------------------------------------------------------------------+
+| performance  FFT.cpp:57  | pipeline        | II=1    | loop PostP_Fwd_loop (FFT.cpp:56:18) in output_result_array_to_stream FFT.cpp:0:3                     |
+| performance  FFT.cpp:401 | pipeline        | II=1    | loop R_Group_loop_bflySize_equal_FFT_NUM (FFT.cpp:398:13) in fft_stage_spatial_unroll<7> FFT.cpp:0:4 |
+| performance  FFT.cpp:414 | pipeline        | II=1    | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<6> FFT.cpp:0:5                        |
+| performance  FFT.cpp:414 | loop_flatten    | 1       | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<6> FFT.cpp:0:6                        |
+| performance  FFT.cpp:414 | pipeline        | II=1    | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<5> FFT.cpp:0:7                        |
+| performance  FFT.cpp:414 | loop_flatten    | 1       | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<5> FFT.cpp:0:8                        |
+| performance  FFT.cpp:414 | pipeline        | II=1    | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<4> FFT.cpp:0:9                        |
+| performance  FFT.cpp:414 | loop_flatten    | 1       | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<4> FFT.cpp:0:10                       |
+| performance  FFT.cpp:414 | pipeline        | II=1    | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<3> FFT.cpp:0:11                       |
+| performance  FFT.cpp:414 | loop_flatten    | 1       | loop R_Group_loop (FFT.cpp:416:13) in fft_stage_spatial_unroll<3> FFT.cpp:0:12                       |
+| performance  FFT.cpp:497 | pipeline        | II=1    | loop FFT_Stage1 (FFT.cpp:496:14) in fft_stage1_vectorstream_parameterize FFT.cpp:0:2                 |
+| performance  FFT.cpp:524 | pipeline        | II=1    | loop FFT_Stage2 (FFT.cpp:523:13) in fft_stage2_vectorstreamin_arrayout_parametize FFT.cpp:0:1        |
++--------------------------+-----------------+---------+------------------------------------------------------------------------------------------------------+
+
+

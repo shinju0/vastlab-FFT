@@ -1,0 +1,1463 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_DIT_RN'
+================================================================
+* Date:           Wed Jul 16 18:22:37 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  5.091 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+    +---------+---------+----------+----------+------+------+---------+
+    |     1258|     1258|  6.404 us|  6.404 us|  1259|  1259|       no|
+    +---------+---------+----------+----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+--------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                 |                                      |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                     Instance                    |                Module                |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +-------------------------------------------------+--------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_FFT_pipeline_DIT_fu_154                      |FFT_pipeline_DIT                      |      477|      477|  2.428 us|  2.428 us|  256|  256|                                        dataflow|
+        |grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1_fu_251  |FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1  |      131|      131|  0.524 us|  0.524 us|  130|  130|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_fu_272  |FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1  |      644|      644|  2.576 us|  2.576 us|  643|  643|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2_fu_282  |FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2  |      132|      132|  0.528 us|  0.528 us|  130|  130|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +-------------------------------------------------+--------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%mid = alloca i64 1"   --->   Operation 7 'alloca' 'mid' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 3.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 8> <FIFO>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln754 = call void @FFT_pipeline_DIT, i256 %in_r, i256 %mid, i7 %revIdxTab, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1" [FFT.cpp:754]   --->   Operation 8 'call' 'call_ln754' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln754 = call void @FFT_pipeline_DIT, i256 %in_r, i256 %mid, i7 %revIdxTab, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2, i32 %reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0, i32 %FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1" [FFT.cpp:754]   --->   Operation 9 'call' 'call_ln754' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1, i256 %mid, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 11 [2/2] (0.00ns)   --->   "%call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1, i7 %revIdxTab, i32 %p_buf_1, i32 %p_buf"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 3.45>
+ST_4 : Operation 12 [1/2] (3.45ns)   --->   "%call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1, i256 %mid, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 3.45> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1, i7 %revIdxTab, i32 %p_buf_1, i32 %p_buf"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 14 [2/2] (0.00ns)   --->   "%call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2, i256 %out_r, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%spectopmodule_ln745 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_72" [FFT.cpp:745]   --->   Operation 15 'spectopmodule' 'spectopmodule_ln745' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %in_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i256 %in_r"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %out_r, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i256 %out_r"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @mid_str, i32 1, void @p_str, void @p_str, i32 8, i32 8, i256 %mid, i256 %mid"   --->   Operation 20 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %mid, void @empty_70, i32 0, i32 0, void @empty_71, i32 0, i32 0, void @empty_71, void @empty_71, void @empty_71, i32 0, i32 0, i32 0, i32 0, void @empty_71, void @empty_71, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln0 = call void @FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2, i256 %out_r, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3, i32 %FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3"   --->   Operation 22 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln768 = ret" [FFT.cpp:768]   --->   Operation 23 'ret' 'ret_ln768' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ in_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ out_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ revIdxTab]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[12]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ p_buf_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ p_buf]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[21]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+mid                 (alloca       ) [ 0111111]
+call_ln754          (call         ) [ 0000000]
+call_ln0            (call         ) [ 0000000]
+call_ln0            (call         ) [ 0000000]
+spectopmodule_ln745 (spectopmodule) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+specbitsmap_ln0     (specbitsmap  ) [ 0000000]
+empty               (specchannel  ) [ 0000000]
+specinterface_ln0   (specinterface) [ 0000000]
+call_ln0            (call         ) [ 0000000]
+ret_ln768           (ret          ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="in_r">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="out_r">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="revIdxTab">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="revIdxTab"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3"/><MemPortTyVec>1 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1000" name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1000" name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1000" name="p_buf_1">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_buf_1"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1000" name="p_buf">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_buf"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_pipeline_DIT"/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1001" name="const_124">
+<pin_list>
+<pin id="125" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="126" class="1001" name="const_126">
+<pin_list>
+<pin id="127" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_72"/></StgValue>
+</bind>
+</comp>
+
+<comp id="128" class="1001" name="const_128">
+<pin_list>
+<pin id="129" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="130" class="1001" name="const_130">
+<pin_list>
+<pin id="131" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_70"/></StgValue>
+</bind>
+</comp>
+
+<comp id="132" class="1001" name="const_132">
+<pin_list>
+<pin id="133" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="134" class="1001" name="const_134">
+<pin_list>
+<pin id="135" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_71"/></StgValue>
+</bind>
+</comp>
+
+<comp id="136" class="1001" name="const_136">
+<pin_list>
+<pin id="137" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="138" class="1001" name="const_138">
+<pin_list>
+<pin id="139" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="140" class="1001" name="const_140">
+<pin_list>
+<pin id="141" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="142" class="1001" name="const_142">
+<pin_list>
+<pin id="143" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mid_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="144" class="1001" name="const_144">
+<pin_list>
+<pin id="145" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="146" class="1001" name="const_146">
+<pin_list>
+<pin id="147" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="148" class="1001" name="const_148">
+<pin_list>
+<pin id="149" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="150" class="1004" name="mid_fu_150">
+<pin_list>
+<pin id="151" dir="0" index="0" bw="1" slack="0"/>
+<pin id="152" dir="1" index="1" bw="256" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="mid/1 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="grp_FFT_pipeline_DIT_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="0" slack="0"/>
+<pin id="156" dir="0" index="1" bw="256" slack="0"/>
+<pin id="157" dir="0" index="2" bw="256" slack="0"/>
+<pin id="158" dir="0" index="3" bw="7" slack="0"/>
+<pin id="159" dir="0" index="4" bw="32" slack="0"/>
+<pin id="160" dir="0" index="5" bw="32" slack="0"/>
+<pin id="161" dir="0" index="6" bw="32" slack="0"/>
+<pin id="162" dir="0" index="7" bw="32" slack="0"/>
+<pin id="163" dir="0" index="8" bw="32" slack="0"/>
+<pin id="164" dir="0" index="9" bw="32" slack="0"/>
+<pin id="165" dir="0" index="10" bw="32" slack="0"/>
+<pin id="166" dir="0" index="11" bw="32" slack="0"/>
+<pin id="167" dir="0" index="12" bw="32" slack="0"/>
+<pin id="168" dir="0" index="13" bw="32" slack="0"/>
+<pin id="169" dir="0" index="14" bw="32" slack="0"/>
+<pin id="170" dir="0" index="15" bw="32" slack="0"/>
+<pin id="171" dir="0" index="16" bw="32" slack="0"/>
+<pin id="172" dir="0" index="17" bw="32" slack="0"/>
+<pin id="173" dir="0" index="18" bw="32" slack="0"/>
+<pin id="174" dir="0" index="19" bw="32" slack="0"/>
+<pin id="175" dir="0" index="20" bw="32" slack="0"/>
+<pin id="176" dir="0" index="21" bw="32" slack="0"/>
+<pin id="177" dir="0" index="22" bw="32" slack="0"/>
+<pin id="178" dir="0" index="23" bw="32" slack="0"/>
+<pin id="179" dir="0" index="24" bw="32" slack="0"/>
+<pin id="180" dir="0" index="25" bw="32" slack="0"/>
+<pin id="181" dir="0" index="26" bw="32" slack="0"/>
+<pin id="182" dir="0" index="27" bw="32" slack="0"/>
+<pin id="183" dir="0" index="28" bw="32" slack="0"/>
+<pin id="184" dir="0" index="29" bw="32" slack="0"/>
+<pin id="185" dir="0" index="30" bw="32" slack="0"/>
+<pin id="186" dir="0" index="31" bw="32" slack="0"/>
+<pin id="187" dir="0" index="32" bw="32" slack="0"/>
+<pin id="188" dir="0" index="33" bw="32" slack="0"/>
+<pin id="189" dir="0" index="34" bw="32" slack="0"/>
+<pin id="190" dir="0" index="35" bw="32" slack="0"/>
+<pin id="191" dir="0" index="36" bw="32" slack="0"/>
+<pin id="192" dir="0" index="37" bw="32" slack="0"/>
+<pin id="193" dir="0" index="38" bw="32" slack="0"/>
+<pin id="194" dir="0" index="39" bw="32" slack="0"/>
+<pin id="195" dir="0" index="40" bw="32" slack="0"/>
+<pin id="196" dir="0" index="41" bw="32" slack="0"/>
+<pin id="197" dir="0" index="42" bw="32" slack="0"/>
+<pin id="198" dir="0" index="43" bw="32" slack="0"/>
+<pin id="199" dir="0" index="44" bw="32" slack="0"/>
+<pin id="200" dir="0" index="45" bw="32" slack="0"/>
+<pin id="201" dir="0" index="46" bw="32" slack="0"/>
+<pin id="202" dir="0" index="47" bw="32" slack="0"/>
+<pin id="203" dir="1" index="48" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln754/1 "/>
+</bind>
+</comp>
+
+<comp id="251" class="1004" name="grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1_fu_251">
+<pin_list>
+<pin id="252" dir="0" index="0" bw="0" slack="0"/>
+<pin id="253" dir="0" index="1" bw="256" slack="2"/>
+<pin id="254" dir="0" index="2" bw="32" slack="0"/>
+<pin id="255" dir="0" index="3" bw="32" slack="0"/>
+<pin id="256" dir="0" index="4" bw="32" slack="0"/>
+<pin id="257" dir="0" index="5" bw="32" slack="0"/>
+<pin id="258" dir="0" index="6" bw="32" slack="0"/>
+<pin id="259" dir="0" index="7" bw="32" slack="0"/>
+<pin id="260" dir="0" index="8" bw="32" slack="0"/>
+<pin id="261" dir="0" index="9" bw="32" slack="0"/>
+<pin id="262" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/3 "/>
+</bind>
+</comp>
+
+<comp id="272" class="1004" name="grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_fu_272">
+<pin_list>
+<pin id="273" dir="0" index="0" bw="0" slack="0"/>
+<pin id="274" dir="0" index="1" bw="7" slack="0"/>
+<pin id="275" dir="0" index="2" bw="32" slack="0"/>
+<pin id="276" dir="0" index="3" bw="32" slack="0"/>
+<pin id="277" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/3 "/>
+</bind>
+</comp>
+
+<comp id="282" class="1004" name="grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2_fu_282">
+<pin_list>
+<pin id="283" dir="0" index="0" bw="0" slack="0"/>
+<pin id="284" dir="0" index="1" bw="256" slack="0"/>
+<pin id="285" dir="0" index="2" bw="32" slack="0"/>
+<pin id="286" dir="0" index="3" bw="32" slack="0"/>
+<pin id="287" dir="0" index="4" bw="32" slack="0"/>
+<pin id="288" dir="0" index="5" bw="32" slack="0"/>
+<pin id="289" dir="0" index="6" bw="32" slack="0"/>
+<pin id="290" dir="0" index="7" bw="32" slack="0"/>
+<pin id="291" dir="0" index="8" bw="32" slack="0"/>
+<pin id="292" dir="0" index="9" bw="32" slack="0"/>
+<pin id="293" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/5 "/>
+</bind>
+</comp>
+
+<comp id="304" class="1005" name="mid_reg_304">
+<pin_list>
+<pin id="305" dir="0" index="0" bw="256" slack="0"/>
+<pin id="306" dir="1" index="1" bw="256" slack="0"/>
+</pin_list>
+<bind>
+<opset="mid "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="153"><net_src comp="114" pin="0"/><net_sink comp="150" pin=0"/></net>
+
+<net id="204"><net_src comp="116" pin="0"/><net_sink comp="154" pin=0"/></net>
+
+<net id="205"><net_src comp="0" pin="0"/><net_sink comp="154" pin=1"/></net>
+
+<net id="206"><net_src comp="4" pin="0"/><net_sink comp="154" pin=3"/></net>
+
+<net id="207"><net_src comp="6" pin="0"/><net_sink comp="154" pin=4"/></net>
+
+<net id="208"><net_src comp="8" pin="0"/><net_sink comp="154" pin=5"/></net>
+
+<net id="209"><net_src comp="10" pin="0"/><net_sink comp="154" pin=6"/></net>
+
+<net id="210"><net_src comp="12" pin="0"/><net_sink comp="154" pin=7"/></net>
+
+<net id="211"><net_src comp="14" pin="0"/><net_sink comp="154" pin=8"/></net>
+
+<net id="212"><net_src comp="16" pin="0"/><net_sink comp="154" pin=9"/></net>
+
+<net id="213"><net_src comp="18" pin="0"/><net_sink comp="154" pin=10"/></net>
+
+<net id="214"><net_src comp="20" pin="0"/><net_sink comp="154" pin=11"/></net>
+
+<net id="215"><net_src comp="22" pin="0"/><net_sink comp="154" pin=12"/></net>
+
+<net id="216"><net_src comp="24" pin="0"/><net_sink comp="154" pin=13"/></net>
+
+<net id="217"><net_src comp="26" pin="0"/><net_sink comp="154" pin=14"/></net>
+
+<net id="218"><net_src comp="28" pin="0"/><net_sink comp="154" pin=15"/></net>
+
+<net id="219"><net_src comp="30" pin="0"/><net_sink comp="154" pin=16"/></net>
+
+<net id="220"><net_src comp="32" pin="0"/><net_sink comp="154" pin=17"/></net>
+
+<net id="221"><net_src comp="34" pin="0"/><net_sink comp="154" pin=18"/></net>
+
+<net id="222"><net_src comp="36" pin="0"/><net_sink comp="154" pin=19"/></net>
+
+<net id="223"><net_src comp="38" pin="0"/><net_sink comp="154" pin=20"/></net>
+
+<net id="224"><net_src comp="40" pin="0"/><net_sink comp="154" pin=21"/></net>
+
+<net id="225"><net_src comp="42" pin="0"/><net_sink comp="154" pin=22"/></net>
+
+<net id="226"><net_src comp="44" pin="0"/><net_sink comp="154" pin=23"/></net>
+
+<net id="227"><net_src comp="46" pin="0"/><net_sink comp="154" pin=24"/></net>
+
+<net id="228"><net_src comp="48" pin="0"/><net_sink comp="154" pin=25"/></net>
+
+<net id="229"><net_src comp="50" pin="0"/><net_sink comp="154" pin=26"/></net>
+
+<net id="230"><net_src comp="52" pin="0"/><net_sink comp="154" pin=27"/></net>
+
+<net id="231"><net_src comp="54" pin="0"/><net_sink comp="154" pin=28"/></net>
+
+<net id="232"><net_src comp="56" pin="0"/><net_sink comp="154" pin=29"/></net>
+
+<net id="233"><net_src comp="58" pin="0"/><net_sink comp="154" pin=30"/></net>
+
+<net id="234"><net_src comp="60" pin="0"/><net_sink comp="154" pin=31"/></net>
+
+<net id="235"><net_src comp="62" pin="0"/><net_sink comp="154" pin=32"/></net>
+
+<net id="236"><net_src comp="64" pin="0"/><net_sink comp="154" pin=33"/></net>
+
+<net id="237"><net_src comp="66" pin="0"/><net_sink comp="154" pin=34"/></net>
+
+<net id="238"><net_src comp="68" pin="0"/><net_sink comp="154" pin=35"/></net>
+
+<net id="239"><net_src comp="70" pin="0"/><net_sink comp="154" pin=36"/></net>
+
+<net id="240"><net_src comp="72" pin="0"/><net_sink comp="154" pin=37"/></net>
+
+<net id="241"><net_src comp="74" pin="0"/><net_sink comp="154" pin=38"/></net>
+
+<net id="242"><net_src comp="76" pin="0"/><net_sink comp="154" pin=39"/></net>
+
+<net id="243"><net_src comp="78" pin="0"/><net_sink comp="154" pin=40"/></net>
+
+<net id="244"><net_src comp="80" pin="0"/><net_sink comp="154" pin=41"/></net>
+
+<net id="245"><net_src comp="82" pin="0"/><net_sink comp="154" pin=42"/></net>
+
+<net id="246"><net_src comp="84" pin="0"/><net_sink comp="154" pin=43"/></net>
+
+<net id="247"><net_src comp="86" pin="0"/><net_sink comp="154" pin=44"/></net>
+
+<net id="248"><net_src comp="88" pin="0"/><net_sink comp="154" pin=45"/></net>
+
+<net id="249"><net_src comp="90" pin="0"/><net_sink comp="154" pin=46"/></net>
+
+<net id="250"><net_src comp="92" pin="0"/><net_sink comp="154" pin=47"/></net>
+
+<net id="263"><net_src comp="118" pin="0"/><net_sink comp="251" pin=0"/></net>
+
+<net id="264"><net_src comp="94" pin="0"/><net_sink comp="251" pin=2"/></net>
+
+<net id="265"><net_src comp="96" pin="0"/><net_sink comp="251" pin=3"/></net>
+
+<net id="266"><net_src comp="98" pin="0"/><net_sink comp="251" pin=4"/></net>
+
+<net id="267"><net_src comp="100" pin="0"/><net_sink comp="251" pin=5"/></net>
+
+<net id="268"><net_src comp="102" pin="0"/><net_sink comp="251" pin=6"/></net>
+
+<net id="269"><net_src comp="104" pin="0"/><net_sink comp="251" pin=7"/></net>
+
+<net id="270"><net_src comp="106" pin="0"/><net_sink comp="251" pin=8"/></net>
+
+<net id="271"><net_src comp="108" pin="0"/><net_sink comp="251" pin=9"/></net>
+
+<net id="278"><net_src comp="120" pin="0"/><net_sink comp="272" pin=0"/></net>
+
+<net id="279"><net_src comp="4" pin="0"/><net_sink comp="272" pin=1"/></net>
+
+<net id="280"><net_src comp="110" pin="0"/><net_sink comp="272" pin=2"/></net>
+
+<net id="281"><net_src comp="112" pin="0"/><net_sink comp="272" pin=3"/></net>
+
+<net id="294"><net_src comp="122" pin="0"/><net_sink comp="282" pin=0"/></net>
+
+<net id="295"><net_src comp="2" pin="0"/><net_sink comp="282" pin=1"/></net>
+
+<net id="296"><net_src comp="94" pin="0"/><net_sink comp="282" pin=2"/></net>
+
+<net id="297"><net_src comp="102" pin="0"/><net_sink comp="282" pin=3"/></net>
+
+<net id="298"><net_src comp="96" pin="0"/><net_sink comp="282" pin=4"/></net>
+
+<net id="299"><net_src comp="104" pin="0"/><net_sink comp="282" pin=5"/></net>
+
+<net id="300"><net_src comp="98" pin="0"/><net_sink comp="282" pin=6"/></net>
+
+<net id="301"><net_src comp="106" pin="0"/><net_sink comp="282" pin=7"/></net>
+
+<net id="302"><net_src comp="100" pin="0"/><net_sink comp="282" pin=8"/></net>
+
+<net id="303"><net_src comp="108" pin="0"/><net_sink comp="282" pin=9"/></net>
+
+<net id="307"><net_src comp="150" pin="1"/><net_sink comp="304" pin=0"/></net>
+
+<net id="308"><net_src comp="304" pin="1"/><net_sink comp="154" pin=2"/></net>
+
+<net id="309"><net_src comp="304" pin="1"/><net_sink comp="251" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: out_r | {5 6 }
+	Port: revIdxTab | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2 | {1 2 }
+	Port: reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0 | {1 2 }
+	Port: FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1 | {1 2 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2 | {3 4 }
+	Port: FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3 | {3 4 }
+	Port: p_buf_1 | {3 4 }
+	Port: p_buf | {3 4 }
+ - Input state : 
+	Port: FFT_DIT_RN : in_r | {1 2 }
+	Port: FFT_DIT_RN : revIdxTab | {3 4 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2 | {1 2 }
+	Port: FFT_DIT_RN : reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1 | {1 2 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2 | {5 6 }
+	Port: FFT_DIT_RN : FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3 | {5 6 }
+	Port: FFT_DIT_RN : p_buf_1 | {3 4 }
+	Port: FFT_DIT_RN : p_buf | {3 4 }
+  - Chain level:
+	State 1
+		call_ln754 : 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------------------|---------|---------|---------|---------|
+| Operation|                 Functional Unit                 |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-------------------------------------------------|---------|---------|---------|---------|
+|          |           grp_FFT_pipeline_DIT_fu_154           |   120   | 196.912 |  65352  |  62109  |
+|   call   | grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_757_1_fu_251 |    0    |    0    |   277   |    28   |
+|          | grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_734_1_fu_272 |    0    | 11.3546 |   260   |   118   |
+|          | grp_FFT_DIT_RN_Pipeline_VITIS_LOOP_764_2_fu_282 |    0    |  12.704 |   319   |   100   |
+|----------|-------------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                                 |   120   | 220.971 |  66208  |  62355  |
+|----------|-------------------------------------------------|---------|---------|---------|---------|
+
+Memories:
++-------------------------------------------------------------------------+--------+--------+--------+--------+
+|                                                                         |  BRAM  |   FF   |   LUT  |  URAM  |
++-------------------------------------------------------------------------+--------+--------+--------+--------+
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_0     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_1     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_2     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_0_3     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_0     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_1     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_2     |    1   |   32   |    0   |    0   |
+|      FFT_DIT_RN_stream_stream_vector_complex_float_4ul_0_buffer_1_3     |    1   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3|    -   |   64   |   16   |    -   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0|    2   |   32   |    0   |    0   |
+|FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1|    2   |   32   |    0   |    0   |
+|                                  p_buf                                  |    2   |   32   |    0   |    0   |
+|                                 p_buf_1                                 |    2   |   32   |    0   |    0   |
+|                                revIdxTab                                |    0   |    7   |   14   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2   |    1   |   32   |    0   |    0   |
+|    reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2   |    1   |   32   |    0   |    0   |
+|   reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3   |    1   |   32   |    0   |    0   |
++-------------------------------------------------------------------------+--------+--------+--------+--------+
+|                                  Total                                  |   68   |  1991  |   142  |    0   |
++-------------------------------------------------------------------------+--------+--------+--------+--------+
+
+* Register list:
++-----------+--------+
+|           |   FF   |
++-----------+--------+
+|mid_reg_304|   256  |
++-----------+--------+
+|   Total   |   256  |
++-----------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |   120  |   220  |  66208 |  62355 |    -   |
+|   Memory  |   68   |    -   |    -   |  1991  |   142  |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |   256  |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   68   |   120  |   220  |  68455 |  62497 |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

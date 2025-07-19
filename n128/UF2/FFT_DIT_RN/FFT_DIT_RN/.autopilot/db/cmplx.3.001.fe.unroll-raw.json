@@ -1,0 +1,279 @@
+{
+  "0": {
+    "basicblocks": 9,
+    "calls": "8 14 17",
+    "file": "FFT.cpp",
+    "fileloc": 745,
+    "instructions": 117,
+    "loads": {
+      "G": 8,
+      "L": 8
+    },
+    "name": "FFT_DIT_RN",
+    "stores": {
+      "G": 8,
+      "L": 8
+    },
+    "total_instructions": 3830
+  },
+  "1": {
+    "basicblocks": 6,
+    "calls": "18 12 12 12 12",
+    "file": "FFT.cpp",
+    "fileloc": 517,
+    "instructions": 289,
+    "loads": {
+      "L": 24
+    },
+    "name": "FFT_Stage2_vectorstreamIn_arrayOut_parametize",
+    "stores": {
+      "G": 8,
+      "L": 24
+    },
+    "total_instructions": 382
+  },
+  "10": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "array",
+    "fileloc": 94,
+    "instructions": 15,
+    "name": "array",
+    "total_instructions": 27
+  },
+  "11": {
+    "basicblocks": 6,
+    "calls": "18 12 12 12 12",
+    "file": "FFT.cpp",
+    "fileloc": 53,
+    "instructions": 87,
+    "loads": {
+      "G": 8,
+      "L": 8
+    },
+    "name": "output_result_array_to_stream",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 140
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "19",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "13": {
+    "basicblocks": 6,
+    "calls": "18 18 12 12 12 12 12 12 12 12",
+    "file": "FFT.cpp",
+    "fileloc": 490,
+    "instructions": 281,
+    "loads": {
+      "L": 32
+    },
+    "name": "FFT_Stage1_vectorstream_parameterize",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 427
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "10",
+    "file": "hls_vector.h",
+    "fileloc": 109,
+    "instructions": 2,
+    "name": "vector",
+    "total_instructions": 29
+  },
+  "15": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "array",
+    "fileloc": 94,
+    "instructions": 11,
+    "name": "array",
+    "total_instructions": 31
+  },
+  "16": {
+    "basicblocks": 27,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 373,
+    "instructions": 290,
+    "loads": {
+      "G": 12,
+      "L": 8
+    },
+    "name": "FFT_stage_spatial_unroll<5>",
+    "stores": {
+      "G": 8,
+      "L": 12
+    },
+    "total_instructions": 342
+  },
+  "17": {
+    "basicblocks": 7,
+    "calls": "4",
+    "file": "FFT.cpp",
+    "fileloc": 733,
+    "instructions": 19,
+    "loads": {
+      "G": 1
+    },
+    "name": "bit_reverse_array",
+    "total_instructions": 51
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "15",
+    "file": "hls_vector.h",
+    "fileloc": 109,
+    "instructions": 2,
+    "name": "vector",
+    "total_instructions": 33
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "2": {
+    "basicblocks": 27,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 373,
+    "instructions": 290,
+    "loads": {
+      "G": 12,
+      "L": 8
+    },
+    "name": "FFT_stage_spatial_unroll<4>",
+    "stores": {
+      "G": 8,
+      "L": 12
+    },
+    "total_instructions": 342
+  },
+  "20": {
+    "basicblocks": 36,
+    "calls": "12 12 12 12 18 14 18 12 12 12 12",
+    "file": "FFT.cpp",
+    "fileloc": 229,
+    "instructions": 774,
+    "loads": {
+      "G": 16,
+      "L": 80
+    },
+    "name": "reverse_input_stream_UF2",
+    "stores": {
+      "G": 16,
+      "L": 92
+    },
+    "total_instructions": 933
+  },
+  "3": {
+    "basicblocks": 27,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 373,
+    "instructions": 288,
+    "loads": {
+      "G": 12,
+      "L": 8
+    },
+    "name": "FFT_stage_spatial_unroll<3>",
+    "stores": {
+      "G": 8,
+      "L": 12
+    },
+    "total_instructions": 340
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "7 7 7",
+    "file": "move.h",
+    "fileloc": 182,
+    "instructions": 29,
+    "loads": {
+      "L": 6
+    },
+    "name": "swap<std::complex<float> >",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 32
+  },
+  "5": {
+    "basicblocks": 27,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 373,
+    "instructions": 290,
+    "loads": {
+      "G": 12,
+      "L": 8
+    },
+    "name": "FFT_stage_spatial_unroll<6>",
+    "stores": {
+      "G": 8,
+      "L": 12
+    },
+    "total_instructions": 342
+  },
+  "6": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "FFT.cpp",
+    "fileloc": 373,
+    "instructions": 277,
+    "loads": {
+      "G": 12,
+      "L": 8
+    },
+    "name": "FFT_stage_spatial_unroll<7>",
+    "stores": {
+      "G": 8,
+      "L": 12
+    },
+    "total_instructions": 329
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "move.h",
+    "fileloc": 99,
+    "instructions": 1,
+    "name": "move<std::complex<float> &>",
+    "total_instructions": 1
+  },
+  "8": {
+    "basicblocks": 11,
+    "calls": "9",
+    "file": "FFT.cpp",
+    "fileloc": 640,
+    "instructions": 28,
+    "name": "FFT_pipeline_DIT",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 3633
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "20 13 1 3 2 16 5 6 11",
+    "file": "FFT.cpp",
+    "fileloc": 548,
+    "instructions": 28,
+    "name": "FFT_DIT_spatial_unroll_CY_stream_vector",
+    "total_instructions": 3605
+  }
+}

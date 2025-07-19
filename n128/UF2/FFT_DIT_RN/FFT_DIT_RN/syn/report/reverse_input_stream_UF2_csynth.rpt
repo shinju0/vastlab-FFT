@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'reverse_input_stream_UF2'
+================================================================
+* Date:           Wed Jul 16 18:22:37 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  4.956 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      107|      107|  0.530 us|  0.530 us|   32|   32|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------+---------------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                            |                                                         |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                          Instance                          |                          Module                         |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +------------------------------------------------------------+---------------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc_U0     |reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc     |       33|       33|  0.164 us|  0.164 us|   32|   32|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc_U0  |reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc  |       37|       37|  0.183 us|  0.183 us|   34|   34|  loop auto-rewind stp (delay=2 clock cycles(s))|
+        |reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc_U0    |reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc    |       35|       35|  0.173 us|  0.173 us|   33|   33|  loop auto-rewind stp (delay=1 clock cycles(s))|
+        +------------------------------------------------------------+---------------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     10|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     856|   1186|    -|
+|Memory           |       16|    -|     512|      0|    0|
+|Multiplexer      |        -|    -|       0|     18|    -|
+|Register         |        -|    -|       2|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       16|    0|    1370|   1214|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        5|    0|       1|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+------+-----+
+    |                          Instance                          |                          Module                         | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+------+-----+
+    |reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc_U0  |reverse_input_stream_UF2_Loop_FROM_BLOCK_TO_CYCLIC_proc  |        0|   0|  837|  1045|    0|
+    |reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc_U0     |reverse_input_stream_UF2_Loop_READ_STREAM_INPUT_proc     |        0|   0|    7|    64|    0|
+    |reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc_U0    |reverse_input_stream_UF2_Loop_STREAM_OUT_REVERSE_proc    |        0|   0|   12|    77|    0|
+    +------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                       |                                                         |        0|   0|  856|  1186|    0|
+    +------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |                                 Memory                                |                                      Module                                      | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_0_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_2_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_1_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_0_3_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_0_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_2_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_1_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3_U  |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_0_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_1_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_2_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_0_3_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_0_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_1_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_2_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    |reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3_U   |reverse_input_stream_UF2_reverse_input_stream_UF2_stream_stream_vector_0_databkb  |        1|  32|   0|    0|    32|   32|     1|         1024|
+    +-----------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                                                                  |                                                                                  |       16| 512|   0|    0|   512|  512|    16|        16384|
+    +-----------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                                       Variable Name                                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3        |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                                                    |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3  |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                                      |          |   0|  0|  10|           5|           5|
+    +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                              Name                                             | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3  |   9|          2|    1|          2|
+    +-----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                                          |  18|          4|    2|          4|
+    +-----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                              Name                                             | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_reverse_input_stream_UF2_stream_stream_vector_0_data_in_cyclic_1_3   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_reverse_input_stream_UF2_stream_stream_vector_0_data_rev_stream_1_3  |  1|   0|    1|          0|
+    +-----------------------------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                                          |  2|   0|    2|          0|
+    +-----------------------------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+--------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++-----------------------------------------+-----+-----+------------+--------------------------+--------------+
+|in_r_dout                                |   in|  256|     ap_fifo|                      in_r|       pointer|
+|in_r_empty_n                             |   in|    1|     ap_fifo|                      in_r|       pointer|
+|in_r_read                                |  out|    1|     ap_fifo|                      in_r|       pointer|
+|reverse_in_stream_vector_din             |  out|  256|     ap_fifo|  reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_full_n          |   in|    1|     ap_fifo|  reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_write           |  out|    1|     ap_fifo|  reverse_in_stream_vector|       pointer|
+|ap_clk                                   |   in|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|ap_rst                                   |   in|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|ap_start                                 |   in|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|reverse_in_stream_vector_dout            |   in|  256|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|reverse_in_stream_vector_empty_n         |   in|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|reverse_in_stream_vector_read            |  out|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|reverse_in_stream_vector_num_data_valid  |   in|   32|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|reverse_in_stream_vector_fifo_cap        |   in|   32|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|ap_done                                  |  out|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|ap_ready                                 |  out|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|ap_idle                                  |  out|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
+|ap_continue                              |   in|    1|  ap_ctrl_hs|  reverse_input_stream_UF2|  return value|
++-----------------------------------------+-----+-----+------------+--------------------------+--------------+
+

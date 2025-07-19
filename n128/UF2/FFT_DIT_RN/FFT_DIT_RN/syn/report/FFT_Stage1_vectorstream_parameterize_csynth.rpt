@@ -1,0 +1,127 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_Stage1_vectorstream_parameterize'
+================================================================
+* Date:           Wed Jul 16 18:22:37 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  4.956 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       46|       46|  0.228 us|  0.228 us|   32|   32|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                              |                                                           |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                           Instance                           |                           Module                          |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +--------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc_U0  |FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc  |       46|       46|  0.228 us|  0.228 us|   32|   32|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    0|    5121|   4848|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    5121|   4848|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       4|      9|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+------+-----+
+    |                           Instance                           |                           Module                          | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +--------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+------+-----+
+    |FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc_U0  |FFT_Stage1_vectorstream_parameterize_Loop_FFT_Stage1_proc  |        0|   0|  5121|  4848|    0|
+    +--------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                         |                                                           |        0|   0|  5121|  4848|    0|
+    +--------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++--------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|reverse_in_stream_vector_dout         |   in|  256|     ap_fifo|              reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_empty_n      |   in|    1|     ap_fifo|              reverse_in_stream_vector|       pointer|
+|reverse_in_stream_vector_read         |  out|    1|     ap_fifo|              reverse_in_stream_vector|       pointer|
+|data_s1_stream_vector_din             |  out|  256|     ap_fifo|                 data_s1_stream_vector|       pointer|
+|data_s1_stream_vector_full_n          |   in|    1|     ap_fifo|                 data_s1_stream_vector|       pointer|
+|data_s1_stream_vector_write           |  out|    1|     ap_fifo|                 data_s1_stream_vector|       pointer|
+|ap_clk                                |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|data_s1_stream_vector_dout            |   in|  256|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|data_s1_stream_vector_empty_n         |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|data_s1_stream_vector_read            |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|data_s1_stream_vector_num_data_valid  |   in|   32|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|data_s1_stream_vector_fifo_cap        |   in|   32|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
+|ap_continue                           |   in|    1|  ap_ctrl_hs|  FFT_Stage1_vectorstream_parameterize|  return value|
++--------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+

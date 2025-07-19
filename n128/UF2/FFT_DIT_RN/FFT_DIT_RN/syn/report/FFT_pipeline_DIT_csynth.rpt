@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT_pipeline_DIT'
+================================================================
+* Date:           Wed Jul 16 18:22:38 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FFT_DIT_RN
+* Solution:       FFT_DIT_RN (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  5.091 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      477|      477|  2.428 us|  2.428 us|  256|  256|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------+------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                             |                                          |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                   Instance                  |                  Module                  |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +---------------------------------------------+------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc_U0  |FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc  |      258|      258|  1.032 us|  1.032 us|  258|  258|  loop auto-rewind stp (delay=2 clock cycles(s))|
+        |FFT_DIT_spatial_unroll_CY_stream_vector_U0   |FFT_DIT_spatial_unroll_CY_stream_vector   |      477|      477|  2.428 us|  2.428 us|   32|   32|                                        dataflow|
+        +---------------------------------------------+------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     16|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |       96|  120|   78741|  64180|    0|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     18|    -|
+|Register         |        -|    -|       2|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       96|  120|   78743|  64214|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       34|   54|      74|    120|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------+------------------------------------------+---------+-----+-------+-------+-----+
+    |                   Instance                  |                  Module                  | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +---------------------------------------------+------------------------------------------+---------+-----+-------+-------+-----+
+    |FFT_DIT_spatial_unroll_CY_stream_vector_U0   |FFT_DIT_spatial_unroll_CY_stream_vector   |       96|  120|  78705|  64080|    0|
+    |FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc_U0  |FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc  |        0|    0|     36|    100|    0|
+    +---------------------------------------------+------------------------------------------+---------+-----+-------+-------+-----+
+    |Total                                        |                                          |       96|  120|  78741|  64180|    0|
+    +---------------------------------------------+------------------------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                         Variable Name                        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |FFT_DIT_spatial_unroll_CY_stream_vector_U0_ap_start           |       and|   0|  0|   2|           1|           1|
+    |FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                       |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                                                  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                                 |       and|   0|  0|   2|           1|           1|
+    |ap_sync_FFT_DIT_spatial_unroll_CY_stream_vector_U0_ap_ready   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +--------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                         |          |   0|  0|  16|           8|           8|
+    +--------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                               Name                               | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_FFT_DIT_spatial_unroll_CY_stream_vector_U0_ap_ready   |   9|          2|    1|          2|
+    |ap_sync_reg_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc_U0_ap_ready  |   9|          2|    1|          2|
+    +------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                             |  18|          4|    2|          4|
+    +------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------+---+----+-----+-----------+
+    |                               Name                               | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_FFT_DIT_spatial_unroll_CY_stream_vector_U0_ap_ready   |  1|   0|    1|          0|
+    |ap_sync_reg_FFT_pipeline_DIT_Loop_LOOP_REVIDTAB_proc_U0_ap_ready  |  1|   0|    1|          0|
+    +------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                             |  2|   0|    2|          0|
+    +------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++--------------------+-----+-----+------------+------------------+--------------+
+|in_r_dout           |   in|  256|     ap_fifo|              in_r|       pointer|
+|in_r_empty_n        |   in|    1|     ap_fifo|              in_r|       pointer|
+|in_r_read           |  out|    1|     ap_fifo|              in_r|       pointer|
+|mid_din             |  out|  256|     ap_fifo|               mid|       pointer|
+|mid_full_n          |   in|    1|     ap_fifo|               mid|       pointer|
+|mid_write           |  out|    1|     ap_fifo|               mid|       pointer|
+|revIdxTab_address0  |  out|    7|   ap_memory|         revIdxTab|         array|
+|revIdxTab_ce0       |  out|    1|   ap_memory|         revIdxTab|         array|
+|revIdxTab_d0        |  out|    7|   ap_memory|         revIdxTab|         array|
+|revIdxTab_q0        |   in|    7|   ap_memory|         revIdxTab|         array|
+|revIdxTab_we0       |  out|    1|   ap_memory|         revIdxTab|         array|
+|revIdxTab_address1  |  out|    7|   ap_memory|         revIdxTab|         array|
+|revIdxTab_ce1       |  out|    1|   ap_memory|         revIdxTab|         array|
+|revIdxTab_d1        |  out|    7|   ap_memory|         revIdxTab|         array|
+|revIdxTab_q1        |   in|    7|   ap_memory|         revIdxTab|         array|
+|revIdxTab_we1       |  out|    1|   ap_memory|         revIdxTab|         array|
+|ap_clk              |   in|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
+|ap_continue         |   in|    1|  ap_ctrl_hs|  FFT_pipeline_DIT|  return value|
++--------------------+-----+-----+------------+------------------+--------------+
+
