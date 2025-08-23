@@ -1,0 +1,1151 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Thu Aug 21 20:22:24 PDT 2025
+    * Version:         2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:         build
+    * Solution:        FFT_250MHz (Vivado IP Flow Target)
+    * Product family:  versalpremium
+    * Target device:   xcvp1802-lsvc4072-3HP-e-S
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  4 ns
+    * C-Synthesis target clock:    4 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              200698
+FF:               120447
+DSP:              222
+BRAM:             384
+URAM:             0
+SRL:              2373
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 4.000       |
+| Post-Synthesis | 3.544       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++----------------------------------------------------------------------------------+--------+--------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                                             | LUT    | FF     | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++----------------------------------------------------------------------------------+--------+--------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                                             | 200698 | 120447 | 222 | 384  |      |     |        |      |         |          |        |
+|   FFT_DIT_spatial_unroll_CY_stream_vector_U0                                     | 200698 | 120447 | 222 | 384  |      |     |        |      |         |          |        |
+|     (FFT_DIT_spatial_unroll_CY_stream_vector_U0)                                 | 1      | 10     |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_0_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_10_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_11_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_12_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_13_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_14_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_15_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_1_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_2_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_3_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_4_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_5_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_6_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_7_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_8_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_0_9_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_0_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_10_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_11_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_12_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_13_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_14_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_15_U | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_1_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_2_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_3_U  | 137    | 104    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_4_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_5_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_6_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_7_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_8_U  | 137    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_0_1_9_U  | 144    | 104    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_0_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_10_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_11_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_12_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_13_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_14_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_15_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_1_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_2_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_3_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_4_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_5_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_6_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_7_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_8_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_0_9_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_0_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_10_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_11_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_12_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_13_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_14_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_15_U | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_1_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_2_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_3_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_4_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_5_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_6_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_7_U  | 136    | 104    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_8_U  | 136    | 103    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_1_1_9_U  | 143    | 104    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_0_U  | 244    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_10_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_11_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_12_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_13_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_14_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_15_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_1_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_2_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_3_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_4_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_5_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_6_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_7_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_8_U  | 247    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_0_9_U  | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_0_U  | 245    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_10_U | 243    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_11_U | 259    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_12_U | 243    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_13_U | 260    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_14_U | 261    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_15_U | 261    | 200    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_1_U  | 243    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_2_U  | 243    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_3_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_4_U  | 243    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_5_U  | 227    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_6_U  | 229    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_7_U  | 229    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_8_U  | 245    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_2_1_9_U  | 243    | 199    |     |      |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_0_U  | 133    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_1_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_2_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_3_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_4_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_5_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_6_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_0_7_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_0_U  | 133    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_1_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_2_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_3_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_4_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_5_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_6_U  | 117    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_3_1_7_U  | 118    | 72     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_0_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_1_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_2_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_3_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_4_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_5_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_6_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_0_7_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_0_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_1_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_2_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_3_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_4_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_5_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_6_U  | 115    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_4_1_7_U  | 115    | 72     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_0_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_1_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_2_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_3_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_4_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_5_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_6_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_0_7_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_0_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_1_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_2_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_3_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_4_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_5_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_6_U  | 113    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_5_1_7_U  | 113    | 72     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_0_U  | 127    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_1_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_2_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_3_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_4_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_5_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_6_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_0_7_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_0_U  | 127    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_1_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_2_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_3_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_4_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_5_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_6_U  | 111    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_6_1_7_U  | 111    | 72     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_0_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_1_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_2_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_3_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_4_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_5_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_6_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_0_7_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_0_U  | 140    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_1_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_2_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_3_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_4_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_5_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_6_U  | 109    | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_7_1_7_U  | 125    | 76     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_0_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_1_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_2_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_3_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_4_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_5_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_6_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_0_7_U  | 77     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_0_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_1_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_2_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_3_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_4_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_5_U  | 75     | 71     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_6_U  | 75     | 72     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_DIT_spatial_unroll_CY_stream_vector_stream_stream_vector_0_data_8_1_7_U  | 88     | 74     |     | 4    |      |     |        |      |         |          |        |
+|     FFT_Stage1_vectorstream_parameterize_U0                                      | 16010  | 6860   |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U1                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U10                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U13                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U14                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U17                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U18                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U2                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U21                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U22                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U25                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U26                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U29                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U30                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U5                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U6                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fadd_32ns_32ns_32_4_no_dsp_1_U9                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_U                                                 | 7      | 1      |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U11                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U12                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U15                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U16                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U19                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U20                                         | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U23                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U24                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U27                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U28                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U3                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U31                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U32                                         | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U4                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U7                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|         fsub_32ns_32ns_32_4_no_dsp_1_U8                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_Stage2_vectorstreamIn_arrayOut_parametize_U0                             | 16567  | 6870   |     |      |      |     |        |      |         |          |        |
+|       (FFT_Stage2_vectorstreamIn_arrayOut_parametize_U0)                         | 12     | 2069   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U39                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U40                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U43                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U46                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U47                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U48                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U51                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U54                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U55                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U56                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U59                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U62                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U63                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U64                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U67                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U70                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                   | 11     | 1      |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U41                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U42                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U44                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U45                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U49                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U50                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U52                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U53                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U57                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U58                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U60                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U61                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U65                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U66                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U68                                           | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U69                                           | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_10_U0                                               | 17460  | 11751  | 32  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_10_U0)                                           | 518    | 6946   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U904                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U905                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U908                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U909                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U912                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U913                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U916                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U917                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U920                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U921                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U924                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U925                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U928                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U929                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U932                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U933                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                   | 350    | 5      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U952                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U953                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U954                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U955                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U956                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U957                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U958                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U959                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U960                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U961                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U962                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U963                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U964                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U965                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U966                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U967                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U936                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U937                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U938                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U939                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U940                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U941                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U942                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U943                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U944                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U945                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U946                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U947                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U948                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U949                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U950                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U951                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U906                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U907                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U910                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U911                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U914                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U915                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U918                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U919                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U922                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U923                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U926                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U927                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U930                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U931                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U934                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U935                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_3_U0                                                | 19550  | 8436   | 12  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_3_U0)                                            | 879    | 3035   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U105                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U107                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U108                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U109                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U112                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U114                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U115                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U119                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U120                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U122                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U123                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U126                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U128                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U129                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U133                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U134                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U136                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U137                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                   | 71     | 1      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U148                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U149                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U150                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U151                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U140                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U141                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U142                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U143                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U144                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U145                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U146                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_U147                                   |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U104                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U106                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U110                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U111                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U113                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U116                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U117                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U118                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U121                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U124                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U125                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U127                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U130                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U131                                          | 536    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U132                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U135                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U138                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U139                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_4_U0                                                | 19683  | 8393   | 22  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_4_U0)                                            | 1023   | 3292   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U220                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U221                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U222                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U225                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U226                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U229                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U230                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U233                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U234                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U238                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U239                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U241                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U242                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U245                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U246                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U249                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U250                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                   | 72     | 1      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U265                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U266                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U267                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U268                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U269                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U270                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U271                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U272                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U273                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U274                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U253                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U254                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U255                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U256                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U257                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U258                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U259                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U260                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U261                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U262                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U263                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U264                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U219                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U223                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U224                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U227                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U228                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U231                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U232                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U235                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U236                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U237                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U240                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U243                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U244                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U247                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U248                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U251                                          | 546    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U252                                          | 552    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_5_U0                                                | 16973  | 9314   | 28  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_5_U0)                                            | 584    | 4512   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U340                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U341                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U344                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U345                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U348                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U349                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U352                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U353                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U356                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U357                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U360                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U361                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U364                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U365                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U368                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U369                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_delay_pipe_U                                             | 23     | 2      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U389                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U390                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U391                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U392                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U393                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U394                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U395                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U397                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U398                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U399                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U400                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U401                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U402                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U403                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U374                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U375                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U376                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U377                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U378                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U379                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U380                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U381                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U382                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U383                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U384                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U385                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U386                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U387                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U342                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U343                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U346                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U347                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U350                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U351                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U354                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U355                                          | 492    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U358                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U359                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U362                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U363                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U366                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U367                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U370                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U371                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_6_U0                                                | 16467  | 11039  | 32  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_6_U0)                                            | 91     | 6237   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U452                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U453                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U456                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U457                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U460                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U461                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U464                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U465                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U468                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U469                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U472                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U473                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U476                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U477                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U480                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U481                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_delay_pipe_U                                             | 88     | 2      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U500                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U501                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U502                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U503                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U504                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U505                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U506                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U507                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U508                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U509                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U510                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U511                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U512                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U513                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U514                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U515                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U484                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U485                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U486                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U487                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U488                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U489                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U490                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U491                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U492                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U493                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U494                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U495                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U496                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U497                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U498                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U499                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U454                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U455                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U458                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U459                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U462                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U463                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U466                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U467                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U470                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U471                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U474                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U475                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U478                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U479                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U482                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U483                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_7_U0                                                | 16578  | 11542  | 32  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_7_U0)                                            | 167    | 6740   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U565                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U566                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U569                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U570                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U573                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U574                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U577                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U578                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U581                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U582                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U585                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U586                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U589                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U590                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U593                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U594                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_delay_pipe_U                                             | 123    | 2      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U613                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U614                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U615                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U616                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U617                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U618                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U619                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U620                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U621                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U622                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U623                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U624                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U625                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U626                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U627                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U628                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U597                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U598                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U599                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U600                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U601                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U602                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U603                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U604                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U605                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U606                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U607                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U608                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U609                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U610                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U611                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U612                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U567                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U568                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U571                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U572                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U575                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U576                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U579                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U580                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U583                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U584                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U587                                          | 488    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U588                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U591                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U592                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U595                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U596                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_8_U0                                                | 16991  | 12151  | 32  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_8_U0)                                            | 341    | 7349   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U678                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U679                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U682                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U683                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U686                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U687                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U690                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U691                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U694                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U695                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U698                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U699                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U702                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U703                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U706                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U707                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_delay_pipe_U                                             | 266    | 2      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U726                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U727                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U728                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U729                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U730                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U731                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U732                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U733                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U734                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U735                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U736                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U737                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U738                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U739                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U740                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U741                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U710                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U711                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U712                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U713                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U714                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U715                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U716                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U717                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U718                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U719                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U720                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U721                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U722                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U723                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U724                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U725                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U680                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U681                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U684                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U685                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U688                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U689                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U692                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U693                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U696                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U697                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U700                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U701                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U704                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U705                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U708                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U709                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|     FFT_stage_spatial_unroll_9_U0                                                | 16785  | 12208  | 32  |      |      |     |        |      |         |          |        |
+|       (FFT_stage_spatial_unroll_9_U0)                                            | 315    | 7406   |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U791                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U792                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U795                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U796                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U799                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U800                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U803                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U804                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U807                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U808                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U811                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U812                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U815                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U816                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U819                                          | 520    | 150    |     |      |      |     |        |      |         |          |        |
+|       fadd_32ns_32ns_32_4_no_dsp_1_U820                                          | 514    | 150    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_delay_pipe_U                                             | 182    | 2      |     |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U839                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U840                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U841                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U842                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U843                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U844                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U845                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U846                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U847                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U848                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U849                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U850                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U851                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U852                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U853                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmsub_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1_U854                        |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U823                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U824                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U825                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U826                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U827                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U828                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U829                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U830                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U831                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U832                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U833                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U834                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U835                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U836                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U837                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fmul_32ns_32ns_32_1_primitive_dsp_1_x_U838                                 |        |        | 1   |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U793                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U794                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U797                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U798                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U801                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U802                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U805                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U806                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U809                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U810                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U813                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U814                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U817                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U818                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U821                                          | 504    | 150    |     |      |      |     |        |      |         |          |        |
+|       fsub_32ns_32ns_32_4_no_dsp_1_U822                                          | 498    | 150    |     |      |      |     |        |      |         |          |        |
+|     data_s1_stream_vector_U                                                      | 534    | 2069   |     |      |      |     |        |      |         |          |        |
+|     output_result_array_to_stream_U0                                             | 188    | 10     |     |      |      |     |        |      |         |          |        |
+|       (output_result_array_to_stream_U0)                                         | 2      | 8      |     |      |      |     |        |      |         |          |        |
++----------------------------------------------------------------------------------+--------+--------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 5.97%  | OK     |
+| FD                                                        | 50%       | 1.79%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.69%  | OK     |
+| LOOKAHEAD8                                                | 25%       | 1.32%  | OK     |
+| DSP                                                       | 80%       | 1.55%  | OK     |
+| RAMB                                                      | 80%       | 3.89%  | OK     |
+| URAM                                                      | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 2.72%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 63017     | 1419   | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 1.82   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 1.82   | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.250ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.177ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                                    | ENDPOINT PIN                                                                                             | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                                   |                                                                                                          |              |            |                |          DELAY |        DELAY |
++-------+-------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.456 | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]/C | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[23]/D |            8 |         93 |          3.215 |          2.551 |        0.664 |
+| Path2 | 0.456 | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]/C | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[23]/D |            8 |         93 |          3.215 |          2.551 |        0.664 |
+| Path3 | 0.458 | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]/C | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[25]/D |            8 |         93 |          3.213 |          2.551 |        0.662 |
+| Path4 | 0.458 | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]/C | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[25]/D |            8 |         93 |          3.213 |          2.551 |        0.662 |
+| Path5 | 0.459 | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]/C | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[16]/D |            8 |         93 |          3.212 |          2.551 |        0.661 |
++-------+-------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | Path1 Cells                                                                                            | Primitive Type         |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[16] | REGISTER.SDR.FDRE      |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | Path2 Cells                                                                                            | Primitive Type         |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[16] | REGISTER.SDR.FDRE      |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | Path3 Cells                                                                                            | Primitive Type         |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[16] | REGISTER.SDR.FDRE      |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | Path4 Cells                                                                                            | Primitive Type         |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[16] | REGISTER.SDR.FDRE      |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | Path5 Cells                                                                                            | Primitive Type         |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[23] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_real_12_i_reg_4614_reg[25] | REGISTER.SDR.FDRE      |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/grp_fu_1761_p2_reg[21]        | REGISTER.SDR.FDRE      |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INREG_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_INMUX_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE0_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_PIPEREG_INST                                                         | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FPM_STAGE1_INST                                                          | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_OUTPUT_INST                                                           | ARITHMETIC.DSP.DSPFP32 |
+    | i_synth/UFMA_OP.OP/i_prim/DSP_FP_ADDER_INST                                                            | ARITHMETIC.DSP.DSPFP32 |
+    | FFT_DIT_spatial_unroll_CY_stream_vector_U0/FFT_stage_spatial_unroll_5_U0/d1_imag_10_i_reg_4590_reg[16] | REGISTER.SDR.FDRE      |
+    +--------------------------------------------------------------------------------------------------------+------------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+----------------------------------------------------------------+
+| Report Type              | Report Location                                                |
++--------------------------+----------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/FFT_TOP_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/FFT_TOP_failfast_synth.rpt                 |
+| power                    | impl/verilog/report/FFT_TOP_power_synth.rpt                    |
+| timing                   | impl/verilog/report/FFT_TOP_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/FFT_TOP_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/FFT_TOP_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/FFT_TOP_utilization_hierarchical_synth.rpt |
++--------------------------+----------------------------------------------------------------+
+
+
